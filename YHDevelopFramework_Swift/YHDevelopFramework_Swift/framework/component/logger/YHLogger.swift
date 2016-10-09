@@ -54,7 +54,7 @@ class YHLogger:YHLoggerProtocol {
         emojiLogFormatter.apply(prefix: "ℹ️ℹ️ℹ️ ", postfix: " ℹ️ℹ️ℹ️", to: .info)
         emojiLogFormatter.apply(prefix: "⚠️⚠️⚠️ ", postfix: " ⚠️⚠️⚠️", to: .warning)
         emojiLogFormatter.apply(prefix: "‼️‼️‼️ ", postfix: " ‼️‼️‼️", to: .error)
-        emojiLogFormatter.apply(prefix: "🍀🍀🍀 ", postfix: " 🍀🍀🍀", to: .severe)
+        emojiLogFormatter.apply(prefix: "💥💥💥 ", postfix: " 💥💥💥", to: .severe)
         log.formatters = [emojiLogFormatter]
     }
     

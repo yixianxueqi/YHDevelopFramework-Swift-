@@ -12,11 +12,11 @@ class BaseViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-         log.severe("\(self.classForCoder) viewWillAppear")
+         log.info("\(self.classForCoder) viewWillAppear")
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        log.severe("\(self.classForCoder) viewWillDisappear")
+        log.info("\(self.classForCoder) viewWillDisappear")
     }
     
 }
