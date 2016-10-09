@@ -13,8 +13,16 @@
 		DB0E25FB1DA5392100618C5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB0E25F91DA5392100618C5D /* Main.storyboard */; };
 		DB0E25FD1DA5392100618C5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB0E25FC1DA5392100618C5D /* Assets.xcassets */; };
 		DB0E26001DA5392100618C5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB0E25FE1DA5392100618C5D /* LaunchScreen.storyboard */; };
+		DB24C33A1DA9D55D00019439 /* YHNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB24C3391DA9D55D00019439 /* YHNetwork.swift */; };
+		DB24C33F1DA9E10B00019439 /* NSObject_ELog.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB24C33E1DA9E10B00019439 /* NSObject_ELog.swift */; };
+		DB24C3411DA9E14300019439 /* NSObject_EAssist.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB24C3401DA9E14300019439 /* NSObject_EAssist.swift */; };
+		DB24C3431DA9E7DB00019439 /* HttpDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB24C3421DA9E7DB00019439 /* HttpDemoViewController.xib */; };
+		DB24C3451DA9E91600019439 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB24C3441DA9E91600019439 /* BaseNavigationController.swift */; };
 		DB24DDE41DA894EF003F1741 /* YHLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB24DDE31DA894EF003F1741 /* YHLogger.swift */; };
 		DB24DE291DA8D4A1003F1741 /* YHLoggerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB24DE281DA8D4A1003F1741 /* YHLoggerProtocol.swift */; };
+		DBFA94621DA8F42B00A9098D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFA94611DA8F42B00A9098D /* BaseViewController.swift */; };
+		DBFA94671DA8F83900A9098D /* demo.plist in Resources */ = {isa = PBXBuildFile; fileRef = DBFA94661DA8F83900A9098D /* demo.plist */; };
+		DBFA94691DA8F87700A9098D /* HttpDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFA94681DA8F87700A9098D /* HttpDemoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,8 +36,16 @@
 		DB0E25FC1DA5392100618C5D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../Assets.xcassets; sourceTree = "<group>"; };
 		DB0E25FF1DA5392100618C5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB0E26011DA5392100618C5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../../Info.plist; sourceTree = "<group>"; };
+		DB24C3391DA9D55D00019439 /* YHNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHNetwork.swift; sourceTree = "<group>"; };
+		DB24C33E1DA9E10B00019439 /* NSObject_ELog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObject_ELog.swift; sourceTree = "<group>"; };
+		DB24C3401DA9E14300019439 /* NSObject_EAssist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObject_EAssist.swift; sourceTree = "<group>"; };
+		DB24C3421DA9E7DB00019439 /* HttpDemoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HttpDemoViewController.xib; sourceTree = "<group>"; };
+		DB24C3441DA9E91600019439 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		DB24DDE31DA894EF003F1741 /* YHLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHLogger.swift; sourceTree = "<group>"; };
 		DB24DE281DA8D4A1003F1741 /* YHLoggerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHLoggerProtocol.swift; sourceTree = "<group>"; };
+		DBFA94611DA8F42B00A9098D /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		DBFA94661DA8F83900A9098D /* demo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = demo.plist; sourceTree = "<group>"; };
+		DBFA94681DA8F87700A9098D /* HttpDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpDemoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +118,7 @@
 		DB0E26081DA5396500618C5D /* framework */ = {
 			isa = PBXGroup;
 			children = (
+				DBFA94581DA8F0D400A9098D /* baseObject */,
 				DB24DDE11DA894B2003F1741 /* component */,
 			);
 			path = framework;
@@ -110,10 +127,12 @@
 		DB0E26091DA5397400618C5D /* test */ = {
 			isa = PBXGroup;
 			children = (
+				DBFA94641DA8F7F000A9098D /* demo */,
 				DB0E25F51DA5392100618C5D /* AppDelegate.swift */,
 				DB0E25F71DA5392100618C5D /* ViewController.swift */,
 				DB0E25F91DA5392100618C5D /* Main.storyboard */,
 				DB0E25FE1DA5392100618C5D /* LaunchScreen.storyboard */,
+				DBFA94661DA8F83900A9098D /* demo.plist */,
 			);
 			path = test;
 			sourceTree = "<group>";
@@ -145,6 +164,7 @@
 		DB24DDE11DA894B2003F1741 /* component */ = {
 			isa = PBXGroup;
 			children = (
+				DBFA94631DA8F64E00A9098D /* http */,
 				DB24DDE21DA894D6003F1741 /* logger */,
 			);
 			path = component;
@@ -157,6 +177,74 @@
 				DB24DE281DA8D4A1003F1741 /* YHLoggerProtocol.swift */,
 			);
 			path = logger;
+			sourceTree = "<group>";
+		};
+		DBFA94581DA8F0D400A9098D /* baseObject */ = {
+			isa = PBXGroup;
+			children = (
+				DBFA945C1DA8F15300A9098D /* model */,
+				DBFA945B1DA8F13E00A9098D /* service */,
+				DBFA945A1DA8F12F00A9098D /* controller */,
+				DBFA94591DA8F12200A9098D /* view */,
+			);
+			path = baseObject;
+			sourceTree = "<group>";
+		};
+		DBFA94591DA8F12200A9098D /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		DBFA945A1DA8F12F00A9098D /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				DBFA94611DA8F42B00A9098D /* BaseViewController.swift */,
+				DB24C3441DA9E91600019439 /* BaseNavigationController.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		DBFA945B1DA8F13E00A9098D /* service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = service;
+			sourceTree = "<group>";
+		};
+		DBFA945C1DA8F15300A9098D /* model */ = {
+			isa = PBXGroup;
+			children = (
+				DB24C33E1DA9E10B00019439 /* NSObject_ELog.swift */,
+				DB24C3401DA9E14300019439 /* NSObject_EAssist.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		DBFA94631DA8F64E00A9098D /* http */ = {
+			isa = PBXGroup;
+			children = (
+				DB24C3391DA9D55D00019439 /* YHNetwork.swift */,
+			);
+			path = http;
+			sourceTree = "<group>";
+		};
+		DBFA94641DA8F7F000A9098D /* demo */ = {
+			isa = PBXGroup;
+			children = (
+				DBFA94651DA8F80200A9098D /* httpDemo */,
+			);
+			path = demo;
+			sourceTree = "<group>";
+		};
+		DBFA94651DA8F80200A9098D /* httpDemo */ = {
+			isa = PBXGroup;
+			children = (
+				DBFA94681DA8F87700A9098D /* HttpDemoViewController.swift */,
+				DB24C3421DA9E7DB00019439 /* HttpDemoViewController.xib */,
+			);
+			path = httpDemo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,7 +310,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB24C3431DA9E7DB00019439 /* HttpDemoViewController.xib in Resources */,
 				DB0E26001DA5392100618C5D /* LaunchScreen.storyboard in Resources */,
+				DBFA94671DA8F83900A9098D /* demo.plist in Resources */,
 				DB0E25FD1DA5392100618C5D /* Assets.xcassets in Resources */,
 				DB0E25FB1DA5392100618C5D /* Main.storyboard in Resources */,
 			);
@@ -285,8 +375,14 @@
 			files = (
 				DB24DE291DA8D4A1003F1741 /* YHLoggerProtocol.swift in Sources */,
 				DB0E25F81DA5392100618C5D /* ViewController.swift in Sources */,
+				DB24C33A1DA9D55D00019439 /* YHNetwork.swift in Sources */,
+				DB24C3411DA9E14300019439 /* NSObject_EAssist.swift in Sources */,
+				DBFA94691DA8F87700A9098D /* HttpDemoViewController.swift in Sources */,
+				DB24C33F1DA9E10B00019439 /* NSObject_ELog.swift in Sources */,
 				DB24DDE41DA894EF003F1741 /* YHLogger.swift in Sources */,
 				DB0E25F61DA5392100618C5D /* AppDelegate.swift in Sources */,
+				DB24C3451DA9E91600019439 /* BaseNavigationController.swift in Sources */,
+				DBFA94621DA8F42B00A9098D /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

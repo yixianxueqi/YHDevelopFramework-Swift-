@@ -5,7 +5,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Develop_Swift-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="YHDevelopFramework_Swift" customModuleProvider="target" sceneMemberID="viewController">
@@ -16,20 +16,38 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ufm-ib-aTU">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="JCn-ly-bgE"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="jZ9-M6-m5L"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ufm-ib-aTU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="2IN-DX-UGI"/>
+                            <constraint firstItem="Ufm-ib-aTU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="4CB-N1-SDZ"/>
+                            <constraint firstAttribute="trailing" secondItem="Ufm-ib-aTU" secondAttribute="trailing" id="CNf-CV-JSA"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ufm-ib-aTU" secondAttribute="bottom" id="Ykt-IJ-1rK"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="CfP-Ar-1Oc"/>
+                    <navigationItem key="navigationItem" title="Develop_Swift" id="CfP-Ar-1Oc"/>
+                    <connections>
+                        <outlet property="tableView" destination="Ufm-ib-aTU" id="MoV-Rr-0rU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1082" y="-355"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Base Navigation Controller-->
         <scene sceneID="qkx-bl-8D9">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vc1-g4-9Uk" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vc1-g4-9Uk" customClass="BaseNavigationController" customModule="YHDevelopFramework_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="tOk-y9-ayi">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="tOk-y9-ayi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
