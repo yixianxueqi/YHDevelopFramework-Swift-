@@ -10,4 +10,18 @@ import UIKit
 
 class HttpDemoViewController: BaseViewController {
     
+    let httpService = HttpService()
+    
+    override func viewDidLoad() {
+         super.viewDidLoad()
+        httpService.getRequestFunc { (isSuccess, obj) in
+         
+            if isSuccess {
+                self.log.info("http result:\(obj)")
+            } else {
+                self.log.error("http error:\(obj)")
+            }
+        }
+    }
+    
 }

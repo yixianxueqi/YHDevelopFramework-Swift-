@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		642F1CFE09F0730FB4836AF0 /* Pods_YHDevelopFramework_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94130C2CA9DFFE1E1D0274D7 /* Pods_YHDevelopFramework_Swift.framework */; };
+		DB0A25C41DAB35620047BA94 /* HttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0A25C31DAB35620047BA94 /* HttpService.swift */; };
+		DB0A25C61DAB35B70047BA94 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0A25C51DAB35B70047BA94 /* BaseService.swift */; };
 		DB0E25F61DA5392100618C5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0E25F51DA5392100618C5D /* AppDelegate.swift */; };
 		DB0E25F81DA5392100618C5D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0E25F71DA5392100618C5D /* ViewController.swift */; };
 		DB0E25FB1DA5392100618C5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB0E25F91DA5392100618C5D /* Main.storyboard */; };
@@ -29,6 +31,8 @@
 		2E8B41077FA94A7CEEAB3C41 /* Pods-YHDevelopFramework_Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YHDevelopFramework_Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YHDevelopFramework_Swift/Pods-YHDevelopFramework_Swift.debug.xcconfig"; sourceTree = "<group>"; };
 		94130C2CA9DFFE1E1D0274D7 /* Pods_YHDevelopFramework_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YHDevelopFramework_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7437F69150C3D7C93FF4911 /* Pods-YHDevelopFramework_Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YHDevelopFramework_Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-YHDevelopFramework_Swift/Pods-YHDevelopFramework_Swift.release.xcconfig"; sourceTree = "<group>"; };
+		DB0A25C31DAB35620047BA94 /* HttpService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpService.swift; sourceTree = "<group>"; };
+		DB0A25C51DAB35B70047BA94 /* BaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
 		DB0E25F21DA5392100618C5D /* YHDevelopFramework_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YHDevelopFramework_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB0E25F51DA5392100618C5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
 		DB0E25F71DA5392100618C5D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
@@ -209,6 +213,7 @@
 		DBFA945B1DA8F13E00A9098D /* service */ = {
 			isa = PBXGroup;
 			children = (
+				DB0A25C51DAB35B70047BA94 /* BaseService.swift */,
 			);
 			path = service;
 			sourceTree = "<group>";
@@ -243,6 +248,7 @@
 			children = (
 				DBFA94681DA8F87700A9098D /* HttpDemoViewController.swift */,
 				DB24C3421DA9E7DB00019439 /* HttpDemoViewController.xib */,
+				DB0A25C31DAB35620047BA94 /* HttpService.swift */,
 			);
 			path = httpDemo;
 			sourceTree = "<group>";
@@ -374,12 +380,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB24DE291DA8D4A1003F1741 /* YHLoggerProtocol.swift in Sources */,
+				DB0A25C41DAB35620047BA94 /* HttpService.swift in Sources */,
 				DB0E25F81DA5392100618C5D /* ViewController.swift in Sources */,
 				DB24C33A1DA9D55D00019439 /* YHNetwork.swift in Sources */,
 				DB24C3411DA9E14300019439 /* NSObject_EAssist.swift in Sources */,
 				DBFA94691DA8F87700A9098D /* HttpDemoViewController.swift in Sources */,
 				DB24C33F1DA9E10B00019439 /* NSObject_ELog.swift in Sources */,
 				DB24DDE41DA894EF003F1741 /* YHLogger.swift in Sources */,
+				DB0A25C61DAB35B70047BA94 /* BaseService.swift in Sources */,
 				DB0E25F61DA5392100618C5D /* AppDelegate.swift in Sources */,
 				DB24C3451DA9E91600019439 /* BaseNavigationController.swift in Sources */,
 				DBFA94621DA8F42B00A9098D /* BaseViewController.swift in Sources */,
@@ -413,6 +421,7 @@
 		DB0E26021DA5392100618C5D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -462,6 +471,7 @@
 		DB0E26031DA5392100618C5D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -505,6 +515,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2E8B41077FA94A7CEEAB3C41 /* Pods-YHDevelopFramework_Swift.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = QZQD5SSHHH;
@@ -521,6 +532,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C7437F69150C3D7C93FF4911 /* Pods-YHDevelopFramework_Swift.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = QZQD5SSHHH;
