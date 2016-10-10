@@ -10,7 +10,10 @@ import UIKit
 
 class HttpService: NSObject, BaseService {
     
-    var handle:((Bool, Any) -> Void)?
+    var handleDic: [String:Any] = [:]
+    var handelList:[NSMutableDictionary] = Array()
+    var handle: ((Bool, Any) -> Void)?
+    var handle_post: ((Bool, Any) -> Void)?
     
     func getRequestFunc(complete: @escaping (Bool, Any) -> Void) {
         
@@ -19,8 +22,16 @@ class HttpService: NSObject, BaseService {
         network.getRequest(url: "http://bea.wufazhuce.com/OneForWeb/one/getHp_N", parameter: ["strDate":"2015-05-25","strRow":"1"]).successHandle(action: networkSuccessHandle).failureHandle(action: networkFailureHandle)
     }
     
-    private func getNetworkInstance() -> YHNetwork {
+    func postRequest(complete: @escaping (Bool, Any) -> Void) {
+        
+        handle_post = complete
+        let network = getNetworkInstance()
+        network.postRequest(url: "https://httpbin.org/post", parameter: ["foo": [1,2,3],"bar":["baz": "qux"]]).successHandle(action: networkSuccessHandle).failureHandle(action: networkFailureHandle)
+    }
     
+    private func getNetworkInstance() -> YHNetwork {
+        
+        YHNetwork.baseURL = ""
         let network = YHNetwork()
         network.header = [:]
         return network
@@ -35,5 +46,4 @@ class HttpService: NSObject, BaseService {
         log.error("\(error)")
         handle?(false,error)
     }
-    
 }

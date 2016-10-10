@@ -22,6 +22,13 @@ class HttpDemoViewController: BaseViewController {
                 self.log.error("http error:\(obj)")
             }
         }
+        httpService.postRequest { (isSuccess, obj) in
+            
+            if isSuccess {
+                self.log.info("http result:\(obj)")
+            } else {
+                self.log.error("http error:\(obj)")
+            }        }
     }
     
 }
