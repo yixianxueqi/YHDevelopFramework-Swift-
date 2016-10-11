@@ -20,21 +20,22 @@ class HttpDemoViewController: BaseViewController {
     override func viewDidLoad() {
          super.viewDidLoad()
 
-        httpService.networkGetRequest(getHttp, parameter: getDic) {(isSuccess, obj) in
+        httpService.networkGetRequest(getHttp, parameter: getDic) {(isSuccess, result) in
             
             if isSuccess {
-                self.log.info("http result:\(obj)")
+                self.log.info("\(JSON(result))")
+                self.log.info("GET SUCCESS")
             } else {
-                self.log.error("http error:\(obj)")
+                self.log.error("GET ERROR:\(result)")
             }
         }
-        httpService.networkPostRequest(postHttp, parameter: postDic) { (isSuccess, obj) in
-            
-            if isSuccess {
-                self.log.info("http result:\(obj)")
-            } else {
-                self.log.error("http error:\(obj)")
-            }
+        httpService.networkPostRequest(postHttp, parameter: postDic, completet: postSuccessHandle)
+    }
+    func postSuccessHandle(_ isSuccess: Bool, result: Any)  {
+        if isSuccess {
+            self.log.info("POST SUCCESS")
+        } else {
+            self.log.error("GET ERROR:\(result)")
         }
     }
     

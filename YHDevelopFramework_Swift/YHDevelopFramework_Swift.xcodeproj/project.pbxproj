@@ -11,6 +11,7 @@
 		DB0A25C41DAB35620047BA94 /* HttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0A25C31DAB35620047BA94 /* HttpService.swift */; };
 		DB0A25C61DAB35B70047BA94 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0A25C51DAB35B70047BA94 /* BaseService.swift */; };
 		DB0A25C81DAB9A330047BA94 /* HttpBaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0A25C71DAB9A330047BA94 /* HttpBaseService.swift */; };
+		DB0B1A941DACCC2700891BAC /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0B1A931DACCC2700891BAC /* SwiftyJSON.swift */; };
 		DB0E25F61DA5392100618C5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0E25F51DA5392100618C5D /* AppDelegate.swift */; };
 		DB0E25F81DA5392100618C5D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0E25F71DA5392100618C5D /* ViewController.swift */; };
 		DB0E25FB1DA5392100618C5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB0E25F91DA5392100618C5D /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 		DB0A25C31DAB35620047BA94 /* HttpService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpService.swift; sourceTree = "<group>"; };
 		DB0A25C51DAB35B70047BA94 /* BaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
 		DB0A25C71DAB9A330047BA94 /* HttpBaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpBaseService.swift; sourceTree = "<group>"; };
+		DB0B1A931DACCC2700891BAC /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		DB0E25F21DA5392100618C5D /* YHDevelopFramework_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YHDevelopFramework_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB0E25F51DA5392100618C5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
 		DB0E25F71DA5392100618C5D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +85,22 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		DB0B1A911DACCBE600891BAC /* thirdParts */ = {
+			isa = PBXGroup;
+			children = (
+				DB0B1A921DACCC0500891BAC /* SwiftyJSON */,
+			);
+			path = thirdParts;
+			sourceTree = "<group>";
+		};
+		DB0B1A921DACCC0500891BAC /* SwiftyJSON */ = {
+			isa = PBXGroup;
+			children = (
+				DB0B1A931DACCC2700891BAC /* SwiftyJSON.swift */,
+			);
+			path = SwiftyJSON;
+			sourceTree = "<group>";
+		};
 		DB0E25E91DA5392100618C5D = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +142,7 @@
 		DB0E26081DA5396500618C5D /* framework */ = {
 			isa = PBXGroup;
 			children = (
+				DB0B1A911DACCBE600891BAC /* thirdParts */,
 				DBFA94581DA8F0D400A9098D /* baseObject */,
 				DB24DDE11DA894B2003F1741 /* component */,
 			);
@@ -387,6 +406,7 @@
 				DB0E25F81DA5392100618C5D /* ViewController.swift in Sources */,
 				DB24C33A1DA9D55D00019439 /* YHNetwork.swift in Sources */,
 				DB24C3411DA9E14300019439 /* NSObject_EAssist.swift in Sources */,
+				DB0B1A941DACCC2700891BAC /* SwiftyJSON.swift in Sources */,
 				DBFA94691DA8F87700A9098D /* HttpDemoViewController.swift in Sources */,
 				DB24C33F1DA9E10B00019439 /* NSObject_ELog.swift in Sources */,
 				DB24DDE41DA894EF003F1741 /* YHLogger.swift in Sources */,

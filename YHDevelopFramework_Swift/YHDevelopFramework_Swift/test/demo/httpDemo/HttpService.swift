@@ -27,7 +27,7 @@ class HttpService: NSObject, HttpBaseService {
         guard url != nil else {
             return
         }
-        network.getRequest(url: url!, parameter: parameter)//.successHandle(action: networkSuccessHandle).failureHandle(action: networkFailureHandle)
+        network.getRequest(url: url!, parameter: parameter).successHandle(action: completet).failureHandle(action: completet)
     }
     
     func networkPostRequest(_ url: String?, parameter: [String : Any]?, completet: @escaping HttpResultHandle) {
@@ -38,7 +38,8 @@ class HttpService: NSObject, HttpBaseService {
         }
         network.postRequest(url: url!, parameter: parameter).successHandle { (isSuccess, response) in
             // do something else
-            completet(isSuccess,response)
+            let json = JSON(response)
+            completet(isSuccess,json)
         }.failureHandle { (isSuccess, error) in
             // do something else
             completet(isSuccess,error)
