@@ -9,17 +9,14 @@
 import UIKit
 import Alamofire
 
-typealias CompleteSuccess = (Any) -> Void
-typealias CompleteFailure = (Error) -> Void
-
-class YHNetwork: YHLoggerProtocol {
+class YHNetwork: NSObject {
     
     static var baseURL: String?
     var header: HTTPHeaders?
     private let utilityQueue = DispatchQueue.global(qos: .utility)
     private let mainQueue = DispatchQueue.main
-    private var successAction: CompleteSuccess?
-    private var failureAction: CompleteFailure?
+    private var successAction: HttpResultHandle?
+    private var failureAction: HttpResultHandle?
     
     @discardableResult
     func getRequest(url: String, parameter: Parameters? = nil) -> YHNetwork {
@@ -29,12 +26,16 @@ class YHNetwork: YHLoggerProtocol {
             case .success:
                 self.log.info("** network success:\n\(response.request!)\n\(response.timeline)\n\(response.response)\n\(response.result.value)")
                 self.mainQueue.async {
-                    self.successAction!(response.result.value!)
+                    if self.successAction != nil {
+                        self.successAction!(true, response.result.value!)
+                    }
                 }
             case .failure(let error):
                 self.log.error("** network error:\n\(error)")
                 self.mainQueue.async {
-                    self.failureAction!(error)
+                    if self.failureAction != nil {
+                        self.failureAction!(false, error)
+                    }
                 }
             }
         }
@@ -49,12 +50,16 @@ class YHNetwork: YHLoggerProtocol {
             case .success:
                 self.log.info("** network success:\n\(response.request!)\n\(response.timeline)\n\(response.response)\n\(response.result.value)")
                 self.mainQueue.async {
-                    self.successAction!(response.result.value!)
+                    if self.successAction != nil {
+                        self.successAction!(true, response.result.value!)
+                    }
                 }
             case .failure(let error):
                 self.log.error("** network error:\n\(error)")
                 self.mainQueue.async {
-                    self.failureAction!(error)
+                    if self.failureAction != nil {
+                        self.failureAction!(false, error)
+                    }
                 }
             }
         }
@@ -62,14 +67,14 @@ class YHNetwork: YHLoggerProtocol {
     }
     
     @discardableResult
-    func successHandle(action: @escaping CompleteSuccess) -> YHNetwork {
+    func successHandle(action: @escaping HttpResultHandle) -> YHNetwork {
         
         successAction = action
         return self
     }
     
     @discardableResult
-    func failureHandle(action: @escaping CompleteFailure) -> YHNetwork {
+    func failureHandle(action: @escaping HttpResultHandle) -> YHNetwork {
         
         failureAction = action
         return self

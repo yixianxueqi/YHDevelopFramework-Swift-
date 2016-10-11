@@ -9,7 +9,7 @@
 import UIKit
 import XCGLogger
 
-class YHLogger:YHLoggerProtocol {
+class YHLogger: YHLoggerProtocol {
 
    private let systemDestination:AppleSystemLogDestination = {
         let systemDestination = AppleSystemLogDestination(identifier: "advancedLogger.systemDestination")

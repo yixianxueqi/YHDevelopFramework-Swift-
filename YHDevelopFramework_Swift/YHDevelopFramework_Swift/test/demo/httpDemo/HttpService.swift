@@ -8,26 +8,9 @@
 
 import UIKit
 
-class HttpService: NSObject, BaseService {
+class HttpService: NSObject, HttpBaseService {
     
-    var handleDic: [String:Any] = [:]
-    var handelList:[NSMutableDictionary] = Array()
-    var handle: ((Bool, Any) -> Void)?
-    var handle_post: ((Bool, Any) -> Void)?
     
-    func getRequestFunc(complete: @escaping (Bool, Any) -> Void) {
-        
-        handle = complete
-        let network = getNetworkInstance()
-        network.getRequest(url: "http://bea.wufazhuce.com/OneForWeb/one/getHp_N", parameter: ["strDate":"2015-05-25","strRow":"1"]).successHandle(action: networkSuccessHandle).failureHandle(action: networkFailureHandle)
-    }
-    
-    func postRequest(complete: @escaping (Bool, Any) -> Void) {
-        
-        handle_post = complete
-        let network = getNetworkInstance()
-        network.postRequest(url: "https://httpbin.org/post", parameter: ["foo": [1,2,3],"bar":["baz": "qux"]]).successHandle(action: networkSuccessHandle).failureHandle(action: networkFailureHandle)
-    }
     
     private func getNetworkInstance() -> YHNetwork {
         
@@ -37,13 +20,30 @@ class HttpService: NSObject, BaseService {
         return network
     }
     
-    // MARK: - BaseService
-    func networkSuccessHandle(response: Any) {
-        log.info("\(response)")
-        handle?(true,response)
+    // MARK: - HttpBaseService
+    func networkGetRequest(_ url: String?, parameter: [String : Any]?, completet: @escaping HttpResultHandle) {
+        
+        let network = getNetworkInstance()
+        guard url != nil else {
+            return
+        }
+        network.getRequest(url: url!, parameter: parameter)//.successHandle(action: networkSuccessHandle).failureHandle(action: networkFailureHandle)
     }
-    func networkFailureHandle(error: Error) {
-        log.error("\(error)")
-        handle?(false,error)
+    
+    func networkPostRequest(_ url: String?, parameter: [String : Any]?, completet: @escaping HttpResultHandle) {
+        
+        let network = getNetworkInstance()
+        guard url != nil else {
+            return
+        }
+        network.postRequest(url: url!, parameter: parameter).successHandle { (isSuccess, response) in
+            // do something else
+            completet(isSuccess,response)
+        }.failureHandle { (isSuccess, error) in
+            // do something else
+            completet(isSuccess,error)
+        }
     }
 }
+
+
