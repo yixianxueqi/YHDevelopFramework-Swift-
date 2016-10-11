@@ -8,5 +8,11 @@
 		<key>title</key>
 		<string>http</string>
 	</dict>
+	<dict>
+		<key>className</key>
+		<string>DeviceInfoViewController</string>
+		<key>title</key>
+		<string>deviceInfo</string>
+	</dict>
 </array>
 </plist>

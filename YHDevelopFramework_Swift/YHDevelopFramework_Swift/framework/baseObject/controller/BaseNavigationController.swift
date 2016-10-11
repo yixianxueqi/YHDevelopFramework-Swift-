@@ -16,7 +16,7 @@ class BaseNavigationController: UINavigationController {
         navigationBar.tintColor = UIColor.black
         interactivePopGestureRecognizer?.delegate = self as? UIGestureRecognizerDelegate
     }
-    
+
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {
         if self.viewControllers.count != 0 {
             viewController.navigationItem.leftBarButtonItem = UIBarButtonItem.init(title: "back", style: UIBarButtonItemStyle.plain, target: self, action: #selector(back))

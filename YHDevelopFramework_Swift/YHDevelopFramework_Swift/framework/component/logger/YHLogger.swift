@@ -11,9 +11,22 @@ import XCGLogger
 
 class YHLogger: YHLoggerProtocol {
 
+    private let consoleDestination: ConsoleDestination = {
+    
+        let consoleDestination = ConsoleDestination(identifier: "advancedLogger.consoleDestination")
+        consoleDestination.outputLevel = .verbose
+        consoleDestination.showLogIdentifier = false
+        consoleDestination.showFunctionName = true
+        consoleDestination.showThreadName = true
+        consoleDestination.showLevel = true
+        consoleDestination.showFileName = true
+        consoleDestination.showLineNumber = true
+        consoleDestination.showDate = true
+        return consoleDestination
+    }()
    private let systemDestination:AppleSystemLogDestination = {
         let systemDestination = AppleSystemLogDestination(identifier: "advancedLogger.systemDestination")
-        systemDestination.outputLevel = .verbose
+        systemDestination.outputLevel = .warning
         systemDestination.showLogIdentifier = false
         systemDestination.showFunctionName = true
         systemDestination.showThreadName = true
@@ -28,7 +41,7 @@ class YHLogger: YHLoggerProtocol {
         let documentDirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first! as String
         let logPath = documentDirPath.appending("/logger.txt")
         let fileDestination = FileDestination(writeToFile: logPath, identifier: "advancedLogger.fileDestination")
-        fileDestination.outputLevel = .debug
+        fileDestination.outputLevel = .info
         fileDestination.showLogIdentifier = false
         fileDestination.showFunctionName = true
         fileDestination.showThreadName = true
@@ -65,6 +78,7 @@ class YHLogger: YHLoggerProtocol {
     }()
     //开启日志
     public func startLog() {
+        log.add(destination: consoleDestination)
         log.add(destination: systemDestination)
         log.add(destination: fileDestination)
         formatterLog()

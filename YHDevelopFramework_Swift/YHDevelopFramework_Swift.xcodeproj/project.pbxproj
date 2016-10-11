@@ -12,6 +12,10 @@
 		DB0A25C61DAB35B70047BA94 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0A25C51DAB35B70047BA94 /* BaseService.swift */; };
 		DB0A25C81DAB9A330047BA94 /* HttpBaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0A25C71DAB9A330047BA94 /* HttpBaseService.swift */; };
 		DB0B1A941DACCC2700891BAC /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0B1A931DACCC2700891BAC /* SwiftyJSON.swift */; };
+		DB0B1A971DACCDFA00891BAC /* YHDeviceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0B1A961DACCDFA00891BAC /* YHDeviceInfo.swift */; };
+		DB0B1AB91DACD6FC00891BAC /* DeviceInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0B1AB71DACD6FC00891BAC /* DeviceInfoViewController.swift */; };
+		DB0B1ABA1DACD6FC00891BAC /* DeviceInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB0B1AB81DACD6FC00891BAC /* DeviceInfoViewController.xib */; };
+		DB0B1ABD1DACEE4500891BAC /* UIColor_EColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0B1ABC1DACEE4500891BAC /* UIColor_EColor.swift */; };
 		DB0E25F61DA5392100618C5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0E25F51DA5392100618C5D /* AppDelegate.swift */; };
 		DB0E25F81DA5392100618C5D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0E25F71DA5392100618C5D /* ViewController.swift */; };
 		DB0E25FB1DA5392100618C5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB0E25F91DA5392100618C5D /* Main.storyboard */; };
@@ -37,6 +41,10 @@
 		DB0A25C51DAB35B70047BA94 /* BaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
 		DB0A25C71DAB9A330047BA94 /* HttpBaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpBaseService.swift; sourceTree = "<group>"; };
 		DB0B1A931DACCC2700891BAC /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		DB0B1A961DACCDFA00891BAC /* YHDeviceInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHDeviceInfo.swift; sourceTree = "<group>"; };
+		DB0B1AB71DACD6FC00891BAC /* DeviceInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceInfoViewController.swift; sourceTree = "<group>"; };
+		DB0B1AB81DACD6FC00891BAC /* DeviceInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeviceInfoViewController.xib; sourceTree = "<group>"; };
+		DB0B1ABC1DACEE4500891BAC /* UIColor_EColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor_EColor.swift; sourceTree = "<group>"; };
 		DB0E25F21DA5392100618C5D /* YHDevelopFramework_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YHDevelopFramework_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB0E25F51DA5392100618C5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
 		DB0E25F71DA5392100618C5D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +109,31 @@
 			path = SwiftyJSON;
 			sourceTree = "<group>";
 		};
+		DB0B1A951DACCDD700891BAC /* deviceInfo */ = {
+			isa = PBXGroup;
+			children = (
+				DB0B1A961DACCDFA00891BAC /* YHDeviceInfo.swift */,
+			);
+			path = deviceInfo;
+			sourceTree = "<group>";
+		};
+		DB0B1AB61DACD6B900891BAC /* deviceInfoDemo */ = {
+			isa = PBXGroup;
+			children = (
+				DB0B1AB71DACD6FC00891BAC /* DeviceInfoViewController.swift */,
+				DB0B1AB81DACD6FC00891BAC /* DeviceInfoViewController.xib */,
+			);
+			path = deviceInfoDemo;
+			sourceTree = "<group>";
+		};
+		DB0B1ABB1DACEE0800891BAC /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				DB0B1ABC1DACEE4500891BAC /* UIColor_EColor.swift */,
+			);
+			path = extension;
+			sourceTree = "<group>";
+		};
 		DB0E25E91DA5392100618C5D = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +175,7 @@
 		DB0E26081DA5396500618C5D /* framework */ = {
 			isa = PBXGroup;
 			children = (
+				DB0B1ABB1DACEE0800891BAC /* extension */,
 				DB0B1A911DACCBE600891BAC /* thirdParts */,
 				DBFA94581DA8F0D400A9098D /* baseObject */,
 				DB24DDE11DA894B2003F1741 /* component */,
@@ -189,6 +223,7 @@
 		DB24DDE11DA894B2003F1741 /* component */ = {
 			isa = PBXGroup;
 			children = (
+				DB0B1A951DACCDD700891BAC /* deviceInfo */,
 				DBFA94631DA8F64E00A9098D /* http */,
 				DB24DDE21DA894D6003F1741 /* logger */,
 			);
@@ -260,6 +295,7 @@
 		DBFA94641DA8F7F000A9098D /* demo */ = {
 			isa = PBXGroup;
 			children = (
+				DB0B1AB61DACD6B900891BAC /* deviceInfoDemo */,
 				DBFA94651DA8F80200A9098D /* httpDemo */,
 			);
 			path = demo;
@@ -338,6 +374,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB0B1ABA1DACD6FC00891BAC /* DeviceInfoViewController.xib in Resources */,
 				DB24C3431DA9E7DB00019439 /* HttpDemoViewController.xib in Resources */,
 				DB0E26001DA5392100618C5D /* LaunchScreen.storyboard in Resources */,
 				DBFA94671DA8F83900A9098D /* demo.plist in Resources */,
@@ -405,12 +442,15 @@
 				DB0A25C41DAB35620047BA94 /* HttpService.swift in Sources */,
 				DB0E25F81DA5392100618C5D /* ViewController.swift in Sources */,
 				DB24C33A1DA9D55D00019439 /* YHNetwork.swift in Sources */,
+				DB0B1AB91DACD6FC00891BAC /* DeviceInfoViewController.swift in Sources */,
+				DB0B1A971DACCDFA00891BAC /* YHDeviceInfo.swift in Sources */,
 				DB24C3411DA9E14300019439 /* NSObject_EAssist.swift in Sources */,
 				DB0B1A941DACCC2700891BAC /* SwiftyJSON.swift in Sources */,
 				DBFA94691DA8F87700A9098D /* HttpDemoViewController.swift in Sources */,
 				DB24C33F1DA9E10B00019439 /* NSObject_ELog.swift in Sources */,
 				DB24DDE41DA894EF003F1741 /* YHLogger.swift in Sources */,
 				DB0A25C61DAB35B70047BA94 /* BaseService.swift in Sources */,
+				DB0B1ABD1DACEE4500891BAC /* UIColor_EColor.swift in Sources */,
 				DB0A25C81DAB9A330047BA94 /* HttpBaseService.swift in Sources */,
 				DB0E25F61DA5392100618C5D /* AppDelegate.swift in Sources */,
 				DB24C3451DA9E91600019439 /* BaseNavigationController.swift in Sources */,

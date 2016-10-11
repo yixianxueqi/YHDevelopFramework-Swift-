@@ -24,9 +24,8 @@ class ViewController: BaseViewController,UITableViewDelegate,UITableViewDataSour
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         tableView.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: "cell")
-        log.verbose("\(self.demoList)")
+        
     }
-    
     // MARK: - UITableViewDelegate,UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return (demoList?.count)!

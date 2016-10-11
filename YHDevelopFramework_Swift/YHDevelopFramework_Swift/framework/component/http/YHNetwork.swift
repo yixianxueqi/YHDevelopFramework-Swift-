@@ -24,14 +24,14 @@ class YHNetwork: NSObject {
         Alamofire.request(getRealUrl(url), method: .get, parameters: parameter, headers: header).validate().responseJSON(queue: utilityQueue) { (response) in
             switch response.result {
             case .success:
-                self.log.info("** network success:\n\(response.request!)\n\(response.timeline)\n\(response.response!)\n\(response.result.value!)")
+                self.log.info("GET SUCCESS:\n\(response.request!)\n\(response.timeline)\n\(response.response!)\n\(response.result.value!)")
                 self.mainQueue.async {
                     if self.successAction != nil {
                         self.successAction!(true, response.result.value!)
                     }
                 }
             case .failure(let error):
-                self.log.error("** network error:\n\(error)")
+                self.log.error("GET ERROR:\n\(error)")
                 self.mainQueue.async {
                     if self.failureAction != nil {
                         self.failureAction!(false, error)
@@ -48,14 +48,14 @@ class YHNetwork: NSObject {
         Alamofire.request(getRealUrl(url), method: .post, parameters: parameter, encoding: JSONEncoding.default, headers: header).validate().responseJSON { (response) in
             switch response.result {
             case .success:
-                self.log.info("** network success:\n\(response.request!)\n\(response.timeline)\n\(response.response!)\n\(response.result.value!)")
+                self.log.info("POST SUCCESS:\n\(response.request!)\n\(response.timeline)\n\(response.response!)\n\(response.result.value!)")
                 self.mainQueue.async {
                     if self.successAction != nil {
                         self.successAction!(true, response.result.value!)
                     }
                 }
             case .failure(let error):
-                self.log.error("** network error:\n\(error)")
+                self.log.error("POST ERROR:\n\(error)")
                 self.mainQueue.async {
                     if self.failureAction != nil {
                         self.failureAction!(false, error)

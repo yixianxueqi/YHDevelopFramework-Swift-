@@ -18,5 +18,4 @@ class BaseViewController: UIViewController {
         super.viewWillDisappear(animated)
         log.info("\(self.classForCoder) viewWillDisappear")
     }
-    
 }
