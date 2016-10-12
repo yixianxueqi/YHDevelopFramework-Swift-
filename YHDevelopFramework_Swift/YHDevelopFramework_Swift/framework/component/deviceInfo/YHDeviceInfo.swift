@@ -8,6 +8,10 @@
 
 import UIKit
 import CoreTelephony
+import KeychainAccess
+
+private let service = "com.yht.service"
+private let uuidKey = "uuid"
 
 class YHDeviceInfo {
     //获取app名称
@@ -28,7 +32,14 @@ class YHDeviceInfo {
     }
     //获取uuid
     static var uuid: String? {
-        return "111"
+        let keychain = Keychain(service:service)
+        if let uuid = keychain[uuidKey], !uuid.isEmpty {
+            return uuid
+        } else {
+            let uuid = UUID().uuidString.lowercased()
+            keychain[uuidKey] = uuid
+            return uuid
+        }
     }
     //获取设备序列号
     static var deviceSerialNum: String? {

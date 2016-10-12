@@ -20,4 +20,16 @@ extension NSObject {
         let cls : AnyClass? = NSClassFromString(clsName + "." + className)
         return cls
     }
+    
+    func sandBoxStore(_ key: String, value: Any) {
+        UserDefaults.standard.setValue(value, forKey: key)
+    }
+    
+    func sanBoxStoreList(keyValues: [String: Any]) {
+        UserDefaults.standard.setValuesForKeys(keyValues)
+    }
+    
+    func sandBoxTake(key: String) -> Any {
+        return UserDefaults.standard.value(forKey: key)
+    }
 }

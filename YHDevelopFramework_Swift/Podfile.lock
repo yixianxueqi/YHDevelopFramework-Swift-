@@ -1,20 +1,23 @@
 PODS:
   - Alamofire (4.0.1)
-  - SwiftyJSON (3.1.0)
+  - KeychainAccess (3.0.0)
+  - SwiftyJSON (3.1.1)
   - XCGLogger (4.0.0):
     - XCGLogger/Core (= 4.0.0)
   - XCGLogger/Core (4.0.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.0.1)
+  - KeychainAccess (~> 3.0.0)
   - SwiftyJSON (~> 3.1.0)
   - XCGLogger (~> 4.0.0)
 
 SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
-  SwiftyJSON: 29b9f2a64f118c07e691667c2ba1efe536acfe0b
+  KeychainAccess: 412bf2650d9aebfc8135a58103b90ec38caad7f8
+  SwiftyJSON: f0be2e604f83e8405a624e9f891898bf6ed4e019
   XCGLogger: 38063ea89b4c8b23232d18efd2e12eb0005f3ea4
 
-PODFILE CHECKSUM: 5de2a24a71fb48b010a2b392a868a290da9adbc7
+PODFILE CHECKSUM: 53c796fc4b2be6591e7a18447d9b59abd2689680
 
 COCOAPODS: 1.1.0.beta.2

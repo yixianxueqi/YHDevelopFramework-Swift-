@@ -14,16 +14,24 @@ extension UIColor {
     static func RGBAColor(red: Int, green: Int, blue: Int, alpha: Float) -> UIColor {
         return UIColor.init(colorLiteralRed: Float(red)/255.0, green: Float(green)/255.0, blue: Float(blue)/255.0, alpha: alpha)
     }
-    //根据16进制返回颜色
-    static func XColor(value: String, alpha: Float) -> UIColor {
+    
+    /// 根据16进制返回颜色
+    ///
+    /// - parameter value: 0x......(16进制数字表示法)
+    /// - parameter alpha: Float
+    ///
+    /// - returns: UIColor
+    static func XColor(value: Int, alpha: Float) -> UIColor {
         
-        let str = value.replacingOccurrences(of: "#", with: "")
-        let num = Int(str)
-        let rgb = XColorToRGBColor(num: num!)
+        let rgb = XColorToRGBColor(num: value)
         return RGBAColor(red: rgb.0, green: rgb.1, blue: rgb.2, alpha: alpha)
         
     }
-    //将16进制色转化为三原色数值
+    /// 将16进制色转化为RGB三原色数值
+    ///
+    /// - parameter num: 0x......(16进制数字表示法)
+    ///
+    /// - returns: UIColor
     static func XColorToRGBColor(num:Int) -> (Int,Int,Int) {
 
         let redComponent = (num & 0xFF0000) >> 16

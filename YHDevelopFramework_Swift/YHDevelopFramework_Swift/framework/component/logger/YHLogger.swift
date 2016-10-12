@@ -9,7 +9,7 @@
 import UIKit
 import XCGLogger
 
-class YHLogger: YHLoggerProtocol {
+class YHLogger {
 
     private let consoleDestination: ConsoleDestination = {
     
