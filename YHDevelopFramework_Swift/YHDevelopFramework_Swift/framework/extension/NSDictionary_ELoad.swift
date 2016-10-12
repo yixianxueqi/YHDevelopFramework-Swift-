@@ -10,6 +10,7 @@ import UIKit
 
 extension NSDictionary {
 
+    //从plist文件读取字典
     static func dicFromPlist(_ name: String) -> NSDictionary? {
         
         guard let path = Bundle.main.path(forResource: name, ofType: ".plist") else {
@@ -18,6 +19,7 @@ extension NSDictionary {
         return NSDictionary.init(contentsOfFile: path) 
     }
     
+    //从json文件读取字典
     static func dicFromJson(_ name: String) -> NSDictionary? {
     
         guard let path = Bundle.main.path(forResource: name, ofType: ".json") else {

@@ -10,6 +10,7 @@ import UIKit
 
 extension UIImage {
 
+    //加载本地图片
     static func loadLocalImage(_ name: String, type: String) -> UIImage? {
     
         guard let path = Bundle.main.path(forResource: name, ofType: type) else {

@@ -6,16 +6,14 @@
 //  Copyright © 2016年 isoftstone. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
+//自定义日志
 func YHLog<T>(_ message: T, file: String = #file,funcName: String = #function, lineNumber: Int = #line) {
-
+    
     #if DEBUG
         let fileName = (file as NSString).lastPathComponent
         print("🐞🐞🐞\n \(fileName)->\(funcName)->\(lineNumber):\(message)\n🐞🐞🐞")
     #endif
     
 }
-
-let log = YHLogger.logger.log
-

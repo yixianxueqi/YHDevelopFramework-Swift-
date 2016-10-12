@@ -24,7 +24,12 @@ class ViewController: BaseViewController,UITableViewDelegate,UITableViewDataSour
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         tableView.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: "cell")
-        
+     
+        let str = "yyyy-MM-dd HH:mm:ss:SSS"
+        log.debug(NSDate.getCurrentDateStamp())
+        log.debug(NSDate.getFormatterDateTime(date: NSDate(), formatter: str))
+        log.debug(NSDate.getFormatterDateTime(dateStamp: NSDate.getCurrentDateStamp(), formatter: str))
+        log.debug(NSDate.getCurrentDate(str))
     }
     // MARK: - UITableViewDelegate,UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

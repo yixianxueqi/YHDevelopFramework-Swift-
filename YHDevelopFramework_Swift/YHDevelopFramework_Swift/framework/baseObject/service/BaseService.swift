@@ -10,8 +10,6 @@ import UIKit
 
 @objc protocol BaseService: NSObjectProtocol {
 
-    @objc optional func networkSuccessHandle(response: Any)
-    @objc optional func networkFailureHandle(error: Error)
    
 }
 
