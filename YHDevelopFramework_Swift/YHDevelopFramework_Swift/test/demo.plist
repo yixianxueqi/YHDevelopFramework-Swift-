@@ -14,5 +14,17 @@
 		<key>title</key>
 		<string>deviceInfo</string>
 	</dict>
+	<dict>
+		<key>className</key>
+		<string>FileViewController</string>
+		<key>title</key>
+		<string>File</string>
+	</dict>
+	<dict>
+		<key>className</key>
+		<string>TestTempViewController</string>
+		<key>title</key>
+		<string>Test</string>
+	</dict>
 </array>
 </plist>

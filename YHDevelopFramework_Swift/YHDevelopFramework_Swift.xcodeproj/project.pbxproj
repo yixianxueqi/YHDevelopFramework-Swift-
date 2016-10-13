@@ -25,6 +25,13 @@
 		DB24C3431DA9E7DB00019439 /* HttpDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB24C3421DA9E7DB00019439 /* HttpDemoViewController.xib */; };
 		DB24C3451DA9E91600019439 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB24C3441DA9E91600019439 /* BaseNavigationController.swift */; };
 		DB24DDE41DA894EF003F1741 /* YHLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB24DDE31DA894EF003F1741 /* YHLogger.swift */; };
+		DB5DACB61DAF2ABD00D5F0B4 /* NSNumber_EFromatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5DACB51DAF2ABD00D5F0B4 /* NSNumber_EFromatter.swift */; };
+		DB5DACB81DAF606E00D5F0B4 /* 111.png in Resources */ = {isa = PBXBuildFile; fileRef = DB5DACB71DAF606E00D5F0B4 /* 111.png */; };
+		DB5DACBE1DAF72A800D5F0B4 /* TestTempViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5DACBC1DAF72A800D5F0B4 /* TestTempViewController.swift */; };
+		DB5DACBF1DAF72A800D5F0B4 /* TestTempViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB5DACBD1DAF72A800D5F0B4 /* TestTempViewController.xib */; };
+		DB5DACC21DAF74BC00D5F0B4 /* YHFileManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5DACC11DAF74BC00D5F0B4 /* YHFileManger.swift */; };
+		DB5DACC61DAF7AFA00D5F0B4 /* FileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5DACC41DAF7AFA00D5F0B4 /* FileViewController.swift */; };
+		DB5DACC71DAF7AFA00D5F0B4 /* FileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB5DACC51DAF7AFA00D5F0B4 /* FileViewController.xib */; };
 		DBD7CB291DAE0920004443A1 /* UIImage_ELoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD7CB281DAE0920004443A1 /* UIImage_ELoad.swift */; };
 		DBD7CB2F1DAE0BB6004443A1 /* pic_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DBD7CB2A1DAE0BB6004443A1 /* pic_1.jpg */; };
 		DBD7CB301DAE0BB6004443A1 /* pic_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DBD7CB2B1DAE0BB6004443A1 /* pic_4.jpg */; };
@@ -68,6 +75,13 @@
 		DB24C3421DA9E7DB00019439 /* HttpDemoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HttpDemoViewController.xib; sourceTree = "<group>"; };
 		DB24C3441DA9E91600019439 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		DB24DDE31DA894EF003F1741 /* YHLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHLogger.swift; sourceTree = "<group>"; };
+		DB5DACB51DAF2ABD00D5F0B4 /* NSNumber_EFromatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSNumber_EFromatter.swift; sourceTree = "<group>"; };
+		DB5DACB71DAF606E00D5F0B4 /* 111.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 111.png; sourceTree = "<group>"; };
+		DB5DACBC1DAF72A800D5F0B4 /* TestTempViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestTempViewController.swift; sourceTree = "<group>"; };
+		DB5DACBD1DAF72A800D5F0B4 /* TestTempViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestTempViewController.xib; sourceTree = "<group>"; };
+		DB5DACC11DAF74BC00D5F0B4 /* YHFileManger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHFileManger.swift; sourceTree = "<group>"; };
+		DB5DACC41DAF7AFA00D5F0B4 /* FileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileViewController.swift; sourceTree = "<group>"; };
+		DB5DACC51DAF7AFA00D5F0B4 /* FileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FileViewController.xib; sourceTree = "<group>"; };
 		DBD7CB271DADE11A004443A1 /* YHDevelopFramework_Swift.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = YHDevelopFramework_Swift.entitlements; sourceTree = "<group>"; };
 		DBD7CB281DAE0920004443A1 /* UIImage_ELoad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage_ELoad.swift; sourceTree = "<group>"; };
 		DBD7CB2A1DAE0BB6004443A1 /* pic_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pic_1.jpg; sourceTree = "<group>"; };
@@ -162,6 +176,7 @@
 				DBD7CB3D1DAE1E94004443A1 /* UIView_EAssist.swift */,
 				DBD7CB411DAE258F004443A1 /* NSString_ERect.swift */,
 				DBD7CB451DAE30D5004443A1 /* NSDate_EStamp.swift */,
+				DB5DACB51DAF2ABD00D5F0B4 /* NSNumber_EFromatter.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -241,6 +256,7 @@
 		DB0E260B1DA5398400618C5D /* res_sources */ = {
 			isa = PBXGroup;
 			children = (
+				DB5DACB71DAF606E00D5F0B4 /* 111.png */,
 				DBD7CB2A1DAE0BB6004443A1 /* pic_1.jpg */,
 				DBD7CB2B1DAE0BB6004443A1 /* pic_4.jpg */,
 				DBD7CB2C1DAE0BB6004443A1 /* pic_6.jpg */,
@@ -263,6 +279,7 @@
 		DB24DDE11DA894B2003F1741 /* component */ = {
 			isa = PBXGroup;
 			children = (
+				DB5DACC01DAF746D00D5F0B4 /* fileManager */,
 				DB0B1A951DACCDD700891BAC /* deviceInfo */,
 				DBFA94631DA8F64E00A9098D /* http */,
 				DB24DDE21DA894D6003F1741 /* logger */,
@@ -276,6 +293,32 @@
 				DB24DDE31DA894EF003F1741 /* YHLogger.swift */,
 			);
 			path = logger;
+			sourceTree = "<group>";
+		};
+		DB5DACBB1DAF727E00D5F0B4 /* testTempDemo */ = {
+			isa = PBXGroup;
+			children = (
+				DB5DACBC1DAF72A800D5F0B4 /* TestTempViewController.swift */,
+				DB5DACBD1DAF72A800D5F0B4 /* TestTempViewController.xib */,
+			);
+			path = testTempDemo;
+			sourceTree = "<group>";
+		};
+		DB5DACC01DAF746D00D5F0B4 /* fileManager */ = {
+			isa = PBXGroup;
+			children = (
+				DB5DACC11DAF74BC00D5F0B4 /* YHFileManger.swift */,
+			);
+			path = fileManager;
+			sourceTree = "<group>";
+		};
+		DB5DACC31DAF7AC700D5F0B4 /* fileDemo */ = {
+			isa = PBXGroup;
+			children = (
+				DB5DACC41DAF7AFA00D5F0B4 /* FileViewController.swift */,
+				DB5DACC51DAF7AFA00D5F0B4 /* FileViewController.xib */,
+			);
+			path = fileDemo;
 			sourceTree = "<group>";
 		};
 		DBD7CB3A1DAE17BD004443A1 /* global */ = {
@@ -341,6 +384,8 @@
 		DBFA94641DA8F7F000A9098D /* demo */ = {
 			isa = PBXGroup;
 			children = (
+				DB5DACC31DAF7AC700D5F0B4 /* fileDemo */,
+				DB5DACBB1DAF727E00D5F0B4 /* testTempDemo */,
 				DB0B1AB61DACD6B900891BAC /* deviceInfoDemo */,
 				DBFA94651DA8F80200A9098D /* httpDemo */,
 			);
@@ -425,10 +470,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB5DACB81DAF606E00D5F0B4 /* 111.png in Resources */,
 				DB0B1ABA1DACD6FC00891BAC /* DeviceInfoViewController.xib in Resources */,
 				DB24C3431DA9E7DB00019439 /* HttpDemoViewController.xib in Resources */,
 				DB0E26001DA5392100618C5D /* LaunchScreen.storyboard in Resources */,
 				DBFA94671DA8F83900A9098D /* demo.plist in Resources */,
+				DB5DACC71DAF7AFA00D5F0B4 /* FileViewController.xib in Resources */,
 				DBD7CB2F1DAE0BB6004443A1 /* pic_1.jpg in Resources */,
 				DBD7CB321DAE0BB6004443A1 /* pic_10.jpg in Resources */,
 				DBD7CB331DAE0BB6004443A1 /* pic_13.png in Resources */,
@@ -436,6 +483,7 @@
 				DBD7CB311DAE0BB6004443A1 /* pic_6.jpg in Resources */,
 				DB0E25FD1DA5392100618C5D /* Assets.xcassets in Resources */,
 				DB0E25FB1DA5392100618C5D /* Main.storyboard in Resources */,
+				DB5DACBF1DAF72A800D5F0B4 /* TestTempViewController.xib in Resources */,
 				DBD7CB301DAE0BB6004443A1 /* pic_4.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -501,6 +549,7 @@
 				DB0E25F81DA5392100618C5D /* ViewController.swift in Sources */,
 				DBD7CB3E1DAE1E94004443A1 /* UIView_EAssist.swift in Sources */,
 				DB24C33A1DA9D55D00019439 /* YHNetwork.swift in Sources */,
+				DB5DACBE1DAF72A800D5F0B4 /* TestTempViewController.swift in Sources */,
 				DB0B1AB91DACD6FC00891BAC /* DeviceInfoViewController.swift in Sources */,
 				DB0B1A971DACCDFA00891BAC /* YHDeviceInfo.swift in Sources */,
 				DBD7CB3C1DAE17E5004443A1 /* YHGlobalVariable.swift in Sources */,
@@ -510,13 +559,16 @@
 				DBD7CB371DAE0F6F004443A1 /* NSArray_ELoad.swift in Sources */,
 				DB24DDE41DA894EF003F1741 /* YHLogger.swift in Sources */,
 				DB0A25C61DAB35B70047BA94 /* BaseService.swift in Sources */,
+				DB5DACC21DAF74BC00D5F0B4 /* YHFileManger.swift in Sources */,
 				DB0B1ABD1DACEE4500891BAC /* UIColor_EColor.swift in Sources */,
+				DB5DACC61DAF7AFA00D5F0B4 /* FileViewController.swift in Sources */,
 				DBD7CB461DAE30D5004443A1 /* NSDate_EStamp.swift in Sources */,
 				DB0A25C81DAB9A330047BA94 /* HttpBaseService.swift in Sources */,
 				DB0E25F61DA5392100618C5D /* AppDelegate.swift in Sources */,
 				DBD7CB291DAE0920004443A1 /* UIImage_ELoad.swift in Sources */,
 				DBD7CB401DAE1EC8004443A1 /* NSObject_EAssist.swift in Sources */,
 				DB24C3451DA9E91600019439 /* BaseNavigationController.swift in Sources */,
+				DB5DACB61DAF2ABD00D5F0B4 /* NSNumber_EFromatter.swift in Sources */,
 				DBFA94621DA8F42B00A9098D /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

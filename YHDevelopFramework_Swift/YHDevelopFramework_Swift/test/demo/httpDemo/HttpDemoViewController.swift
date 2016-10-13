@@ -38,7 +38,6 @@ class HttpDemoViewController: BaseViewController {
             log.error("GET ERROR:\(result)")
         }
     }
-    
 }
 
 

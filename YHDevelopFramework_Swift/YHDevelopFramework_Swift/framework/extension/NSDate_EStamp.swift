@@ -78,4 +78,21 @@ extension NSDate {
         let date = NSDate.init(timeIntervalSince1970: seconds)
         return getFormatterDateTime(date: date, formatter: formatter)
     }
+    //获取指定时间的指定间隔的开始和结束
+    static func getStartAndEndDate(_ date: NSDate, type: NSCalendar.Unit) -> (NSDate?, NSDate?) {
+    
+        var beginDate: NSDate?
+        var endDate: NSDate?
+        var inteval: TimeInterval = 0
+        
+        let calendar = NSCalendar.current as NSCalendar
+        if type == .weekOfMonth || type == .weekOfYear {
+            calendar.firstWeekday = 2
+        }
+        guard calendar.range(of: type, start: &beginDate, interval: &inteval, for: date as Date) else {
+            return (nil, nil)
+        }
+        endDate = beginDate?.addingTimeInterval(inteval - 1)
+        return (beginDate,endDate)
+    }
 }
