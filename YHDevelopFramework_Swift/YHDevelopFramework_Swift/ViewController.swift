@@ -25,6 +25,8 @@ class ViewController: BaseViewController,UITableViewDelegate,UITableViewDataSour
         // Do any additional setup after loading the view, typically from a nib.
         tableView.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: "cell")
         tableView.reloadData()
+        
+        log.warn("这是一个测试！！！！")
     }
     // MARK: - UITableViewDelegate,UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
