@@ -9,13 +9,15 @@
 import UIKit
 
 typealias HttpResultHandle = (Bool, Any) -> Void
+typealias HttpProgressHandle = (Double) -> Void
 
 @objc protocol HttpBaseService: BaseService {
     
-    @objc optional func networkSuccessHandle(response: Any)
-    @objc optional func networkFailureHandle(error: Error)
     @objc optional func networkGetRequest(_ url: String?, parameter: [String: Any]?, completet: @escaping HttpResultHandle)
     @objc optional func networkPostRequest(_ url: String?, parameter: [String: Any]?, completet: @escaping HttpResultHandle)
+    @objc optional func networkDownloadRequest(_ url: String?, parameter: [String: Any]?, progressHandle: @escaping HttpProgressHandle, completet: @escaping HttpResultHandle)
+    @objc optional func networkUploadRequest(_ url: String?, obj:Any, progressHandle: @escaping HttpProgressHandle, completet: @escaping HttpResultHandle)
+    
 }
 
 extension HttpBaseService {

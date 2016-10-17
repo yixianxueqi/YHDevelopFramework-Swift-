@@ -12,7 +12,7 @@ class FileViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
 
     @IBOutlet weak var tableView: UITableView!
     
-    let pathList = [["home":YHFileManager.homePath],["documents":YHFileManager.documentsPath],["library":YHFileManager.libraryPath],["temp":YHFileManager.tempPath],["cache":YHFileManager.cachePath],["preferences":YHFileManager.preferencesPath]]
+    let pathList = [["home":YHFileManager.homePath],["documents":YHFileManager.documentsPath],["library":YHFileManager.libraryPath],["temp":YHFileManager.tempPath],["cache":YHFileManager.cachePath],["preferences":YHFileManager.preferencesPath],["文件操作测试":"详见控制台"]]
     
     override func viewDidLoad() {
         super.viewDidLoad()
