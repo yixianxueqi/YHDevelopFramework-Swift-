@@ -35,6 +35,8 @@
 		DBB792651DB0DF43003ACA7A /* Dictionary_EAssist.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB792641DB0DF43003ACA7A /* Dictionary_EAssist.swift */; };
 		DBC8D0231DB5CA5400B08ED4 /* SpringDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC8D0211DB5CA5400B08ED4 /* SpringDemoViewController.swift */; };
 		DBC8D0241DB5CA5400B08ED4 /* SpringDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBC8D0221DB5CA5400B08ED4 /* SpringDemoViewController.xib */; };
+		DBC8D0281DB60BBF00B08ED4 /* PromiseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC8D0261DB60BBF00B08ED4 /* PromiseViewController.swift */; };
+		DBC8D0291DB60BBF00B08ED4 /* PromiseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBC8D0271DB60BBF00B08ED4 /* PromiseViewController.xib */; };
 		DBD7CB291DAE0920004443A1 /* UIImage_ELoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD7CB281DAE0920004443A1 /* UIImage_ELoad.swift */; };
 		DBD7CB2F1DAE0BB6004443A1 /* pic_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DBD7CB2A1DAE0BB6004443A1 /* pic_1.jpg */; };
 		DBD7CB301DAE0BB6004443A1 /* pic_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DBD7CB2B1DAE0BB6004443A1 /* pic_4.jpg */; };
@@ -88,6 +90,8 @@
 		DBB792641DB0DF43003ACA7A /* Dictionary_EAssist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dictionary_EAssist.swift; sourceTree = "<group>"; };
 		DBC8D0211DB5CA5400B08ED4 /* SpringDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringDemoViewController.swift; sourceTree = "<group>"; };
 		DBC8D0221DB5CA5400B08ED4 /* SpringDemoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpringDemoViewController.xib; sourceTree = "<group>"; };
+		DBC8D0261DB60BBF00B08ED4 /* PromiseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromiseViewController.swift; sourceTree = "<group>"; };
+		DBC8D0271DB60BBF00B08ED4 /* PromiseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PromiseViewController.xib; sourceTree = "<group>"; };
 		DBD7CB271DADE11A004443A1 /* YHDevelopFramework_Swift.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = YHDevelopFramework_Swift.entitlements; sourceTree = "<group>"; };
 		DBD7CB281DAE0920004443A1 /* UIImage_ELoad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage_ELoad.swift; sourceTree = "<group>"; };
 		DBD7CB2A1DAE0BB6004443A1 /* pic_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pic_1.jpg; sourceTree = "<group>"; };
@@ -337,6 +341,15 @@
 			path = springDemo;
 			sourceTree = "<group>";
 		};
+		DBC8D0251DB60B8A00B08ED4 /* promiseDemo */ = {
+			isa = PBXGroup;
+			children = (
+				DBC8D0261DB60BBF00B08ED4 /* PromiseViewController.swift */,
+				DBC8D0271DB60BBF00B08ED4 /* PromiseViewController.xib */,
+			);
+			path = promiseDemo;
+			sourceTree = "<group>";
+		};
 		DBD7CB3A1DAE17BD004443A1 /* global */ = {
 			isa = PBXGroup;
 			children = (
@@ -400,6 +413,7 @@
 		DBFA94641DA8F7F000A9098D /* demo */ = {
 			isa = PBXGroup;
 			children = (
+				DBC8D0251DB60B8A00B08ED4 /* promiseDemo */,
 				DBC8D0201DB5CA1500B08ED4 /* springDemo */,
 				DB5DACC31DAF7AC700D5F0B4 /* fileDemo */,
 				DB5DACBB1DAF727E00D5F0B4 /* testTempDemo */,
@@ -495,6 +509,7 @@
 				DBFA94671DA8F83900A9098D /* demo.plist in Resources */,
 				DB5DACC71DAF7AFA00D5F0B4 /* FileViewController.xib in Resources */,
 				DBD7CB2F1DAE0BB6004443A1 /* pic_1.jpg in Resources */,
+				DBC8D0291DB60BBF00B08ED4 /* PromiseViewController.xib in Resources */,
 				DBD7CB321DAE0BB6004443A1 /* pic_10.jpg in Resources */,
 				DBD7CB331DAE0BB6004443A1 /* pic_13.png in Resources */,
 				DBD7CB391DAE152C004443A1 /* testJson.json in Resources */,
@@ -569,6 +584,7 @@
 				DB24C33A1DA9D55D00019439 /* YHNetwork.swift in Sources */,
 				DB5DACBE1DAF72A800D5F0B4 /* TestTempViewController.swift in Sources */,
 				DB0B1AB91DACD6FC00891BAC /* DeviceInfoViewController.swift in Sources */,
+				DBC8D0281DB60BBF00B08ED4 /* PromiseViewController.swift in Sources */,
 				DB0B1A971DACCDFA00891BAC /* YHDeviceInfo.swift in Sources */,
 				DBD7CB3C1DAE17E5004443A1 /* YHGlobalVariable.swift in Sources */,
 				DBD7CB421DAE258F004443A1 /* NSString_ERect.swift in Sources */,
