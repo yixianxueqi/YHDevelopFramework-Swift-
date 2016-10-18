@@ -18,7 +18,13 @@
 		<key>className</key>
 		<string>FileViewController</string>
 		<key>title</key>
-		<string>File</string>
+		<string>file</string>
+	</dict>
+	<dict>
+		<key>className</key>
+		<string>SpringDemoViewController</string>
+		<key>title</key>
+		<string>spring</string>
 	</dict>
 	<dict>
 		<key>className</key>

@@ -13,7 +13,7 @@ let getDic = ["strDate":"2015-05-25","strRow":"1"]
 let postHttp = "https://httpbin.org/post"
 let postDic = ["foo": [1,2,3],"bar":["baz": "qux"]] as [String : Any]
 let download1 = "http://farm3.staticflickr.com/2831/9823890176_82b4165653_b_d.jpg"
-let upload = ""
+let upload = "https://httpbin.org/post"
 
 class HttpDemoViewController: BaseViewController {
     
@@ -24,7 +24,8 @@ class HttpDemoViewController: BaseViewController {
     
 //        getDemo()
 //        postDemo()
-        downloadDemo()
+//        downloadDemo()
+        uploadDemo()
     }
     // MARK: - GET
     func getDemo() {
@@ -68,7 +69,11 @@ class HttpDemoViewController: BaseViewController {
     }
     // MARK: - UPLOAD
     func uploadDemo() {
-        httpService.networkUploadRequest(upload, obj: "", progressHandle: { progress in
+        //此处会上传成功，但是返回的是image data,默认用的是responseJson解析的，所以会出现responseSerializationFailed
+        //改用response解析正常，考虑一般情况，默认使用responseJson解析
+        let imgData = UIImagePNGRepresentation(UIImage.loadLocalImage("111", type: ".png")!)
+//        let fileUrl = Bundle.main.url(forResource: "111", withExtension: ".png")
+        httpService.networkUploadRequest(upload, obj: imgData, progressHandle: { progress in
             log.debug("upload progress:\(progress)")
             }) { (isSuccess, result) in
                 if isSuccess {

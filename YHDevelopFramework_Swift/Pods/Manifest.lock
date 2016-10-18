@@ -1,6 +1,8 @@
 PODS:
   - Alamofire (4.0.1)
+  - IQKeyboardManagerSwift (4.0.6)
   - KeychainAccess (3.0.0)
+  - Spring (1.0.3)
   - SwiftyJSON (3.1.1)
   - XCGLogger (4.0.0):
     - XCGLogger/Core (= 4.0.0)
@@ -8,16 +10,30 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.0.1)
+  - IQKeyboardManagerSwift (= 4.0.6)
   - KeychainAccess (~> 3.0.0)
+  - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift3`)
   - SwiftyJSON (~> 3.1.0)
   - XCGLogger (~> 4.0.0)
 
+EXTERNAL SOURCES:
+  Spring:
+    :branch: swift3
+    :git: https://github.com/MengTo/Spring.git
+
+CHECKOUT OPTIONS:
+  Spring:
+    :commit: 3a9227c6e9157e7b47f5ac1ee5abab2a56b50002
+    :git: https://github.com/MengTo/Spring.git
+
 SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
+  IQKeyboardManagerSwift: b3015e819559ca76381f87a0833f44d178564603
   KeychainAccess: 412bf2650d9aebfc8135a58103b90ec38caad7f8
+  Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
   SwiftyJSON: f0be2e604f83e8405a624e9f891898bf6ed4e019
   XCGLogger: 38063ea89b4c8b23232d18efd2e12eb0005f3ea4
 
-PODFILE CHECKSUM: 53c796fc4b2be6591e7a18447d9b59abd2689680
+PODFILE CHECKSUM: e720ebe5931dcaf07b4c6691617474060d68e35e
 
 COCOAPODS: 1.1.0.beta.2
