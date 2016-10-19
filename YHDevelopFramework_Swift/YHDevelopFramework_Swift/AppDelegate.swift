@@ -22,6 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //键盘处理
         IQKeyboardManager.sharedManager().enable = true
         IQKeyboardManager.sharedManager().shouldResignOnTouchOutside = true
+        //网络监听
+        YHNetworkReachability.reachability.startListenNetwork()
         
         return true
     }

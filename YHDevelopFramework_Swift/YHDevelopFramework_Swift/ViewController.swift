@@ -26,6 +26,26 @@ class ViewController: BaseViewController,UITableViewDelegate,UITableViewDataSour
         tableView.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: "cell")
         tableView.reloadData()
         
+        networkChangeListener()
+    }
+    // MARK: - define
+    //监听网络变化
+    func networkChangeListener() {
+    
+        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: YHNotificationListener), object: nil, queue: nil) { status in
+            log.info("** network change:\(status.userInfo!["status"]!) **")
+            let sta = status.userInfo!["status"]! as! YHNetworkStatus
+            switch sta {
+            case YHNetworkStatus.unknown :
+                log.info(sta.rawValue)
+            case YHNetworkStatus.notReachable :
+                log.info(sta.rawValue)
+            case YHNetworkStatus.ethernetOrWiFi :
+                log.info(sta.rawValue)
+            case YHNetworkStatus.wwan :
+                log.info(sta.rawValue)
+            }
+        }
     }
     // MARK: - UITableViewDelegate,UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

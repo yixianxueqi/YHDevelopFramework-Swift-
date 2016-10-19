@@ -52,6 +52,7 @@
 		DBD7CB421DAE258F004443A1 /* NSString_ERect.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD7CB411DAE258F004443A1 /* NSString_ERect.swift */; };
 		DBD7CB441DAE307D004443A1 /* YHGlobalFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD7CB431DAE307D004443A1 /* YHGlobalFunc.swift */; };
 		DBD7CB461DAE30D5004443A1 /* NSDate_EStamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD7CB451DAE30D5004443A1 /* NSDate_EStamp.swift */; };
+		DBDF15131DB70BAC0072364A /* YHNetworkReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDF15121DB70BAC0072364A /* YHNetworkReachability.swift */; };
 		DBFA94621DA8F42B00A9098D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFA94611DA8F42B00A9098D /* BaseViewController.swift */; };
 		DBFA94671DA8F83900A9098D /* demo.plist in Resources */ = {isa = PBXBuildFile; fileRef = DBFA94661DA8F83900A9098D /* demo.plist */; };
 		DBFA94691DA8F87700A9098D /* HttpDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFA94681DA8F87700A9098D /* HttpDemoViewController.swift */; };
@@ -108,6 +109,7 @@
 		DBD7CB411DAE258F004443A1 /* NSString_ERect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSString_ERect.swift; sourceTree = "<group>"; };
 		DBD7CB431DAE307D004443A1 /* YHGlobalFunc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHGlobalFunc.swift; sourceTree = "<group>"; };
 		DBD7CB451DAE30D5004443A1 /* NSDate_EStamp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDate_EStamp.swift; sourceTree = "<group>"; };
+		DBDF15121DB70BAC0072364A /* YHNetworkReachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHNetworkReachability.swift; sourceTree = "<group>"; };
 		DBFA94611DA8F42B00A9098D /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		DBFA94661DA8F83900A9098D /* demo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = demo.plist; sourceTree = "<group>"; };
 		DBFA94681DA8F87700A9098D /* HttpDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpDemoViewController.swift; sourceTree = "<group>"; };
@@ -406,6 +408,7 @@
 			isa = PBXGroup;
 			children = (
 				DB24C3391DA9D55D00019439 /* YHNetwork.swift */,
+				DBDF15121DB70BAC0072364A /* YHNetworkReachability.swift */,
 			);
 			path = http;
 			sourceTree = "<group>";
@@ -596,6 +599,7 @@
 				DB5DACC21DAF74BC00D5F0B4 /* YHFileManger.swift in Sources */,
 				DB0B1ABD1DACEE4500891BAC /* UIColor_EColor.swift in Sources */,
 				DB5DACC61DAF7AFA00D5F0B4 /* FileViewController.swift in Sources */,
+				DBDF15131DB70BAC0072364A /* YHNetworkReachability.swift in Sources */,
 				DBD7CB461DAE30D5004443A1 /* NSDate_EStamp.swift in Sources */,
 				DB0A25C81DAB9A330047BA94 /* HttpBaseService.swift in Sources */,
 				DB0E25F61DA5392100618C5D /* AppDelegate.swift in Sources */,
