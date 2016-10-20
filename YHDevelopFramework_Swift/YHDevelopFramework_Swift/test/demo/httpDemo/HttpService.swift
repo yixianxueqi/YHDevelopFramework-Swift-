@@ -19,6 +19,8 @@ class HttpService: NSObject, HttpBaseService {
         let network = YHNetwork()
         network.header = [:]
         network.commonParam = ["":""]
+        network.isUseCache = true
+        network.isStoreCache = true
         return network
     }
     

@@ -16,16 +16,26 @@ enum HttpStreamType {
 
 class YHNetwork: NSObject {
     
-    static var baseURL: String?
-    static var timeOut: TimeInterval = 15.0
-    var header: HTTPHeaders?
-    var commonParam: Parameters?
+    static var baseURL: String?//http://ip:port
+    static var timeOut: TimeInterval = 15.0//超时
+    var header: HTTPHeaders?//请求头
+    var commonParam: Parameters?//公共参数
+    var isStoreCache: Bool = false//是否缓存
+    var isUseCache: Bool = false//是否使用缓存
     private let utilityQueue = DispatchQueue.global(qos: .utility)
     private let mainQueue = DispatchQueue.main
-    private var successAction: HttpResultHandle?
+    private let cache = YHURLCache.defaultCache
+    private var successAction: HttpResultHandle? {
+        didSet {
+            if isUseCache, let cacheResult = storeCacheResult {
+                successAction!(cacheResult.0,cacheResult.1)
+            }
+        }
+    }
     private var failureAction: HttpResultHandle?
     private var progressAction: HttpProgressHandle?
     private var sessionMnager: SessionManager?
+    private var storeCacheResult: (Bool,String)?
     
     override init() {
         
@@ -38,12 +48,29 @@ class YHNetwork: NSObject {
     @discardableResult
     func getRequest(url: String, parameter: Parameters? = nil) -> YHNetwork {
         
-        sessionMnager?.request(getRealUrl(url), method: .get, parameters: getRealParameters(parameter), headers: header)
+        let realUrl = getRealUrl(url)
+        let realParameters = getRealParameters(parameter)
+        var urlRequest: URLRequest?
+        do {
+            urlRequest = try URLRequest(url: realUrl, method:.get, headers: header)
+            urlRequest = try URLEncoding.default.encode(urlRequest!, with: realParameters)
+        } catch {
+            log.error("network get urlRequest error:\(error)")
+        }
+        //是否使用缓 && 缓存存在
+        if isUseCache, let json = useCache(urlRequest!) {
+            storeCacheResult = (true,json)
+            return self
+        }
+        sessionMnager?.request(realUrl, method: .get, parameters: realParameters, headers: header)
             .validate()
             .responseJSON(queue: utilityQueue) { (response) in
             switch response.result {
             case .success:
                 log.info("GET SUCCESS:\n\(response.request!)\n\(response.timeline)\n\(response.response!)\n\(response.result.value!)")
+                if self.isStoreCache {
+                    self.storeCacahe(urlRequest!, response: response.response!, data: response.data!)
+                }
                 self.mainQueue.async {
                     self.successAction?(true, response.result.value!)
                 }
@@ -60,12 +87,29 @@ class YHNetwork: NSObject {
     @discardableResult
     func postRequest(url: String, parameter: Parameters? = nil) -> YHNetwork {
     
-        sessionMnager?.request(getRealUrl(url), method: .post, parameters: getRealParameters(parameter), encoding: JSONEncoding.default, headers: header)
+        let realUrl = getRealUrl(url)
+        let realParameters = getRealParameters(parameter)
+        var urlRequest: URLRequest?
+        do {
+            let identifier = realUrl + String.init((realParameters! as NSDictionary).hashValue)
+            urlRequest = try URLRequest(url: identifier, method:.post, headers: header)
+        } catch {
+            log.error("network get urlRequest error:\(error)")
+        }
+        //是否使用缓存 && 缓存存在
+        if isUseCache, let json = useCache(urlRequest!) {
+            storeCacheResult = (true,json)
+            return self
+        }
+        sessionMnager?.request(realUrl, method: .post, parameters: realParameters, encoding: JSONEncoding.default, headers: header)
             .validate()
             .responseJSON { (response) in
             switch response.result {
             case .success:
                 log.info("POST SUCCESS:\n\(response.request!)\n\(response.timeline)\n\(response.response!)\n\(response.result.value!)")
+                if self.isStoreCache {
+                    self.storeCacahe(urlRequest!, response: response.response!, data: response.data!)
+                }
                 self.mainQueue.async {
                     self.successAction?(true, response.result.value!)
                 }
@@ -209,5 +253,20 @@ class YHNetwork: NSObject {
         configuration.httpAdditionalHeaders = SessionManager.defaultHTTPHeaders
         configuration.timeoutIntervalForRequest = YHNetwork.timeOut
         return SessionManager(configuration: configuration)
+    }
+    //是否使用缓存
+    private func useCache(_ request: URLRequest) -> String? {
+        let urlResponse = cache.cachedResponse(for: request)
+        if let data = urlResponse?.data {
+            log.info("use cache")
+            return JSON(data: data).rawString()
+        }
+        return nil
+    }
+    //是否缓存
+    private func storeCacahe(_ request: URLRequest,response: HTTPURLResponse, data: Data) {
+        log.info("store cache")
+        let urlResponse = CachedURLResponse.init(response: response, data: data)
+        cache.storeCachedResponse(urlResponse, for: request)
     }
 }

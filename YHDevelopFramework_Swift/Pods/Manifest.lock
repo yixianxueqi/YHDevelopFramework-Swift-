@@ -2,6 +2,7 @@ PODS:
   - Alamofire (4.0.1)
   - IQKeyboardManagerSwift (4.0.6)
   - KeychainAccess (3.0.0)
+  - Kingfisher (3.1.3)
   - PromiseKit (4.0.3):
     - PromiseKit/Foundation (= 4.0.3)
     - PromiseKit/QuartzCore (= 4.0.3)
@@ -23,6 +24,7 @@ DEPENDENCIES:
   - Alamofire (~> 4.0.1)
   - IQKeyboardManagerSwift (= 4.0.6)
   - KeychainAccess (~> 3.0.0)
+  - Kingfisher (~> 3.1.3)
   - PromiseKit (~> 4.0.3)
   - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift3`)
   - SwiftyJSON (~> 3.1.0)
@@ -42,11 +44,12 @@ SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
   IQKeyboardManagerSwift: b3015e819559ca76381f87a0833f44d178564603
   KeychainAccess: 412bf2650d9aebfc8135a58103b90ec38caad7f8
+  Kingfisher: 007f5851c18c81e7cc106c9cbac1bafea1cce5dc
   PromiseKit: dfe8fcc6445674fb23378d89990838c1cbdbf05a
   Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
   SwiftyJSON: f0be2e604f83e8405a624e9f891898bf6ed4e019
   XCGLogger: 38063ea89b4c8b23232d18efd2e12eb0005f3ea4
 
-PODFILE CHECKSUM: 86aba3b1881c5aedf746417a8d8e124afd806aa7
+PODFILE CHECKSUM: d304ac00b629eb22249e6d7de480200c878dc887
 
 COCOAPODS: 1.1.0.beta.2

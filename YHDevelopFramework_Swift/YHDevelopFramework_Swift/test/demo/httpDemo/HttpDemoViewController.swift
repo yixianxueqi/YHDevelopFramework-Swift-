@@ -23,9 +23,9 @@ class HttpDemoViewController: BaseViewController {
          super.viewDidLoad()
     
 //        getDemo()
-//        postDemo()
+        postDemo()
 //        downloadDemo()
-        uploadDemo()
+//        uploadDemo()
     }
     // MARK: - GET
     func getDemo() {
@@ -47,7 +47,7 @@ class HttpDemoViewController: BaseViewController {
     //post
     func postSuccessHandle(_ isSuccess: Bool, result: Any)  {
         if isSuccess {
-            log.info("POST SUCCESS")
+            log.info("POST SUCCESS:\(result)")
         } else {
             log.error("GET ERROR:\(result)")
         }
