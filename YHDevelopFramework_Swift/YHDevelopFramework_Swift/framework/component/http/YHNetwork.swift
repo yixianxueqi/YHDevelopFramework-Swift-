@@ -91,7 +91,12 @@ class YHNetwork: NSObject {
         let realParameters = getRealParameters(parameter)
         var urlRequest: URLRequest?
         do {
-            let identifier = realUrl + String.init((realParameters! as NSDictionary).hashValue)
+            var identifier: String!
+            if let realDic = realParameters {
+                identifier = realUrl + String.init((realDic as NSDictionary).hashValue)
+            } else {
+                identifier = realUrl
+            }
             urlRequest = try URLRequest(url: identifier, method:.post, headers: header)
         } catch {
             log.error("network get urlRequest error:\(error)")
