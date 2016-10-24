@@ -32,6 +32,9 @@
 		DB5DACC21DAF74BC00D5F0B4 /* YHFileManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5DACC11DAF74BC00D5F0B4 /* YHFileManger.swift */; };
 		DB5DACC61DAF7AFA00D5F0B4 /* FileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5DACC41DAF7AFA00D5F0B4 /* FileViewController.swift */; };
 		DB5DACC71DAF7AFA00D5F0B4 /* FileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB5DACC51DAF7AFA00D5F0B4 /* FileViewController.xib */; };
+		DB629D631DBB6D80006A642A /* YHWaterFallLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB629D621DBB6D80006A642A /* YHWaterFallLayout.swift */; };
+		DB629D671DBB6DB3006A642A /* WaterFallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB629D651DBB6DB3006A642A /* WaterFallViewController.swift */; };
+		DB629D681DBB6DB3006A642A /* WaterFallViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB629D661DBB6DB3006A642A /* WaterFallViewController.xib */; };
 		DBC8D0231DB5CA5400B08ED4 /* SpringDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC8D0211DB5CA5400B08ED4 /* SpringDemoViewController.swift */; };
 		DBC8D0241DB5CA5400B08ED4 /* SpringDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBC8D0221DB5CA5400B08ED4 /* SpringDemoViewController.xib */; };
 		DBC8D0281DB60BBF00B08ED4 /* PromiseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC8D0261DB60BBF00B08ED4 /* PromiseViewController.swift */; };
@@ -88,6 +91,9 @@
 		DB5DACC11DAF74BC00D5F0B4 /* YHFileManger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHFileManger.swift; sourceTree = "<group>"; };
 		DB5DACC41DAF7AFA00D5F0B4 /* FileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileViewController.swift; sourceTree = "<group>"; };
 		DB5DACC51DAF7AFA00D5F0B4 /* FileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FileViewController.xib; sourceTree = "<group>"; };
+		DB629D621DBB6D80006A642A /* YHWaterFallLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHWaterFallLayout.swift; sourceTree = "<group>"; };
+		DB629D651DBB6DB3006A642A /* WaterFallViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaterFallViewController.swift; sourceTree = "<group>"; };
+		DB629D661DBB6DB3006A642A /* WaterFallViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WaterFallViewController.xib; sourceTree = "<group>"; };
 		DBC8D0211DB5CA5400B08ED4 /* SpringDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringDemoViewController.swift; sourceTree = "<group>"; };
 		DBC8D0221DB5CA5400B08ED4 /* SpringDemoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpringDemoViewController.xib; sourceTree = "<group>"; };
 		DBC8D0261DB60BBF00B08ED4 /* PromiseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromiseViewController.swift; sourceTree = "<group>"; };
@@ -235,6 +241,7 @@
 		DB0E26081DA5396500618C5D /* framework */ = {
 			isa = PBXGroup;
 			children = (
+				DBCE0CE61DBB573900A84358 /* subClass */,
 				DBD7CB3A1DAE17BD004443A1 /* global */,
 				DB0B1ABB1DACEE0800891BAC /* extension */,
 				DB0B1A911DACCBE600891BAC /* thirdParts */,
@@ -333,6 +340,23 @@
 			path = fileDemo;
 			sourceTree = "<group>";
 		};
+		DB629D611DBB6D5F006A642A /* collectionLayout */ = {
+			isa = PBXGroup;
+			children = (
+				DB629D621DBB6D80006A642A /* YHWaterFallLayout.swift */,
+			);
+			path = collectionLayout;
+			sourceTree = "<group>";
+		};
+		DB629D641DBB6D8A006A642A /* waterFallDemo */ = {
+			isa = PBXGroup;
+			children = (
+				DB629D651DBB6DB3006A642A /* WaterFallViewController.swift */,
+				DB629D661DBB6DB3006A642A /* WaterFallViewController.xib */,
+			);
+			path = waterFallDemo;
+			sourceTree = "<group>";
+		};
 		DBC8D0201DB5CA1500B08ED4 /* springDemo */ = {
 			isa = PBXGroup;
 			children = (
@@ -349,6 +373,14 @@
 				DBC8D0271DB60BBF00B08ED4 /* PromiseViewController.xib */,
 			);
 			path = promiseDemo;
+			sourceTree = "<group>";
+		};
+		DBCE0CE61DBB573900A84358 /* subClass */ = {
+			isa = PBXGroup;
+			children = (
+				DB629D611DBB6D5F006A642A /* collectionLayout */,
+			);
+			path = subClass;
 			sourceTree = "<group>";
 		};
 		DBD7CB3A1DAE17BD004443A1 /* global */ = {
@@ -416,6 +448,7 @@
 		DBFA94641DA8F7F000A9098D /* demo */ = {
 			isa = PBXGroup;
 			children = (
+				DB629D641DBB6D8A006A642A /* waterFallDemo */,
 				DBC8D0251DB60B8A00B08ED4 /* promiseDemo */,
 				DBC8D0201DB5CA1500B08ED4 /* springDemo */,
 				DB5DACC31DAF7AC700D5F0B4 /* fileDemo */,
@@ -507,6 +540,7 @@
 				DB5DACB81DAF606E00D5F0B4 /* 111.png in Resources */,
 				DB0B1ABA1DACD6FC00891BAC /* DeviceInfoViewController.xib in Resources */,
 				DB24C3431DA9E7DB00019439 /* HttpDemoViewController.xib in Resources */,
+				DB629D681DBB6DB3006A642A /* WaterFallViewController.xib in Resources */,
 				DB0E26001DA5392100618C5D /* LaunchScreen.storyboard in Resources */,
 				DBC8D0241DB5CA5400B08ED4 /* SpringDemoViewController.xib in Resources */,
 				DBFA94671DA8F83900A9098D /* demo.plist in Resources */,
@@ -594,10 +628,12 @@
 				DB0B1A941DACCC2700891BAC /* SwiftyJSON.swift in Sources */,
 				DBFA94691DA8F87700A9098D /* HttpDemoViewController.swift in Sources */,
 				DBD7CB371DAE0F6F004443A1 /* NSArray_ELoad.swift in Sources */,
+				DB629D671DBB6DB3006A642A /* WaterFallViewController.swift in Sources */,
 				DB24DDE41DA894EF003F1741 /* YHLogger.swift in Sources */,
 				DB0A25C61DAB35B70047BA94 /* BaseService.swift in Sources */,
 				DB5DACC21DAF74BC00D5F0B4 /* YHFileManger.swift in Sources */,
 				DB0B1ABD1DACEE4500891BAC /* UIColor_EColor.swift in Sources */,
+				DB629D631DBB6D80006A642A /* YHWaterFallLayout.swift in Sources */,
 				DBDF15151DB74AD40072364A /* YHURLCache.swift in Sources */,
 				DB5DACC61DAF7AFA00D5F0B4 /* FileViewController.swift in Sources */,
 				DBDF15131DB70BAC0072364A /* YHNetworkReachability.swift in Sources */,

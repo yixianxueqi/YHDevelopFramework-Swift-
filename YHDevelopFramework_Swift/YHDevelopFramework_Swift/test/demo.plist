@@ -34,6 +34,12 @@
 	</dict>
 	<dict>
 		<key>className</key>
+		<string>WaterFallViewController</string>
+		<key>title</key>
+		<string>fallLayout</string>
+	</dict>
+	<dict>
+		<key>className</key>
 		<string>TestTempViewController</string>
 		<key>title</key>
 		<string>Test</string>
