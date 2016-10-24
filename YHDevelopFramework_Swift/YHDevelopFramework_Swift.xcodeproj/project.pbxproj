@@ -243,6 +243,7 @@
 		DB0E26081DA5396500618C5D /* framework */ = {
 			isa = PBXGroup;
 			children = (
+				DB286AC31DBE02E400BC7EAF /* viewContent */,
 				DBCE0CE61DBB573900A84358 /* subClass */,
 				DBD7CB3A1DAE17BD004443A1 /* global */,
 				DB0B1ABB1DACEE0800891BAC /* extension */,
@@ -314,6 +315,13 @@
 				DB24DDE31DA894EF003F1741 /* YHLogger.swift */,
 			);
 			path = logger;
+			sourceTree = "<group>";
+		};
+		DB286AC31DBE02E400BC7EAF /* viewContent */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = viewContent;
 			sourceTree = "<group>";
 		};
 		DB5DACBB1DAF727E00D5F0B4 /* testTempDemo */ = {
