@@ -35,6 +35,7 @@
 		DB629D631DBB6D80006A642A /* YHWaterFallLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB629D621DBB6D80006A642A /* YHWaterFallLayout.swift */; };
 		DB629D671DBB6DB3006A642A /* WaterFallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB629D651DBB6DB3006A642A /* WaterFallViewController.swift */; };
 		DB629D681DBB6DB3006A642A /* WaterFallViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB629D661DBB6DB3006A642A /* WaterFallViewController.xib */; };
+		DBA2DA051DBDA5ED00CCCCB5 /* YHPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA2DA041DBDA5ED00CCCCB5 /* YHPageControl.swift */; };
 		DBC8D0231DB5CA5400B08ED4 /* SpringDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC8D0211DB5CA5400B08ED4 /* SpringDemoViewController.swift */; };
 		DBC8D0241DB5CA5400B08ED4 /* SpringDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBC8D0221DB5CA5400B08ED4 /* SpringDemoViewController.xib */; };
 		DBC8D0281DB60BBF00B08ED4 /* PromiseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC8D0261DB60BBF00B08ED4 /* PromiseViewController.swift */; };
@@ -94,6 +95,7 @@
 		DB629D621DBB6D80006A642A /* YHWaterFallLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHWaterFallLayout.swift; sourceTree = "<group>"; };
 		DB629D651DBB6DB3006A642A /* WaterFallViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaterFallViewController.swift; sourceTree = "<group>"; };
 		DB629D661DBB6DB3006A642A /* WaterFallViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WaterFallViewController.xib; sourceTree = "<group>"; };
+		DBA2DA041DBDA5ED00CCCCB5 /* YHPageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHPageControl.swift; sourceTree = "<group>"; };
 		DBC8D0211DB5CA5400B08ED4 /* SpringDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringDemoViewController.swift; sourceTree = "<group>"; };
 		DBC8D0221DB5CA5400B08ED4 /* SpringDemoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpringDemoViewController.xib; sourceTree = "<group>"; };
 		DBC8D0261DB60BBF00B08ED4 /* PromiseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromiseViewController.swift; sourceTree = "<group>"; };
@@ -357,6 +359,14 @@
 			path = waterFallDemo;
 			sourceTree = "<group>";
 		};
+		DBA2DA031DBDA59400CCCCB5 /* pageControl */ = {
+			isa = PBXGroup;
+			children = (
+				DBA2DA041DBDA5ED00CCCCB5 /* YHPageControl.swift */,
+			);
+			path = pageControl;
+			sourceTree = "<group>";
+		};
 		DBC8D0201DB5CA1500B08ED4 /* springDemo */ = {
 			isa = PBXGroup;
 			children = (
@@ -378,6 +388,7 @@
 		DBCE0CE61DBB573900A84358 /* subClass */ = {
 			isa = PBXGroup;
 			children = (
+				DBA2DA031DBDA59400CCCCB5 /* pageControl */,
 				DB629D611DBB6D5F006A642A /* collectionLayout */,
 			);
 			path = subClass;
@@ -620,6 +631,7 @@
 				DBD7CB3E1DAE1E94004443A1 /* UIView_EAssist.swift in Sources */,
 				DB24C33A1DA9D55D00019439 /* YHNetwork.swift in Sources */,
 				DB5DACBE1DAF72A800D5F0B4 /* TestTempViewController.swift in Sources */,
+				DBA2DA051DBDA5ED00CCCCB5 /* YHPageControl.swift in Sources */,
 				DB0B1AB91DACD6FC00891BAC /* DeviceInfoViewController.swift in Sources */,
 				DBC8D0281DB60BBF00B08ED4 /* PromiseViewController.swift in Sources */,
 				DB0B1A971DACCDFA00891BAC /* YHDeviceInfo.swift in Sources */,
