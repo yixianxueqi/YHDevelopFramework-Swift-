@@ -34,6 +34,9 @@ class WaterFallViewController: BaseViewController, YHWaterFallLayoutDelegate, UI
         layout.minimumInteritemSpacing = 8
         layout.scrollDirection = UICollectionViewScrollDirection.vertical
         layout.sectionInset = UIEdgeInsets.init(top: 16, left: 16, bottom: 16, right: 16)
+        if #available(iOS 10.0, *) {
+            collectionView?.isPrefetchingEnabled = false
+        }
         collectionView?.delegate = self
         collectionView?.dataSource = self
         collectionView?.backgroundColor = UIColor.white
