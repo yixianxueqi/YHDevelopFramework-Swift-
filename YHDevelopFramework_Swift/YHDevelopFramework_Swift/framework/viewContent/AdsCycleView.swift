@@ -49,10 +49,6 @@ class AdsCycleView: UIView, UIScrollViewDelegate {
         super.init(coder: aDecoder)
     }
     // MARK: - method
-    //更新视图，完成视图布局
-    func updateView() {
-        customView()
-    }
     //添加广告词
     func customAdsStringList(_ strList: [String]) {
         adsStringList = strList
@@ -134,6 +130,7 @@ class AdsCycleView: UIView, UIScrollViewDelegate {
         //无限循环轮播，需要n+2张，即首尾各加一张
         imageViewList.insert(tempList.last!, at: 0)
         imageViewList.append(tempList.first!)
+        customView()
     }
     //布局界面
     private func customView() {
@@ -226,6 +223,7 @@ class AdsCycleView: UIView, UIScrollViewDelegate {
         scView.bounces = false
         scView.isPagingEnabled = true
         scView.showsHorizontalScrollIndicator = false
+        scView.showsVerticalScrollIndicator = false
         scView.delegate = self
         return scView
     }

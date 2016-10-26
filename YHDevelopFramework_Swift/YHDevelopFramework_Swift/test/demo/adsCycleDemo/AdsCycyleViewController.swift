@@ -36,7 +36,6 @@ class AdsCycyleViewController: BaseViewController {
         let adsView = AdsCycleView.init(frame: CGRect.init(x: 0, y: 100, width: UIView.screenWidth, height: 200), imageList: imgList)
         view.addSubview(adsView)
         adsView.backgroundColor = UIColor.gray
-        adsView.updateView()
         adsView.customAdsStringList(["时就开始的煎熬了快乐的撒娇的","实打实基督教阿克苏的杰拉德卡加大了肯德基圣诞节阿拉丁进垃圾堆里劳动纪律","是大家都就拉开机读卡机大垃圾袋垃圾了到家了就睡啦到家啦九点多就撒了","","说就打开就大了就打开了的骄傲了解到垃圾坑的垃圾涉及到卡萨看来大家拉斯加大量的煎熬了解到撒娇大李经理"])
         adsView.customPageControl(pageControl, .left)
         adsView.startAutoCycle()
