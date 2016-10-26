@@ -17,3 +17,10 @@ func YHLog<T>(_ message: T, file: String = #file,funcName: String = #function, l
     #endif
     
 }
+//延时执行
+func dispatch_after(_ seconds: Double, execute: @escaping (Void)->Void) {
+
+    let delay = DispatchTime.now() + Double(seconds)
+    DispatchQueue.main.asyncAfter(deadline: delay, execute: execute)
+}
+

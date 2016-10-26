@@ -84,7 +84,9 @@ class YHPageControl: UIControl {
     //点击响应事件及回调
     @objc private func clickBtn(_ btn: YHButton) {
         currentPage = (btn.tag - 1)
-        clickFunc!(btn.tag - 1)
+        if clickFunc != nil {
+            clickFunc!(btn.tag - 1)            
+        }
     }
     private func setSelectItem(_ index: Int) {
         subViewList[index].isSelected = true

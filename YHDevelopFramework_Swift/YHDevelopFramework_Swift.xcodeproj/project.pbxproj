@@ -36,6 +36,8 @@
 		DB629D631DBB6D80006A642A /* YHWaterFallLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB629D621DBB6D80006A642A /* YHWaterFallLayout.swift */; };
 		DB629D671DBB6DB3006A642A /* WaterFallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB629D651DBB6DB3006A642A /* WaterFallViewController.swift */; };
 		DB629D681DBB6DB3006A642A /* WaterFallViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB629D661DBB6DB3006A642A /* WaterFallViewController.xib */; };
+		DB6C92A31DBF460E006AB9FE /* AdsCycyleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C92A11DBF460E006AB9FE /* AdsCycyleViewController.swift */; };
+		DB6C92A41DBF460E006AB9FE /* AdsCycyleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB6C92A21DBF460E006AB9FE /* AdsCycyleViewController.xib */; };
 		DBA2DA051DBDA5ED00CCCCB5 /* YHPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA2DA041DBDA5ED00CCCCB5 /* YHPageControl.swift */; };
 		DBC8D0231DB5CA5400B08ED4 /* SpringDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC8D0211DB5CA5400B08ED4 /* SpringDemoViewController.swift */; };
 		DBC8D0241DB5CA5400B08ED4 /* SpringDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBC8D0221DB5CA5400B08ED4 /* SpringDemoViewController.xib */; };
@@ -43,10 +45,10 @@
 		DBC8D0291DB60BBF00B08ED4 /* PromiseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBC8D0271DB60BBF00B08ED4 /* PromiseViewController.xib */; };
 		DBD7CB291DAE0920004443A1 /* UIImage_ELoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD7CB281DAE0920004443A1 /* UIImage_ELoad.swift */; };
 		DBD7CB2F1DAE0BB6004443A1 /* pic_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DBD7CB2A1DAE0BB6004443A1 /* pic_1.jpg */; };
-		DBD7CB301DAE0BB6004443A1 /* pic_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DBD7CB2B1DAE0BB6004443A1 /* pic_4.jpg */; };
-		DBD7CB311DAE0BB6004443A1 /* pic_6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DBD7CB2C1DAE0BB6004443A1 /* pic_6.jpg */; };
-		DBD7CB321DAE0BB6004443A1 /* pic_10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DBD7CB2D1DAE0BB6004443A1 /* pic_10.jpg */; };
-		DBD7CB331DAE0BB6004443A1 /* pic_13.png in Resources */ = {isa = PBXBuildFile; fileRef = DBD7CB2E1DAE0BB6004443A1 /* pic_13.png */; };
+		DBD7CB301DAE0BB6004443A1 /* pic_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DBD7CB2B1DAE0BB6004443A1 /* pic_2.jpg */; };
+		DBD7CB311DAE0BB6004443A1 /* pic_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DBD7CB2C1DAE0BB6004443A1 /* pic_3.jpg */; };
+		DBD7CB321DAE0BB6004443A1 /* pic_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DBD7CB2D1DAE0BB6004443A1 /* pic_4.jpg */; };
+		DBD7CB331DAE0BB6004443A1 /* pic_5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DBD7CB2E1DAE0BB6004443A1 /* pic_5.jpg */; };
 		DBD7CB351DAE0C84004443A1 /* NSDictionary_ELoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD7CB341DAE0C84004443A1 /* NSDictionary_ELoad.swift */; };
 		DBD7CB371DAE0F6F004443A1 /* NSArray_ELoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD7CB361DAE0F6F004443A1 /* NSArray_ELoad.swift */; };
 		DBD7CB391DAE152C004443A1 /* testJson.json in Resources */ = {isa = PBXBuildFile; fileRef = DBD7CB381DAE152C004443A1 /* testJson.json */; };
@@ -97,6 +99,8 @@
 		DB629D621DBB6D80006A642A /* YHWaterFallLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHWaterFallLayout.swift; sourceTree = "<group>"; };
 		DB629D651DBB6DB3006A642A /* WaterFallViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaterFallViewController.swift; sourceTree = "<group>"; };
 		DB629D661DBB6DB3006A642A /* WaterFallViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WaterFallViewController.xib; sourceTree = "<group>"; };
+		DB6C92A11DBF460E006AB9FE /* AdsCycyleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdsCycyleViewController.swift; sourceTree = "<group>"; };
+		DB6C92A21DBF460E006AB9FE /* AdsCycyleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdsCycyleViewController.xib; sourceTree = "<group>"; };
 		DBA2DA041DBDA5ED00CCCCB5 /* YHPageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHPageControl.swift; sourceTree = "<group>"; };
 		DBC8D0211DB5CA5400B08ED4 /* SpringDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringDemoViewController.swift; sourceTree = "<group>"; };
 		DBC8D0221DB5CA5400B08ED4 /* SpringDemoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpringDemoViewController.xib; sourceTree = "<group>"; };
@@ -105,10 +109,10 @@
 		DBD7CB271DADE11A004443A1 /* YHDevelopFramework_Swift.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = YHDevelopFramework_Swift.entitlements; sourceTree = "<group>"; };
 		DBD7CB281DAE0920004443A1 /* UIImage_ELoad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage_ELoad.swift; sourceTree = "<group>"; };
 		DBD7CB2A1DAE0BB6004443A1 /* pic_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pic_1.jpg; sourceTree = "<group>"; };
-		DBD7CB2B1DAE0BB6004443A1 /* pic_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pic_4.jpg; sourceTree = "<group>"; };
-		DBD7CB2C1DAE0BB6004443A1 /* pic_6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pic_6.jpg; sourceTree = "<group>"; };
-		DBD7CB2D1DAE0BB6004443A1 /* pic_10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pic_10.jpg; sourceTree = "<group>"; };
-		DBD7CB2E1DAE0BB6004443A1 /* pic_13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pic_13.png; sourceTree = "<group>"; };
+		DBD7CB2B1DAE0BB6004443A1 /* pic_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pic_2.jpg; sourceTree = "<group>"; };
+		DBD7CB2C1DAE0BB6004443A1 /* pic_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pic_3.jpg; sourceTree = "<group>"; };
+		DBD7CB2D1DAE0BB6004443A1 /* pic_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pic_4.jpg; sourceTree = "<group>"; };
+		DBD7CB2E1DAE0BB6004443A1 /* pic_5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pic_5.jpg; sourceTree = "<group>"; };
 		DBD7CB341DAE0C84004443A1 /* NSDictionary_ELoad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDictionary_ELoad.swift; sourceTree = "<group>"; };
 		DBD7CB361DAE0F6F004443A1 /* NSArray_ELoad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSArray_ELoad.swift; sourceTree = "<group>"; };
 		DBD7CB381DAE152C004443A1 /* testJson.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testJson.json; sourceTree = "<group>"; };
@@ -282,10 +286,10 @@
 			children = (
 				DB5DACB71DAF606E00D5F0B4 /* 111.png */,
 				DBD7CB2A1DAE0BB6004443A1 /* pic_1.jpg */,
-				DBD7CB2B1DAE0BB6004443A1 /* pic_4.jpg */,
-				DBD7CB2C1DAE0BB6004443A1 /* pic_6.jpg */,
-				DBD7CB2D1DAE0BB6004443A1 /* pic_10.jpg */,
-				DBD7CB2E1DAE0BB6004443A1 /* pic_13.png */,
+				DBD7CB2B1DAE0BB6004443A1 /* pic_2.jpg */,
+				DBD7CB2C1DAE0BB6004443A1 /* pic_3.jpg */,
+				DBD7CB2D1DAE0BB6004443A1 /* pic_4.jpg */,
+				DBD7CB2E1DAE0BB6004443A1 /* pic_5.jpg */,
 				DB0E25FC1DA5392100618C5D /* Assets.xcassets */,
 				DBD7CB381DAE152C004443A1 /* testJson.json */,
 			);
@@ -368,6 +372,15 @@
 				DB629D661DBB6DB3006A642A /* WaterFallViewController.xib */,
 			);
 			path = waterFallDemo;
+			sourceTree = "<group>";
+		};
+		DB6C92A01DBF45D4006AB9FE /* adsCycleDemo */ = {
+			isa = PBXGroup;
+			children = (
+				DB6C92A11DBF460E006AB9FE /* AdsCycyleViewController.swift */,
+				DB6C92A21DBF460E006AB9FE /* AdsCycyleViewController.xib */,
+			);
+			path = adsCycleDemo;
 			sourceTree = "<group>";
 		};
 		DBA2DA031DBDA59400CCCCB5 /* pageControl */ = {
@@ -470,6 +483,7 @@
 		DBFA94641DA8F7F000A9098D /* demo */ = {
 			isa = PBXGroup;
 			children = (
+				DB6C92A01DBF45D4006AB9FE /* adsCycleDemo */,
 				DB629D641DBB6D8A006A642A /* waterFallDemo */,
 				DBC8D0251DB60B8A00B08ED4 /* promiseDemo */,
 				DBC8D0201DB5CA1500B08ED4 /* springDemo */,
@@ -561,6 +575,7 @@
 			files = (
 				DB5DACB81DAF606E00D5F0B4 /* 111.png in Resources */,
 				DB0B1ABA1DACD6FC00891BAC /* DeviceInfoViewController.xib in Resources */,
+				DB6C92A41DBF460E006AB9FE /* AdsCycyleViewController.xib in Resources */,
 				DB24C3431DA9E7DB00019439 /* HttpDemoViewController.xib in Resources */,
 				DB629D681DBB6DB3006A642A /* WaterFallViewController.xib in Resources */,
 				DB0E26001DA5392100618C5D /* LaunchScreen.storyboard in Resources */,
@@ -569,14 +584,14 @@
 				DB5DACC71DAF7AFA00D5F0B4 /* FileViewController.xib in Resources */,
 				DBD7CB2F1DAE0BB6004443A1 /* pic_1.jpg in Resources */,
 				DBC8D0291DB60BBF00B08ED4 /* PromiseViewController.xib in Resources */,
-				DBD7CB321DAE0BB6004443A1 /* pic_10.jpg in Resources */,
-				DBD7CB331DAE0BB6004443A1 /* pic_13.png in Resources */,
+				DBD7CB321DAE0BB6004443A1 /* pic_4.jpg in Resources */,
+				DBD7CB331DAE0BB6004443A1 /* pic_5.jpg in Resources */,
 				DBD7CB391DAE152C004443A1 /* testJson.json in Resources */,
-				DBD7CB311DAE0BB6004443A1 /* pic_6.jpg in Resources */,
+				DBD7CB311DAE0BB6004443A1 /* pic_3.jpg in Resources */,
 				DB0E25FD1DA5392100618C5D /* Assets.xcassets in Resources */,
 				DB0E25FB1DA5392100618C5D /* Main.storyboard in Resources */,
 				DB5DACBF1DAF72A800D5F0B4 /* TestTempViewController.xib in Resources */,
-				DBD7CB301DAE0BB6004443A1 /* pic_4.jpg in Resources */,
+				DBD7CB301DAE0BB6004443A1 /* pic_2.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -659,6 +674,7 @@
 				DB0B1ABD1DACEE4500891BAC /* UIColor_EColor.swift in Sources */,
 				DB629D631DBB6D80006A642A /* YHWaterFallLayout.swift in Sources */,
 				DBDF15151DB74AD40072364A /* YHURLCache.swift in Sources */,
+				DB6C92A31DBF460E006AB9FE /* AdsCycyleViewController.swift in Sources */,
 				DB5DACC61DAF7AFA00D5F0B4 /* FileViewController.swift in Sources */,
 				DBDF15131DB70BAC0072364A /* YHNetworkReachability.swift in Sources */,
 				DBD7CB461DAE30D5004443A1 /* NSDate_EStamp.swift in Sources */,
