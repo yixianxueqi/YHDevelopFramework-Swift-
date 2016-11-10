@@ -1,38 +1,38 @@
 PODS:
   - Alamofire (4.0.1)
-  - IQKeyboardManagerSwift (4.0.6)
-  - KeychainAccess (3.0.0)
-  - Kingfisher (3.1.3)
-  - PromiseKit (4.0.3):
-    - PromiseKit/Foundation (= 4.0.3)
-    - PromiseKit/QuartzCore (= 4.0.3)
-    - PromiseKit/UIKit (= 4.0.3)
-  - PromiseKit/CorePromise (4.0.3)
-  - PromiseKit/Foundation (4.0.3):
+  - IQKeyboardManagerSwift (4.0.7)
+  - KeychainAccess (3.0.1)
+  - Kingfisher (3.1.4)
+  - PromiseKit (4.0.4):
+    - PromiseKit/Foundation (= 4.0.4)
+    - PromiseKit/QuartzCore (= 4.0.4)
+    - PromiseKit/UIKit (= 4.0.4)
+  - PromiseKit/CorePromise (4.0.4)
+  - PromiseKit/Foundation (4.0.4):
     - PromiseKit/CorePromise
-  - PromiseKit/QuartzCore (4.0.3):
+  - PromiseKit/QuartzCore (4.0.4):
     - PromiseKit/CorePromise
-  - PromiseKit/UIKit (4.0.3):
+  - PromiseKit/UIKit (4.0.4):
     - PromiseKit/CorePromise
   - Spring (1.0.3)
   - SQLite.swift (0.11.0):
     - SQLite.swift/standard (= 0.11.0)
   - SQLite.swift/standard (0.11.0)
-  - SwiftyJSON (3.1.0)
+  - SwiftyJSON (3.1.1)
   - XCGLogger (4.0.0):
     - XCGLogger/Core (= 4.0.0)
   - XCGLogger/Core (4.0.0)
 
 DEPENDENCIES:
-  - Alamofire (= 4.0.1)
-  - IQKeyboardManagerSwift (= 4.0.6)
-  - KeychainAccess (= 3.0.0)
-  - Kingfisher (= 3.1.3)
-  - PromiseKit (= 4.0.3)
+  - Alamofire (~> 4.0.1)
+  - IQKeyboardManagerSwift (~> 4.0.6)
+  - KeychainAccess (~> 3.0.0)
+  - Kingfisher (~> 3.1.3)
+  - PromiseKit (~> 4.0.3)
   - Spring (from `https://github.com/MengTo/Spring.git`, branch `swift3`)
-  - SQLite.swift (= 0.11.0)
-  - SwiftyJSON (= 3.1.0)
-  - XCGLogger (= 4.0.0)
+  - SQLite.swift (~> 0.11.0)
+  - SwiftyJSON (~> 3.1.0)
+  - XCGLogger (~> 4.0.0)
 
 EXTERNAL SOURCES:
   Spring:
@@ -46,15 +46,15 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
-  IQKeyboardManagerSwift: b3015e819559ca76381f87a0833f44d178564603
-  KeychainAccess: 412bf2650d9aebfc8135a58103b90ec38caad7f8
-  Kingfisher: 007f5851c18c81e7cc106c9cbac1bafea1cce5dc
-  PromiseKit: dfe8fcc6445674fb23378d89990838c1cbdbf05a
+  IQKeyboardManagerSwift: 58bbcf46b5cf9fd4ed625d28a60cb2fbae4ab0f4
+  KeychainAccess: 017ea25e313a49eda10bb19b0bb0760fb1edfe1a
+  Kingfisher: 6c67e3e57f2d81a9cfdfa25052cd86f33ceac9bb
+  PromiseKit: 8e8ee39d33ff199d92a1a883b5396f6285be6c91
   Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
   SQLite.swift: 9a26273607d3077a2e5a8d33486e9989f8404c7d
-  SwiftyJSON: 29b9f2a64f118c07e691667c2ba1efe536acfe0b
+  SwiftyJSON: f0be2e604f83e8405a624e9f891898bf6ed4e019
   XCGLogger: 38063ea89b4c8b23232d18efd2e12eb0005f3ea4
 
-PODFILE CHECKSUM: 068adc568faf2a8b7523bbde5b2d92b68fd57bac
+PODFILE CHECKSUM: d5b5eccf898001c6956945145eebb95806b74518
 
 COCOAPODS: 1.1.0.rc.3

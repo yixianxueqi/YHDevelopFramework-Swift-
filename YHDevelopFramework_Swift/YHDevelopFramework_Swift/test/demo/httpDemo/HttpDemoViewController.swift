@@ -73,7 +73,7 @@ class HttpDemoViewController: BaseViewController {
         //改用response解析正常，考虑一般情况，默认使用responseJson解析
         let imgData = UIImagePNGRepresentation(UIImage.loadLocalImage("111", type: ".png")!)
 //        let fileUrl = Bundle.main.url(forResource: "111", withExtension: ".png")
-        httpService.networkUploadRequest(upload, obj: imgData, progressHandle: { progress in
+        httpService.networkUploadRequest(upload, obj: imgData!, progressHandle: { progress in
             log.debug("upload progress:\(progress)")
             }) { (isSuccess, result) in
                 if isSuccess {

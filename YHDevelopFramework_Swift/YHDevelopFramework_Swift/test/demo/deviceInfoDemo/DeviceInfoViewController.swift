@@ -13,7 +13,7 @@ class DeviceInfoViewController: BaseViewController,UITableViewDelegate,UITableVi
     @IBOutlet weak var tableView: UITableView!
     var list: [NSDictionary] {
     
-        return [["appName":YHDeviceInfo.appName],["bundleIdentifier":YHDeviceInfo.bundleIdentifier],["appVersion":YHDeviceInfo.appVersion],["appBuildVersion":YHDeviceInfo.appBuildVersion],["uuid":YHDeviceInfo.uuid],["deviceSerialNum":YHDeviceInfo.deviceSerialNum],["deviceNameDefineByUser":YHDeviceInfo.deviceNameDefineByUser],["deviceName":YHDeviceInfo.deviceName],["deviceSystemVersion":YHDeviceInfo.deviceSystemVersion],["deviceModel":YHDeviceInfo.deviceModel],["deviceLocalModel":YHDeviceInfo.deviceLocalModel],["operatorInfo":YHDeviceInfo.operatorInfo],["batteryState":YHDeviceInfo.batteryState],["batteryLevel":YHDeviceInfo.batteryLevel]]
+        return [["appName":YHDeviceInfo.appName!],["bundleIdentifier":YHDeviceInfo.bundleIdentifier!],["appVersion":YHDeviceInfo.appVersion!],["appBuildVersion":YHDeviceInfo.appBuildVersion!],["uuid":YHDeviceInfo.uuid!],["deviceSerialNum":YHDeviceInfo.deviceSerialNum!],["deviceNameDefineByUser":YHDeviceInfo.deviceNameDefineByUser!],["deviceName":YHDeviceInfo.deviceName!],["deviceSystemVersion":YHDeviceInfo.deviceSystemVersion!],["deviceModel":YHDeviceInfo.deviceModel!],["deviceLocalModel":YHDeviceInfo.deviceLocalModel!],["operatorInfo":YHDeviceInfo.operatorInfo!],["batteryState":YHDeviceInfo.batteryState],["batteryLevel":YHDeviceInfo.batteryLevel]]
     }
     
     override func viewDidLoad() {

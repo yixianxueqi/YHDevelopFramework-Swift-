@@ -158,9 +158,9 @@ class YHNetwork: NSObject {
                 }
                 .response(queue: mainQueue) { response in
                     if response.error != nil {
-                        self.failureAction?(false, response.error)
+                        self.failureAction?(false, response.error!)
                     } else {
-                        self.successAction?(true,response.destinationURL?.path)
+                        self.successAction?(true,response.destinationURL?.path ?? "")
                     }
             }
         }

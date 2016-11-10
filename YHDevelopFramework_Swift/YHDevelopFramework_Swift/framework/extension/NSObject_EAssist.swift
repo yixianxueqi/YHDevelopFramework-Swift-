@@ -30,7 +30,7 @@ extension NSObject {
         UserDefaults.standard.setValuesForKeys(keyValues)
     }
     //沙盒取
-    func sandBoxTake(key: String) -> Any {
+    func sandBoxTake(key: String) -> Any? {
         return UserDefaults.standard.value(forKey: key)
     }
     
