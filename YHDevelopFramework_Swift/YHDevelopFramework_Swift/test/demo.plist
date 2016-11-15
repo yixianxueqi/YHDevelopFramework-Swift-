@@ -50,5 +50,11 @@
 		<key>title</key>
 		<string>Test</string>
 	</dict>
+	<dict>
+		<key>className</key>
+		<string>FileDownloadViewController</string>
+		<key>title</key>
+		<string>FileDownload</string>
+	</dict>
 </array>
 </plist>

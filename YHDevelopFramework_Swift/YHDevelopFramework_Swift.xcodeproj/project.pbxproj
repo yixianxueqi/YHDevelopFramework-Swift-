@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		642F1CFE09F0730FB4836AF0 /* Pods_YHDevelopFramework_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94130C2CA9DFFE1E1D0274D7 /* Pods_YHDevelopFramework_Swift.framework */; };
+		CE01AEC41DD9923C0037A989 /* FileDownloadDBUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01AEC31DD9923C0037A989 /* FileDownloadDBUtil.swift */; };
+		CE01AEC61DD992BE0037A989 /* FileDownloadDBConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01AEC51DD992BE0037A989 /* FileDownloadDBConstants.swift */; };
+		CE40FFDA1DD559E200C4B3D4 /* DownloadTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40FFD71DD559E200C4B3D4 /* DownloadTableViewCell.swift */; };
+		CE40FFDB1DD559E200C4B3D4 /* DownloadTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE40FFD81DD559E200C4B3D4 /* DownloadTableViewCell.xib */; };
+		CE40FFDC1DD559E200C4B3D4 /* FileDownloadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40FFD91DD559E200C4B3D4 /* FileDownloadViewController.swift */; };
+		CE40FFE41DD55A1900C4B3D4 /* FileDownloadDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40FFDE1DD55A1900C4B3D4 /* FileDownloadDao.swift */; };
+		CE40FFE71DD55A1900C4B3D4 /* FileDownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40FFE11DD55A1900C4B3D4 /* FileDownloadManager.swift */; };
+		CE40FFE81DD55A1900C4B3D4 /* FileDownloadOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40FFE21DD55A1900C4B3D4 /* FileDownloadOperation.swift */; };
+		CE40FFE91DD55A1900C4B3D4 /* FileDownloadVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40FFE31DD55A1900C4B3D4 /* FileDownloadVO.swift */; };
 		DB0A25C41DAB35620047BA94 /* HttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0A25C31DAB35620047BA94 /* HttpService.swift */; };
 		DB0A25C61DAB35B70047BA94 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0A25C51DAB35B70047BA94 /* BaseService.swift */; };
 		DB0A25C81DAB9A330047BA94 /* HttpBaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0A25C71DAB9A330047BA94 /* HttpBaseService.swift */; };
@@ -69,6 +78,16 @@
 		2E8B41077FA94A7CEEAB3C41 /* Pods-YHDevelopFramework_Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YHDevelopFramework_Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YHDevelopFramework_Swift/Pods-YHDevelopFramework_Swift.debug.xcconfig"; sourceTree = "<group>"; };
 		94130C2CA9DFFE1E1D0274D7 /* Pods_YHDevelopFramework_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YHDevelopFramework_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7437F69150C3D7C93FF4911 /* Pods-YHDevelopFramework_Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YHDevelopFramework_Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-YHDevelopFramework_Swift/Pods-YHDevelopFramework_Swift.release.xcconfig"; sourceTree = "<group>"; };
+		CE01AEC31DD9923C0037A989 /* FileDownloadDBUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileDownloadDBUtil.swift; sourceTree = "<group>"; };
+		CE01AEC51DD992BE0037A989 /* FileDownloadDBConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileDownloadDBConstants.swift; sourceTree = "<group>"; };
+		CE01D6431DDAEA8C00DE1A82 /* BridgeFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgeFile.h; sourceTree = "<group>"; };
+		CE40FFD71DD559E200C4B3D4 /* DownloadTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadTableViewCell.swift; sourceTree = "<group>"; };
+		CE40FFD81DD559E200C4B3D4 /* DownloadTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DownloadTableViewCell.xib; sourceTree = "<group>"; };
+		CE40FFD91DD559E200C4B3D4 /* FileDownloadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileDownloadViewController.swift; sourceTree = "<group>"; };
+		CE40FFDE1DD55A1900C4B3D4 /* FileDownloadDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileDownloadDao.swift; sourceTree = "<group>"; };
+		CE40FFE11DD55A1900C4B3D4 /* FileDownloadManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileDownloadManager.swift; sourceTree = "<group>"; };
+		CE40FFE21DD55A1900C4B3D4 /* FileDownloadOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileDownloadOperation.swift; sourceTree = "<group>"; };
+		CE40FFE31DD55A1900C4B3D4 /* FileDownloadVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileDownloadVO.swift; sourceTree = "<group>"; };
 		DB0A25C31DAB35620047BA94 /* HttpService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpService.swift; sourceTree = "<group>"; };
 		DB0A25C51DAB35B70047BA94 /* BaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
 		DB0A25C71DAB9A330047BA94 /* HttpBaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpBaseService.swift; sourceTree = "<group>"; };
@@ -158,6 +177,29 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		CE40FFD61DD559E200C4B3D4 /* fileDownload */ = {
+			isa = PBXGroup;
+			children = (
+				CE40FFD91DD559E200C4B3D4 /* FileDownloadViewController.swift */,
+				CE40FFD71DD559E200C4B3D4 /* DownloadTableViewCell.swift */,
+				CE40FFD81DD559E200C4B3D4 /* DownloadTableViewCell.xib */,
+			);
+			path = fileDownload;
+			sourceTree = "<group>";
+		};
+		CE40FFDD1DD55A1900C4B3D4 /* fileDownload */ = {
+			isa = PBXGroup;
+			children = (
+				CE40FFDE1DD55A1900C4B3D4 /* FileDownloadDao.swift */,
+				CE01AEC31DD9923C0037A989 /* FileDownloadDBUtil.swift */,
+				CE01AEC51DD992BE0037A989 /* FileDownloadDBConstants.swift */,
+				CE40FFE11DD55A1900C4B3D4 /* FileDownloadManager.swift */,
+				CE40FFE21DD55A1900C4B3D4 /* FileDownloadOperation.swift */,
+				CE40FFE31DD55A1900C4B3D4 /* FileDownloadVO.swift */,
+			);
+			path = fileDownload;
+			sourceTree = "<group>";
+		};
 		DB0B1A911DACCBE600891BAC /* thirdParts */ = {
 			isa = PBXGroup;
 			children = (
@@ -228,6 +270,7 @@
 		DB0E25F41DA5392100618C5D /* YHDevelopFramework_Swift */ = {
 			isa = PBXGroup;
 			children = (
+				CE01D6431DDAEA8C00DE1A82 /* BridgeFile.h */,
 				DBD7CB271DADE11A004443A1 /* YHDevelopFramework_Swift.entitlements */,
 				DB0E26091DA5397400618C5D /* test */,
 				DB0E26081DA5396500618C5D /* framework */,
@@ -307,6 +350,7 @@
 		DB24DDE11DA894B2003F1741 /* component */ = {
 			isa = PBXGroup;
 			children = (
+				CE40FFDD1DD55A1900C4B3D4 /* fileDownload */,
 				DB5DACC01DAF746D00D5F0B4 /* fileManager */,
 				DB0B1A951DACCDD700891BAC /* deviceInfo */,
 				DBFA94631DA8F64E00A9098D /* http */,
@@ -483,6 +527,7 @@
 		DBFA94641DA8F7F000A9098D /* demo */ = {
 			isa = PBXGroup;
 			children = (
+				CE40FFD61DD559E200C4B3D4 /* fileDownload */,
 				DB6C92A01DBF45D4006AB9FE /* adsCycleDemo */,
 				DB629D641DBB6D8A006A642A /* waterFallDemo */,
 				DBC8D0251DB60B8A00B08ED4 /* promiseDemo */,
@@ -540,7 +585,7 @@
 				TargetAttributes = {
 					DB0E25F11DA5392100618C5D = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = QZQD5SSHHH;
+						DevelopmentTeam = 7GU5S6A8A5;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
@@ -582,6 +627,7 @@
 				DBC8D0241DB5CA5400B08ED4 /* SpringDemoViewController.xib in Resources */,
 				DBFA94671DA8F83900A9098D /* demo.plist in Resources */,
 				DB5DACC71DAF7AFA00D5F0B4 /* FileViewController.xib in Resources */,
+				CE40FFDB1DD559E200C4B3D4 /* DownloadTableViewCell.xib in Resources */,
 				DBD7CB2F1DAE0BB6004443A1 /* pic_1.jpg in Resources */,
 				DBC8D0291DB60BBF00B08ED4 /* PromiseViewController.xib in Resources */,
 				DBD7CB321DAE0BB6004443A1 /* pic_4.jpg in Resources */,
@@ -650,11 +696,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE40FFDA1DD559E200C4B3D4 /* DownloadTableViewCell.swift in Sources */,
 				DB0A25C41DAB35620047BA94 /* HttpService.swift in Sources */,
 				DBD7CB441DAE307D004443A1 /* YHGlobalFunc.swift in Sources */,
 				DBD7CB351DAE0C84004443A1 /* NSDictionary_ELoad.swift in Sources */,
+				CE40FFE81DD55A1900C4B3D4 /* FileDownloadOperation.swift in Sources */,
+				CE40FFE41DD55A1900C4B3D4 /* FileDownloadDao.swift in Sources */,
 				DB0E25F81DA5392100618C5D /* ViewController.swift in Sources */,
 				DBD7CB3E1DAE1E94004443A1 /* UIView_EAssist.swift in Sources */,
+				CE40FFE91DD55A1900C4B3D4 /* FileDownloadVO.swift in Sources */,
 				DB24C33A1DA9D55D00019439 /* YHNetwork.swift in Sources */,
 				DB5DACBE1DAF72A800D5F0B4 /* TestTempViewController.swift in Sources */,
 				DBA2DA051DBDA5ED00CCCCB5 /* YHPageControl.swift in Sources */,
@@ -665,6 +715,7 @@
 				DBD7CB421DAE258F004443A1 /* NSString_ERect.swift in Sources */,
 				DB286AC51DBE0A2000BC7EAF /* AdsCycleView.swift in Sources */,
 				DBFA94691DA8F87700A9098D /* HttpDemoViewController.swift in Sources */,
+				CE01AEC61DD992BE0037A989 /* FileDownloadDBConstants.swift in Sources */,
 				DBBC94BB1DD4A63D00A20383 /* SwiftyJSON.swift in Sources */,
 				DBD7CB371DAE0F6F004443A1 /* NSArray_ELoad.swift in Sources */,
 				DB629D671DBB6DB3006A642A /* WaterFallViewController.swift in Sources */,
@@ -680,12 +731,15 @@
 				DBD7CB461DAE30D5004443A1 /* NSDate_EStamp.swift in Sources */,
 				DB0A25C81DAB9A330047BA94 /* HttpBaseService.swift in Sources */,
 				DB0E25F61DA5392100618C5D /* AppDelegate.swift in Sources */,
+				CE01AEC41DD9923C0037A989 /* FileDownloadDBUtil.swift in Sources */,
 				DBD7CB291DAE0920004443A1 /* UIImage_ELoad.swift in Sources */,
 				DBD7CB401DAE1EC8004443A1 /* NSObject_EAssist.swift in Sources */,
 				DBC8D0231DB5CA5400B08ED4 /* SpringDemoViewController.swift in Sources */,
+				CE40FFDC1DD559E200C4B3D4 /* FileDownloadViewController.swift in Sources */,
 				DB24C3451DA9E91600019439 /* BaseNavigationController.swift in Sources */,
 				DB5DACB61DAF2ABD00D5F0B4 /* NSNumber_EFromatter.swift in Sources */,
 				DBFA94621DA8F42B00A9098D /* BaseViewController.swift in Sources */,
+				CE40FFE71DD55A1900C4B3D4 /* FileDownloadManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -760,6 +814,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = YHDevelopFramework_Swift/BridgeFile.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -803,6 +858,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = YHDevelopFramework_Swift/BridgeFile.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -816,11 +872,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = YHDevelopFramework_Swift/YHDevelopFramework_Swift.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = QZQD5SSHHH;
+				DEVELOPMENT_TEAM = 7GU5S6A8A5;
 				INFOPLIST_FILE = YHDevelopFramework_Swift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.yht.YHDevelopFramework-Swift";
+				PRODUCT_BUNDLE_IDENTIFIER = "keqi.YHDevelopFramework-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -834,11 +890,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = YHDevelopFramework_Swift/YHDevelopFramework_Swift.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = QZQD5SSHHH;
+				DEVELOPMENT_TEAM = 7GU5S6A8A5;
 				INFOPLIST_FILE = YHDevelopFramework_Swift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.yht.YHDevelopFramework-Swift";
+				PRODUCT_BUNDLE_IDENTIFIER = "keqi.YHDevelopFramework-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
