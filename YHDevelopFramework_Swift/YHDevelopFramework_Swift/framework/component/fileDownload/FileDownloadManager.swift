@@ -8,7 +8,7 @@
 
 import UIKit
 
-private let DEFAULT_SAVE_DIRECTORY = NSHomeDirectory().appending("/Documents/FileDownload")
+private let DEFAULT_SAVE_DIRECTORY = NSHomeDirectory().appending("/Documents/FileDownload/")
 
 class FileDownloadManager: NSObject {
 
@@ -22,12 +22,12 @@ class FileDownloadManager: NSObject {
     private override init(){}
     
     /**
-     *  初始化文件下载管理器
+     *  设置最大线程数
      *
      *  @param threadNum   最大线程数(可同时下载的最大文件数)，取值[1-5]，超出取默认值3
      */
-    init(withMaxThreadNum threadNum: Int) {
-        super.init()
+    func setMaxThread(_ threadNum: Int) {
+    
         var temNum = threadNum
         if threadNum < 1 || threadNum > 5 {
             temNum = 3
