@@ -10,6 +10,7 @@
 		642F1CFE09F0730FB4836AF0 /* Pods_YHDevelopFramework_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94130C2CA9DFFE1E1D0274D7 /* Pods_YHDevelopFramework_Swift.framework */; };
 		CE01AEC41DD9923C0037A989 /* FileDownloadDBUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01AEC31DD9923C0037A989 /* FileDownloadDBUtil.swift */; };
 		CE01AEC61DD992BE0037A989 /* FileDownloadDBConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01AEC51DD992BE0037A989 /* FileDownloadDBConstants.swift */; };
+		CE0E4F681DDD87C400AC2BD2 /* LoadPhotosBiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E4F671DDD87C400AC2BD2 /* LoadPhotosBiz.swift */; };
 		CE40FFDA1DD559E200C4B3D4 /* DownloadTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40FFD71DD559E200C4B3D4 /* DownloadTableViewCell.swift */; };
 		CE40FFDB1DD559E200C4B3D4 /* DownloadTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE40FFD81DD559E200C4B3D4 /* DownloadTableViewCell.xib */; };
 		CE40FFDC1DD559E200C4B3D4 /* FileDownloadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40FFD91DD559E200C4B3D4 /* FileDownloadViewController.swift */; };
@@ -81,6 +82,7 @@
 		CE01AEC31DD9923C0037A989 /* FileDownloadDBUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileDownloadDBUtil.swift; sourceTree = "<group>"; };
 		CE01AEC51DD992BE0037A989 /* FileDownloadDBConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileDownloadDBConstants.swift; sourceTree = "<group>"; };
 		CE01D6431DDAEA8C00DE1A82 /* BridgeFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgeFile.h; sourceTree = "<group>"; };
+		CE0E4F671DDD87C400AC2BD2 /* LoadPhotosBiz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadPhotosBiz.swift; sourceTree = "<group>"; };
 		CE40FFD71DD559E200C4B3D4 /* DownloadTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadTableViewCell.swift; sourceTree = "<group>"; };
 		CE40FFD81DD559E200C4B3D4 /* DownloadTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DownloadTableViewCell.xib; sourceTree = "<group>"; };
 		CE40FFD91DD559E200C4B3D4 /* FileDownloadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileDownloadViewController.swift; sourceTree = "<group>"; };
@@ -175,6 +177,14 @@
 				C7437F69150C3D7C93FF4911 /* Pods-YHDevelopFramework_Swift.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		CE0E4F661DDD53AA00AC2BD2 /* photoPicker */ = {
+			isa = PBXGroup;
+			children = (
+				CE0E4F671DDD87C400AC2BD2 /* LoadPhotosBiz.swift */,
+			);
+			path = photoPicker;
 			sourceTree = "<group>";
 		};
 		CE40FFD61DD559E200C4B3D4 /* fileDownload */ = {
@@ -350,6 +360,7 @@
 		DB24DDE11DA894B2003F1741 /* component */ = {
 			isa = PBXGroup;
 			children = (
+				CE0E4F661DDD53AA00AC2BD2 /* photoPicker */,
 				CE40FFDD1DD55A1900C4B3D4 /* fileDownload */,
 				DB5DACC01DAF746D00D5F0B4 /* fileManager */,
 				DB0B1A951DACCDD700891BAC /* deviceInfo */,
@@ -703,6 +714,7 @@
 				CE40FFE81DD55A1900C4B3D4 /* FileDownloadOperation.swift in Sources */,
 				CE40FFE41DD55A1900C4B3D4 /* FileDownloadDao.swift in Sources */,
 				DB0E25F81DA5392100618C5D /* ViewController.swift in Sources */,
+				CE0E4F681DDD87C400AC2BD2 /* LoadPhotosBiz.swift in Sources */,
 				DBD7CB3E1DAE1E94004443A1 /* UIView_EAssist.swift in Sources */,
 				CE40FFE91DD55A1900C4B3D4 /* FileDownloadVO.swift in Sources */,
 				DB24C33A1DA9D55D00019439 /* YHNetwork.swift in Sources */,

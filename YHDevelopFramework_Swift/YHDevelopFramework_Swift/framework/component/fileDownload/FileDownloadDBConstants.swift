@@ -36,6 +36,10 @@ class FileDownloadDBConstants: NSObject {
         return String(format: "SELECT * FROM %@ WHERE %@ = ?", TABLE_FILEINFO, fileID)
     }
     
+    static func getQuerySQLV3() -> String {
+        return String(format: "SELECT * FROM %@", TABLE_FILEINFO)
+    }
+    
     static func getInsertSQL() -> String {
         
         return String(format: "INSERT INTO %@(%@, %@, %@, %@, %@, %@) VALUES (?,?,?,?,?,?)",  TABLE_FILEINFO,

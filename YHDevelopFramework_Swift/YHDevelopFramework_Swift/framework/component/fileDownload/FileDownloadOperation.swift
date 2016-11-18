@@ -39,17 +39,6 @@ class FileDownloadOperation: Operation {
         self.model = model;  //很关键
         //创建下载任务
         creatDownloadSessionTaskWithURLString(model.urlStr!)
-        
-        //添加应用程序退出的通知
-        addNotification()
-    }
-    
-    deinit {
-        NotificationCenter.default.removeObserver(self)
-    }
-    
-    func addNotification() {
-        NotificationCenter.default.addObserver(self, selector: #selector(appWillTerminateNotification), name: NSNotification.Name.UIApplicationWillTerminate, object: nil)
     }
     
     //MARK: - Create Session And Task
@@ -61,7 +50,6 @@ class FileDownloadOperation: Operation {
         
         //获取文件已经下载的长度，断点续传需要此参数
         if let m = model {
-            
             self.currentFileSize = m.downloadedSize;
         }
         
@@ -116,17 +104,6 @@ class FileDownloadOperation: Operation {
         self.task?.resume()
         _executing = true;
         self.didChangeValue(forKey: "isExecuting")
-    }
-    
-    
-    //应用程序退出 保存状态
-    @objc private func appWillTerminateNotification() {
-    
-        if (self.model?.status == .kDownloadStatusRunning) {
-            self.model?.status = .kDownloadStatusSuspended
-        }
-        print("applicationWillTerminate")
-        self.dao.updateWithID(self.model!)
     }
     
     // MARK: - Overwrite Methods

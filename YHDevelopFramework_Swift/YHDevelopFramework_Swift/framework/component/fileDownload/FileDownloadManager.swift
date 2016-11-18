@@ -19,7 +19,16 @@ class FileDownloadManager: NSObject {
      *  获取文件下载管理器对象
      */
     static let sharedInstance = FileDownloadManager()
-    private override init(){}
+    private override init(){
+        super.init()
+        //从数据库读取之前已添加的所有任务
+        let voListFromDB = self.dao.queryAll()
+        if voListFromDB.count > 0 {
+            fileDownloadModels.append(contentsOf: voListFromDB)
+        }
+        //添加应用程序退出的通知
+        addNotification()
+    }
     
     /**
      *  设置最大线程数
@@ -33,6 +42,27 @@ class FileDownloadManager: NSObject {
             temNum = 3
         }
         operationQueue.maxConcurrentOperationCount = temNum
+    }
+    
+    private func addNotification() {
+        NotificationCenter.default.addObserver(self, selector: #selector(appWillTerminateNotification), name: NSNotification.Name.UIApplicationWillTerminate, object: nil)
+    }
+    
+    //应用程序退出 保存状态
+    @objc private func appWillTerminateNotification() {
+        
+        print("applicationWillTerminate")
+
+        for vo in fileDownloadModels {
+            if vo.status == .kDownloadStatusRunning {
+                vo.status = .kDownloadStatusSuspended
+                self.dao.updateWithID(vo)
+            }
+        }
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
     
     /**
@@ -63,15 +93,9 @@ class FileDownloadManager: NSObject {
     func addTaskWithFileDownloadEntity(_ model: FileDownloadVO) {
         
         let vo:FileDownloadVO? = self.dao.queryWithURL(model.urlStr!)
-        var dbVO = vo
         
-        if let dbVO = vo {// 如果数据库里已经有记录,赋值之前的状态给数据源(很重要)
-            model.ID = dbVO.ID;
-            model.status = dbVO.status
-            model.downloadedSize = dbVO.downloadedSize
-            model.totalSize = dbVO.totalSize
-            model.localPath = dbVO.localPath
-        } else {
+        if vo == nil {// 如果数据库里没有有记录,追加数据
+
             //拼接文件路径
             if model.localPath == nil {
                 //创建默认存储路径
@@ -83,11 +107,11 @@ class FileDownloadManager: NSObject {
             }
             
             //存入数据库
-            self.dao .insertWithEntity(model)
-            dbVO = self.dao.queryWithURL(model.urlStr!)
+            self.dao.insertWithEntity(model)
+            let dbVO = self.dao.queryWithURL(model.urlStr!)
             model.ID = dbVO!.ID //赋值ID
+            fileDownloadModels.append(model)
         }
-        fileDownloadModels.append(model)
     }
     
     /**
@@ -176,6 +200,7 @@ class FileDownloadManager: NSObject {
      *  @return 下载列表
      */
     func getDownloadList() -> [FileDownloadVO] {
+        
         return fileDownloadModels
     }
     

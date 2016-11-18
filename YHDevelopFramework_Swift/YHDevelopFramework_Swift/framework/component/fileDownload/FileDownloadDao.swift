@@ -61,6 +61,29 @@ class FileDownloadDao: NSObject {
         return vo
     }
     
+    /**
+     *  查询所有记录
+     */
+    func queryAll() -> [FileDownloadVO] {
+        
+        var voList = [FileDownloadVO]()
+        
+        dbQueue.inDatabase { (database) in
+            if let db = database {
+                let result = db.executeQuery(FileDownloadDBConstants.getQuerySQLV3(), withArgumentsIn: nil)
+                if let rs = result {
+                    while rs.next() {
+                       let vo = self.assignEntityFromFMResultSet(rs)
+                        voList.append(vo)
+                    }
+                    rs.close()
+                }
+            }
+        }
+        
+        return voList
+    }
+    
     private func assignEntityFromFMResultSet(_ rs:FMResultSet) -> FileDownloadVO {
         let vo = FileDownloadVO()
         vo.ID = rs.int(forColumn: fileID)
