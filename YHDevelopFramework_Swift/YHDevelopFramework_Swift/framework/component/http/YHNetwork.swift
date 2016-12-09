@@ -22,6 +22,7 @@ class YHNetwork: NSObject {
     var commonParam: Parameters?//公共参数
     var isStoreCache: Bool = false//是否缓存
     var isUseCache: Bool = false//是否使用缓存
+
     private let utilityQueue = DispatchQueue.global(qos: .utility)
     private let mainQueue = DispatchQueue.main
     private let cache = YHURLCache.defaultCache
@@ -41,6 +42,40 @@ class YHNetwork: NSObject {
         
         super.init()
         sessionMnager = self.getSessionManager()
+    }
+    // MARK: - https证书
+    func setHttpsCerPath(_ path:NSString) {
+    
+        sessionMnager?.delegate.sessionDidReceiveChallenge = { session, challenge in
+            //认证服务器证书
+            if challenge.protectionSpace.authenticationMethod
+                == NSURLAuthenticationMethodServerTrust {
+                print("服务端证书认证！")
+                let serverTrust:SecTrust = challenge.protectionSpace.serverTrust!
+                let certificate = SecTrustGetCertificateAtIndex(serverTrust, 0)!
+                let remoteCertificateData
+                    = CFBridgingRetain(SecCertificateCopyData(certificate))!
+                let cerPath = path as String
+                let cerUrl = URL(fileURLWithPath:cerPath)
+                let localCertificateData = try! Data(contentsOf: cerUrl)
+                
+                if (remoteCertificateData.isEqual(localCertificateData) == true) {
+                    
+                    let credential = URLCredential(trust: serverTrust)
+                    challenge.sender?.use(credential, for: challenge)
+                    return (URLSession.AuthChallengeDisposition.useCredential,
+                            URLCredential(trust: challenge.protectionSpace.serverTrust!))
+                    
+                } else {
+                    return (.cancelAuthenticationChallenge, nil)
+                }
+            }
+            // 其它情况（不接受认证）
+            else {
+                print("其它情况（不接受认证）")
+                return (.cancelAuthenticationChallenge, nil)
+            }
+        }
     }
     
     // MARK: - Method

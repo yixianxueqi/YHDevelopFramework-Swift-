@@ -35,6 +35,7 @@
 		DB24C3451DA9E91600019439 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB24C3441DA9E91600019439 /* BaseNavigationController.swift */; };
 		DB24DDE41DA894EF003F1741 /* YHLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB24DDE31DA894EF003F1741 /* YHLogger.swift */; };
 		DB286AC51DBE0A2000BC7EAF /* AdsCycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB286AC41DBE0A2000BC7EAF /* AdsCycleView.swift */; };
+		DB55B8B81DFA51C2005BFA9A /* https.cer in Resources */ = {isa = PBXBuildFile; fileRef = DB55B8B71DFA51C2005BFA9A /* https.cer */; };
 		DB5DACB61DAF2ABD00D5F0B4 /* NSNumber_EFromatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5DACB51DAF2ABD00D5F0B4 /* NSNumber_EFromatter.swift */; };
 		DB5DACB81DAF606E00D5F0B4 /* 111.png in Resources */ = {isa = PBXBuildFile; fileRef = DB5DACB71DAF606E00D5F0B4 /* 111.png */; };
 		DB5DACBE1DAF72A800D5F0B4 /* TestTempViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5DACBC1DAF72A800D5F0B4 /* TestTempViewController.swift */; };
@@ -109,6 +110,7 @@
 		DB24C3441DA9E91600019439 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		DB24DDE31DA894EF003F1741 /* YHLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHLogger.swift; sourceTree = "<group>"; };
 		DB286AC41DBE0A2000BC7EAF /* AdsCycleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdsCycleView.swift; sourceTree = "<group>"; };
+		DB55B8B71DFA51C2005BFA9A /* https.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = https.cer; sourceTree = "<group>"; };
 		DB5DACB51DAF2ABD00D5F0B4 /* NSNumber_EFromatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSNumber_EFromatter.swift; sourceTree = "<group>"; };
 		DB5DACB71DAF606E00D5F0B4 /* 111.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 111.png; sourceTree = "<group>"; };
 		DB5DACBC1DAF72A800D5F0B4 /* TestTempViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestTempViewController.swift; sourceTree = "<group>"; };
@@ -557,6 +559,7 @@
 				DBFA94681DA8F87700A9098D /* HttpDemoViewController.swift */,
 				DB24C3421DA9E7DB00019439 /* HttpDemoViewController.xib */,
 				DB0A25C31DAB35620047BA94 /* HttpService.swift */,
+				DB55B8B71DFA51C2005BFA9A /* https.cer */,
 			);
 			path = httpDemo;
 			sourceTree = "<group>";
@@ -645,6 +648,7 @@
 				DBD7CB331DAE0BB6004443A1 /* pic_5.jpg in Resources */,
 				DBD7CB391DAE152C004443A1 /* testJson.json in Resources */,
 				DBD7CB311DAE0BB6004443A1 /* pic_3.jpg in Resources */,
+				DB55B8B81DFA51C2005BFA9A /* https.cer in Resources */,
 				DB0E25FD1DA5392100618C5D /* Assets.xcassets in Resources */,
 				DB0E25FB1DA5392100618C5D /* Main.storyboard in Resources */,
 				DB5DACBF1DAF72A800D5F0B4 /* TestTempViewController.xib in Resources */,

@@ -37,6 +37,8 @@ class HttpService: NSObject, HttpBaseService {
     func networkPostRequest(_ url: String?, parameter: [String : Any]?, completet: @escaping HttpResultHandle) {
         
         let network = getNetworkInstance()
+        let str = Bundle.main.path(forResource: "https", ofType: "cer")! as NSString
+        network.setHttpsCerPath(str)
         guard url != nil else {
             return
         }
