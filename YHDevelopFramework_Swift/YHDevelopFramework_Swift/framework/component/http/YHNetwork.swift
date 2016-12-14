@@ -50,7 +50,7 @@ class YHNetwork: NSObject {
             //认证服务器证书
             if challenge.protectionSpace.authenticationMethod
                 == NSURLAuthenticationMethodServerTrust {
-                print("服务端证书认证！")
+                log.debug("https服务端证书认证")
                 let serverTrust:SecTrust = challenge.protectionSpace.serverTrust!
                 let certificate = SecTrustGetCertificateAtIndex(serverTrust, 0)!
                 let remoteCertificateData
@@ -72,7 +72,7 @@ class YHNetwork: NSObject {
             }
             // 其它情况（不接受认证）
             else {
-                print("其它情况（不接受认证）")
+                log.warning("https其它情况（不接受认证）")
                 return (.cancelAuthenticationChallenge, nil)
             }
         }
@@ -102,7 +102,7 @@ class YHNetwork: NSObject {
             .responseJSON(queue: utilityQueue) { (response) in
             switch response.result {
             case .success:
-                log.info("GET SUCCESS:\n\(response.request!)\n\(response.timeline)\n\(response.response!)\n\(response.result.value!)")
+                log.debug("GET SUCCESS:\n\(response.request!)\n\(response.timeline)\n\(response.response!)\n\(response.result.value!)")
                 if self.isStoreCache {
                     self.storeCacahe(urlRequest!, response: response.response!, data: response.data!)
                 }
@@ -146,7 +146,7 @@ class YHNetwork: NSObject {
             .responseJSON { (response) in
             switch response.result {
             case .success:
-                log.info("POST SUCCESS:\n\(response.request!)\n\(response.timeline)\n\(response.response!)\n\(response.result.value!)")
+                log.debug("POST SUCCESS:\n\(response.request!)\n\(response.timeline)\n\(response.response!)\n\(response.result.value!)")
                 if self.isStoreCache {
                     self.storeCacahe(urlRequest!, response: response.response!, data: response.data!)
                 }
@@ -171,10 +171,10 @@ class YHNetwork: NSObject {
                          domain: FileManager.SearchPathDomainMask = .userDomainMask) -> YHNetwork {
         
         if type == .DataStream {
-            log.info("download data")
+            log.debug("download data")
             sessionMnager?.download(getRealUrl(url), method: .post, parameters: getRealParameters(parameter), encoding: JSONEncoding.default, headers: header, to: nil)
                 .downloadProgress(queue: mainQueue) { progress in
-                    log.info("download progress\(progress.fractionCompleted)")
+                    log.debug("download progress\(progress.fractionCompleted)")
                     self.progressAction?(progress.fractionCompleted)
                 }
                 .responseData(queue: mainQueue) { response in
@@ -184,11 +184,11 @@ class YHNetwork: NSObject {
                     }
             }
         } else {
-            log.info("download file")
+            log.debug("download file")
             let destination = DownloadRequest.suggestedDownloadDestination(for: directory, in: domain)
             sessionMnager?.download(getRealUrl(url), method: .post, parameters: getRealParameters(parameter), encoding: JSONEncoding.default, headers: header, to: destination)
                 .downloadProgress(queue: mainQueue) { progress in
-                    log.info("download progress\(progress.fractionCompleted)")
+                    log.debug("download progress\(progress.fractionCompleted)")
                     self.progressAction?(progress.fractionCompleted)
                 }
                 .response(queue: mainQueue) { response in
@@ -205,7 +205,7 @@ class YHNetwork: NSObject {
     func uploadRequest(url: String, type: HttpStreamType? = .DataStream, obj: Any) -> YHNetwork {
         
         if type == .DataStream {
-            log.info("upload data")
+            log.debug("upload data")
             let data = obj as! Data
             sessionMnager?.upload(data, to: getRealUrl(url), method: .post, headers: header)
                 .uploadProgress(queue: mainQueue, closure: { progresss in
@@ -220,7 +220,7 @@ class YHNetwork: NSObject {
                     }
                 })
         } else {
-            log.info("upload file")
+            log.debug("upload file")
             let fileURL = obj as! URL
             sessionMnager?.upload(fileURL, to: getRealUrl(url), method: .post, headers: header)
                 .uploadProgress(queue: mainQueue, closure: { progresss in
@@ -298,14 +298,14 @@ class YHNetwork: NSObject {
     private func useCache(_ request: URLRequest) -> String? {
         let urlResponse = cache.cachedResponse(for: request)
         if let data = urlResponse?.data {
-            log.info("use cache")
+            log.debug("use cache")
             return JSON(data: data).rawString()
         }
         return nil
     }
     //是否缓存
     private func storeCacahe(_ request: URLRequest,response: HTTPURLResponse, data: Data) {
-        log.info("store cache")
+        log.debug("store cache")
         let urlResponse = CachedURLResponse.init(response: response, data: data)
         cache.storeCachedResponse(urlResponse, for: request)
     }

@@ -10,7 +10,6 @@
 		642F1CFE09F0730FB4836AF0 /* Pods_YHDevelopFramework_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94130C2CA9DFFE1E1D0274D7 /* Pods_YHDevelopFramework_Swift.framework */; };
 		CE01AEC41DD9923C0037A989 /* FileDownloadDBUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01AEC31DD9923C0037A989 /* FileDownloadDBUtil.swift */; };
 		CE01AEC61DD992BE0037A989 /* FileDownloadDBConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01AEC51DD992BE0037A989 /* FileDownloadDBConstants.swift */; };
-		CE0E4F681DDD87C400AC2BD2 /* LoadPhotosBiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E4F671DDD87C400AC2BD2 /* LoadPhotosBiz.swift */; };
 		CE40FFDA1DD559E200C4B3D4 /* DownloadTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40FFD71DD559E200C4B3D4 /* DownloadTableViewCell.swift */; };
 		CE40FFDB1DD559E200C4B3D4 /* DownloadTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE40FFD81DD559E200C4B3D4 /* DownloadTableViewCell.xib */; };
 		CE40FFDC1DD559E200C4B3D4 /* FileDownloadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40FFD91DD559E200C4B3D4 /* FileDownloadViewController.swift */; };
@@ -36,6 +35,12 @@
 		DB24DDE41DA894EF003F1741 /* YHLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB24DDE31DA894EF003F1741 /* YHLogger.swift */; };
 		DB286AC51DBE0A2000BC7EAF /* AdsCycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB286AC41DBE0A2000BC7EAF /* AdsCycleView.swift */; };
 		DB55B8B81DFA51C2005BFA9A /* https.cer in Resources */ = {isa = PBXBuildFile; fileRef = DB55B8B71DFA51C2005BFA9A /* https.cer */; };
+		DB55B8BA1DFA81FC005BFA9A /* YHAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB55B8B91DFA81FC005BFA9A /* YHAssets.swift */; };
+		DB55B8BE1DFA95D7005BFA9A /* PhotoPickDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB55B8BC1DFA95D7005BFA9A /* PhotoPickDemoViewController.swift */; };
+		DB55B8BF1DFA95D7005BFA9A /* PhotoPickDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB55B8BD1DFA95D7005BFA9A /* PhotoPickDemoViewController.xib */; };
+		DB5B707F1DFFE4670033193F /* YHPhotoPickViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5B707D1DFFE4670033193F /* YHPhotoPickViewController.swift */; };
+		DB5B70801DFFE4670033193F /* YHPhotoPickViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB5B707E1DFFE4670033193F /* YHPhotoPickViewController.xib */; };
+		DB5B70821DFFE8C30033193F /* YHPhotoPickCollectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5B70811DFFE8C30033193F /* YHPhotoPickCollectionDelegate.swift */; };
 		DB5DACB61DAF2ABD00D5F0B4 /* NSNumber_EFromatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5DACB51DAF2ABD00D5F0B4 /* NSNumber_EFromatter.swift */; };
 		DB5DACB81DAF606E00D5F0B4 /* 111.png in Resources */ = {isa = PBXBuildFile; fileRef = DB5DACB71DAF606E00D5F0B4 /* 111.png */; };
 		DB5DACBE1DAF72A800D5F0B4 /* TestTempViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5DACBC1DAF72A800D5F0B4 /* TestTempViewController.swift */; };
@@ -54,6 +59,7 @@
 		DBC8D0241DB5CA5400B08ED4 /* SpringDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBC8D0221DB5CA5400B08ED4 /* SpringDemoViewController.xib */; };
 		DBC8D0281DB60BBF00B08ED4 /* PromiseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC8D0261DB60BBF00B08ED4 /* PromiseViewController.swift */; };
 		DBC8D0291DB60BBF00B08ED4 /* PromiseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBC8D0271DB60BBF00B08ED4 /* PromiseViewController.xib */; };
+		DBCD12FC1E013DCC00587500 /* YHPhotoResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCD12FB1E013DCC00587500 /* YHPhotoResult.swift */; };
 		DBD7CB291DAE0920004443A1 /* UIImage_ELoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD7CB281DAE0920004443A1 /* UIImage_ELoad.swift */; };
 		DBD7CB2F1DAE0BB6004443A1 /* pic_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DBD7CB2A1DAE0BB6004443A1 /* pic_1.jpg */; };
 		DBD7CB301DAE0BB6004443A1 /* pic_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DBD7CB2B1DAE0BB6004443A1 /* pic_2.jpg */; };
@@ -74,6 +80,8 @@
 		DBFA94621DA8F42B00A9098D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFA94611DA8F42B00A9098D /* BaseViewController.swift */; };
 		DBFA94671DA8F83900A9098D /* demo.plist in Resources */ = {isa = PBXBuildFile; fileRef = DBFA94661DA8F83900A9098D /* demo.plist */; };
 		DBFA94691DA8F87700A9098D /* HttpDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFA94681DA8F87700A9098D /* HttpDemoViewController.swift */; };
+		DBFDC4DA1E00E39F00AC38DF /* YHPhotoThumbnailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFDC4D81E00E39F00AC38DF /* YHPhotoThumbnailCell.swift */; };
+		DBFDC4DB1E00E39F00AC38DF /* YHPhotoThumbnailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBFDC4D91E00E39F00AC38DF /* YHPhotoThumbnailCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,7 +91,6 @@
 		CE01AEC31DD9923C0037A989 /* FileDownloadDBUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileDownloadDBUtil.swift; sourceTree = "<group>"; };
 		CE01AEC51DD992BE0037A989 /* FileDownloadDBConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileDownloadDBConstants.swift; sourceTree = "<group>"; };
 		CE01D6431DDAEA8C00DE1A82 /* BridgeFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgeFile.h; sourceTree = "<group>"; };
-		CE0E4F671DDD87C400AC2BD2 /* LoadPhotosBiz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadPhotosBiz.swift; sourceTree = "<group>"; };
 		CE40FFD71DD559E200C4B3D4 /* DownloadTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadTableViewCell.swift; sourceTree = "<group>"; };
 		CE40FFD81DD559E200C4B3D4 /* DownloadTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DownloadTableViewCell.xib; sourceTree = "<group>"; };
 		CE40FFD91DD559E200C4B3D4 /* FileDownloadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileDownloadViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +118,12 @@
 		DB24DDE31DA894EF003F1741 /* YHLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHLogger.swift; sourceTree = "<group>"; };
 		DB286AC41DBE0A2000BC7EAF /* AdsCycleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdsCycleView.swift; sourceTree = "<group>"; };
 		DB55B8B71DFA51C2005BFA9A /* https.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = https.cer; sourceTree = "<group>"; };
+		DB55B8B91DFA81FC005BFA9A /* YHAssets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHAssets.swift; sourceTree = "<group>"; };
+		DB55B8BC1DFA95D7005BFA9A /* PhotoPickDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoPickDemoViewController.swift; sourceTree = "<group>"; };
+		DB55B8BD1DFA95D7005BFA9A /* PhotoPickDemoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoPickDemoViewController.xib; sourceTree = "<group>"; };
+		DB5B707D1DFFE4670033193F /* YHPhotoPickViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHPhotoPickViewController.swift; sourceTree = "<group>"; };
+		DB5B707E1DFFE4670033193F /* YHPhotoPickViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YHPhotoPickViewController.xib; sourceTree = "<group>"; };
+		DB5B70811DFFE8C30033193F /* YHPhotoPickCollectionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHPhotoPickCollectionDelegate.swift; sourceTree = "<group>"; };
 		DB5DACB51DAF2ABD00D5F0B4 /* NSNumber_EFromatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSNumber_EFromatter.swift; sourceTree = "<group>"; };
 		DB5DACB71DAF606E00D5F0B4 /* 111.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 111.png; sourceTree = "<group>"; };
 		DB5DACBC1DAF72A800D5F0B4 /* TestTempViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestTempViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +142,7 @@
 		DBC8D0221DB5CA5400B08ED4 /* SpringDemoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpringDemoViewController.xib; sourceTree = "<group>"; };
 		DBC8D0261DB60BBF00B08ED4 /* PromiseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromiseViewController.swift; sourceTree = "<group>"; };
 		DBC8D0271DB60BBF00B08ED4 /* PromiseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PromiseViewController.xib; sourceTree = "<group>"; };
+		DBCD12FB1E013DCC00587500 /* YHPhotoResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHPhotoResult.swift; sourceTree = "<group>"; };
 		DBD7CB271DADE11A004443A1 /* YHDevelopFramework_Swift.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = YHDevelopFramework_Swift.entitlements; sourceTree = "<group>"; };
 		DBD7CB281DAE0920004443A1 /* UIImage_ELoad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage_ELoad.swift; sourceTree = "<group>"; };
 		DBD7CB2A1DAE0BB6004443A1 /* pic_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pic_1.jpg; sourceTree = "<group>"; };
@@ -150,6 +164,8 @@
 		DBFA94611DA8F42B00A9098D /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		DBFA94661DA8F83900A9098D /* demo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = demo.plist; sourceTree = "<group>"; };
 		DBFA94681DA8F87700A9098D /* HttpDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpDemoViewController.swift; sourceTree = "<group>"; };
+		DBFDC4D81E00E39F00AC38DF /* YHPhotoThumbnailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHPhotoThumbnailCell.swift; sourceTree = "<group>"; };
+		DBFDC4D91E00E39F00AC38DF /* YHPhotoThumbnailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YHPhotoThumbnailCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,7 +200,13 @@
 		CE0E4F661DDD53AA00AC2BD2 /* photoPicker */ = {
 			isa = PBXGroup;
 			children = (
-				CE0E4F671DDD87C400AC2BD2 /* LoadPhotosBiz.swift */,
+				DB55B8B91DFA81FC005BFA9A /* YHAssets.swift */,
+				DB5B707D1DFFE4670033193F /* YHPhotoPickViewController.swift */,
+				DB5B70811DFFE8C30033193F /* YHPhotoPickCollectionDelegate.swift */,
+				DB5B707E1DFFE4670033193F /* YHPhotoPickViewController.xib */,
+				DBFDC4D81E00E39F00AC38DF /* YHPhotoThumbnailCell.swift */,
+				DBFDC4D91E00E39F00AC38DF /* YHPhotoThumbnailCell.xib */,
+				DBCD12FB1E013DCC00587500 /* YHPhotoResult.swift */,
 			);
 			path = photoPicker;
 			sourceTree = "<group>";
@@ -388,6 +410,15 @@
 			path = viewContent;
 			sourceTree = "<group>";
 		};
+		DB55B8BB1DFA956A005BFA9A /* photoPickDemo */ = {
+			isa = PBXGroup;
+			children = (
+				DB55B8BC1DFA95D7005BFA9A /* PhotoPickDemoViewController.swift */,
+				DB55B8BD1DFA95D7005BFA9A /* PhotoPickDemoViewController.xib */,
+			);
+			path = photoPickDemo;
+			sourceTree = "<group>";
+		};
 		DB5DACBB1DAF727E00D5F0B4 /* testTempDemo */ = {
 			isa = PBXGroup;
 			children = (
@@ -540,6 +571,7 @@
 		DBFA94641DA8F7F000A9098D /* demo */ = {
 			isa = PBXGroup;
 			children = (
+				DB55B8BB1DFA956A005BFA9A /* photoPickDemo */,
 				CE40FFD61DD559E200C4B3D4 /* fileDownload */,
 				DB6C92A01DBF45D4006AB9FE /* adsCycleDemo */,
 				DB629D641DBB6D8A006A642A /* waterFallDemo */,
@@ -599,7 +631,7 @@
 				TargetAttributes = {
 					DB0E25F11DA5392100618C5D = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 7GU5S6A8A5;
+						DevelopmentTeam = T5PFJRPNYQ;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
@@ -632,7 +664,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBFDC4DB1E00E39F00AC38DF /* YHPhotoThumbnailCell.xib in Resources */,
 				DB5DACB81DAF606E00D5F0B4 /* 111.png in Resources */,
+				DB55B8BF1DFA95D7005BFA9A /* PhotoPickDemoViewController.xib in Resources */,
 				DB0B1ABA1DACD6FC00891BAC /* DeviceInfoViewController.xib in Resources */,
 				DB6C92A41DBF460E006AB9FE /* AdsCycyleViewController.xib in Resources */,
 				DB24C3431DA9E7DB00019439 /* HttpDemoViewController.xib in Resources */,
@@ -647,6 +681,7 @@
 				DBD7CB321DAE0BB6004443A1 /* pic_4.jpg in Resources */,
 				DBD7CB331DAE0BB6004443A1 /* pic_5.jpg in Resources */,
 				DBD7CB391DAE152C004443A1 /* testJson.json in Resources */,
+				DB5B70801DFFE4670033193F /* YHPhotoPickViewController.xib in Resources */,
 				DBD7CB311DAE0BB6004443A1 /* pic_3.jpg in Resources */,
 				DB55B8B81DFA51C2005BFA9A /* https.cer in Resources */,
 				DB0E25FD1DA5392100618C5D /* Assets.xcassets in Resources */,
@@ -717,14 +752,16 @@
 				DBD7CB351DAE0C84004443A1 /* NSDictionary_ELoad.swift in Sources */,
 				CE40FFE81DD55A1900C4B3D4 /* FileDownloadOperation.swift in Sources */,
 				CE40FFE41DD55A1900C4B3D4 /* FileDownloadDao.swift in Sources */,
+				DB55B8BE1DFA95D7005BFA9A /* PhotoPickDemoViewController.swift in Sources */,
 				DB0E25F81DA5392100618C5D /* ViewController.swift in Sources */,
-				CE0E4F681DDD87C400AC2BD2 /* LoadPhotosBiz.swift in Sources */,
 				DBD7CB3E1DAE1E94004443A1 /* UIView_EAssist.swift in Sources */,
 				CE40FFE91DD55A1900C4B3D4 /* FileDownloadVO.swift in Sources */,
 				DB24C33A1DA9D55D00019439 /* YHNetwork.swift in Sources */,
+				DB55B8BA1DFA81FC005BFA9A /* YHAssets.swift in Sources */,
 				DB5DACBE1DAF72A800D5F0B4 /* TestTempViewController.swift in Sources */,
 				DBA2DA051DBDA5ED00CCCCB5 /* YHPageControl.swift in Sources */,
 				DB0B1AB91DACD6FC00891BAC /* DeviceInfoViewController.swift in Sources */,
+				DBFDC4DA1E00E39F00AC38DF /* YHPhotoThumbnailCell.swift in Sources */,
 				DBC8D0281DB60BBF00B08ED4 /* PromiseViewController.swift in Sources */,
 				DB0B1A971DACCDFA00891BAC /* YHDeviceInfo.swift in Sources */,
 				DBD7CB3C1DAE17E5004443A1 /* YHGlobalVariable.swift in Sources */,
@@ -739,12 +776,14 @@
 				DB0A25C61DAB35B70047BA94 /* BaseService.swift in Sources */,
 				DB5DACC21DAF74BC00D5F0B4 /* YHFileManger.swift in Sources */,
 				DB0B1ABD1DACEE4500891BAC /* UIColor_EColor.swift in Sources */,
+				DBCD12FC1E013DCC00587500 /* YHPhotoResult.swift in Sources */,
 				DB629D631DBB6D80006A642A /* YHWaterFallLayout.swift in Sources */,
 				DBDF15151DB74AD40072364A /* YHURLCache.swift in Sources */,
 				DB6C92A31DBF460E006AB9FE /* AdsCycyleViewController.swift in Sources */,
 				DB5DACC61DAF7AFA00D5F0B4 /* FileViewController.swift in Sources */,
 				DBDF15131DB70BAC0072364A /* YHNetworkReachability.swift in Sources */,
 				DBD7CB461DAE30D5004443A1 /* NSDate_EStamp.swift in Sources */,
+				DB5B70821DFFE8C30033193F /* YHPhotoPickCollectionDelegate.swift in Sources */,
 				DB0A25C81DAB9A330047BA94 /* HttpBaseService.swift in Sources */,
 				DB0E25F61DA5392100618C5D /* AppDelegate.swift in Sources */,
 				CE01AEC41DD9923C0037A989 /* FileDownloadDBUtil.swift in Sources */,
@@ -752,6 +791,7 @@
 				DBD7CB401DAE1EC8004443A1 /* NSObject_EAssist.swift in Sources */,
 				DBC8D0231DB5CA5400B08ED4 /* SpringDemoViewController.swift in Sources */,
 				CE40FFDC1DD559E200C4B3D4 /* FileDownloadViewController.swift in Sources */,
+				DB5B707F1DFFE4670033193F /* YHPhotoPickViewController.swift in Sources */,
 				DB24C3451DA9E91600019439 /* BaseNavigationController.swift in Sources */,
 				DB5DACB61DAF2ABD00D5F0B4 /* NSNumber_EFromatter.swift in Sources */,
 				DBFA94621DA8F42B00A9098D /* BaseViewController.swift in Sources */,
@@ -888,11 +928,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = YHDevelopFramework_Swift/YHDevelopFramework_Swift.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 7GU5S6A8A5;
+				DEVELOPMENT_TEAM = T5PFJRPNYQ;
 				INFOPLIST_FILE = YHDevelopFramework_Swift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "keqi.YHDevelopFramework-Swift";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iss.-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -906,11 +946,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = YHDevelopFramework_Swift/YHDevelopFramework_Swift.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 7GU5S6A8A5;
+				DEVELOPMENT_TEAM = T5PFJRPNYQ;
 				INFOPLIST_FILE = YHDevelopFramework_Swift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "keqi.YHDevelopFramework-Swift";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iss.-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

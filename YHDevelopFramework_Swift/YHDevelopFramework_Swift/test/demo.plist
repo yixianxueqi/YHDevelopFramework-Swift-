@@ -56,5 +56,11 @@
 		<key>title</key>
 		<string>FileDownload</string>
 	</dict>
+	<dict>
+		<key>className</key>
+		<string>PhotoPickDemoViewController</string>
+		<key>title</key>
+		<string>photoPick</string>
+	</dict>
 </array>
 </plist>
