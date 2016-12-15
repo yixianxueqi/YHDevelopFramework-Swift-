@@ -1,5 +1,5 @@
 //
-//  YHPhotoThroughViewController.swift
+//  YHPhotoBrowseViewController.swift
 //  YHDevelopFramework_Swift
 //
 //  Created by 君若见故 on 16/12/14.
@@ -9,7 +9,7 @@
 import UIKit
 
 protocol YHPhotoThroughProtocol: NSObjectProtocol {
-
+    
     func photoCount() -> Int
     func photoStartAtIndex() -> Int
     func photoThroughNeedGetImage(_ index: Int) -> UIImage
@@ -17,9 +17,9 @@ protocol YHPhotoThroughProtocol: NSObjectProtocol {
     func unSelectImageOfIndex(_ index: Int) -> Void
 }
 
-class YHPhotoThroughViewController: UIViewController {
-
-
+class YHPhotoBrowseViewController: UIViewController {
+    
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var topView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -38,24 +38,20 @@ class YHPhotoThroughViewController: UIViewController {
     // MARK: - life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
         initilalizeCollectionView()
+        
+        
     }
     override func viewWillAppear(_ animated: Bool) {
-         super.viewWillAppear(animated)
+        super.viewWillAppear(animated)
         navigationController?.interactivePopGestureRecognizer?.isEnabled = false
-    }
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-    
-        //bug: it's doesn't work
-//        let indexPath = IndexPath.init(row: delegate.photoStartAtIndex(), section: 0)
-//        collectionView.scrollToItem(at: indexPath , at: .top, animated: false)
-        
         let width = UIScreen.main.bounds.size.width * CGFloat.init(delegate.photoStartAtIndex())
         let offsetPoint = CGPoint.init(x: width, y: 0)
         collectionView.setContentOffset(offsetPoint, animated: false)
     }
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
@@ -67,32 +63,32 @@ class YHPhotoThroughViewController: UIViewController {
     }
     // MARK: - incident
     //click back button
+
+    //click select button
     @IBAction func clickBack(_ sender: UIButton) {
-        
         navigationController?.popViewController(animated: true)
     }
-    //click select button
-    @IBAction func clickSelect(_ sender: UIButton) {
-        
-    }
 
+    @IBAction func clickSelect(_ sender: UIButton) {
+    }
+    
     // MARK: - customView
     private func initilalizeCollectionView() {
         
         tabBarController?.tabBar.isHidden = true
         navigationController?.navigationBar.isHidden = true
         topView.backgroundColor = UIColor.white.withAlphaComponent(0.2)
-//        changeTitlePage(delegate.photoStartAtIndex())
+        //        changeTitlePage(delegate.photoStartAtIndex())
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.setCollectionViewLayout(flowLayout, animated: true)
         collectionView.register(UINib.init(nibName: "YHPhotoHighImageCell", bundle: Bundle.main), forCellWithReuseIdentifier: "cell")
-        view.addSubview(collectionView)
+        //view.addSubview(collectionView)
         collectionView.reloadData()
     }
     //hide toolView
     private func hideToolView() -> Void {
-    
+        
         UIView.animate(withDuration: 0.25, animations:{
             self.topView.center = CGPoint.init(x: kSize.width * 0.5, y: -kNavigationHeight * 0.5)
         })
@@ -106,7 +102,7 @@ class YHPhotoThroughViewController: UIViewController {
     }
     //update title label
     func changeTitlePage(_ index: Int) -> Void {
-     
+
         titleLabel.text = String.init("\(index + 1) / \(delegate.photoCount())")
     }
 }

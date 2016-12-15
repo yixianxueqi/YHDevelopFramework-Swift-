@@ -71,7 +71,7 @@ public class YHPhotoPickViewController: UIViewController {
     internal func throughImage(_ index: Int) {
         
         throuthStartIndex = index
-        let throughVC = YHPhotoThroughViewController.init()
+        let throughVC = YHPhotoBrowseViewController.init()
         throughVC.delegate = self
         navigationController?.pushViewController(throughVC, animated: true)
     }

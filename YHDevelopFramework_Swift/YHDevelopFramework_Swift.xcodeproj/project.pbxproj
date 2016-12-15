@@ -17,6 +17,8 @@
 		CE40FFE71DD55A1900C4B3D4 /* FileDownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40FFE11DD55A1900C4B3D4 /* FileDownloadManager.swift */; };
 		CE40FFE81DD55A1900C4B3D4 /* FileDownloadOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40FFE21DD55A1900C4B3D4 /* FileDownloadOperation.swift */; };
 		CE40FFE91DD55A1900C4B3D4 /* FileDownloadVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE40FFE31DD55A1900C4B3D4 /* FileDownloadVO.swift */; };
+		CEB414411E02920B00C2D21C /* YHPhotoBrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB4143F1E02920B00C2D21C /* YHPhotoBrowseViewController.swift */; };
+		CEB414421E02920B00C2D21C /* YHPhotoBrowseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEB414401E02920B00C2D21C /* YHPhotoBrowseViewController.xib */; };
 		DB0A25C41DAB35620047BA94 /* HttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0A25C31DAB35620047BA94 /* HttpService.swift */; };
 		DB0A25C61DAB35B70047BA94 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0A25C51DAB35B70047BA94 /* BaseService.swift */; };
 		DB0A25C81DAB9A330047BA94 /* HttpBaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0A25C71DAB9A330047BA94 /* HttpBaseService.swift */; };
@@ -37,8 +39,6 @@
 		DB5259A71E02332100C0C8A9 /* YHPhotoHighImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5259A51E02332100C0C8A9 /* YHPhotoHighImageCell.swift */; };
 		DB5259A81E02332100C0C8A9 /* YHPhotoHighImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB5259A61E02332100C0C8A9 /* YHPhotoHighImageCell.xib */; };
 		DB5259AA1E023EA000C0C8A9 /* YHPhotoPickThroughDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5259A91E023EA000C0C8A9 /* YHPhotoPickThroughDelegate.swift */; };
-		DB5259B31E028CE700C0C8A9 /* YHPhotoThroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5259B11E028CE700C0C8A9 /* YHPhotoThroughViewController.swift */; };
-		DB5259B41E028CE700C0C8A9 /* YHPhotoThroughViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB5259B21E028CE700C0C8A9 /* YHPhotoThroughViewController.xib */; };
 		DB55B8B81DFA51C2005BFA9A /* https.cer in Resources */ = {isa = PBXBuildFile; fileRef = DB55B8B71DFA51C2005BFA9A /* https.cer */; };
 		DB55B8BA1DFA81FC005BFA9A /* YHAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB55B8B91DFA81FC005BFA9A /* YHAssets.swift */; };
 		DB55B8BE1DFA95D7005BFA9A /* PhotoPickDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB55B8BC1DFA95D7005BFA9A /* PhotoPickDemoViewController.swift */; };
@@ -104,6 +104,8 @@
 		CE40FFE11DD55A1900C4B3D4 /* FileDownloadManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileDownloadManager.swift; sourceTree = "<group>"; };
 		CE40FFE21DD55A1900C4B3D4 /* FileDownloadOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileDownloadOperation.swift; sourceTree = "<group>"; };
 		CE40FFE31DD55A1900C4B3D4 /* FileDownloadVO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileDownloadVO.swift; sourceTree = "<group>"; };
+		CEB4143F1E02920B00C2D21C /* YHPhotoBrowseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHPhotoBrowseViewController.swift; sourceTree = "<group>"; };
+		CEB414401E02920B00C2D21C /* YHPhotoBrowseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YHPhotoBrowseViewController.xib; sourceTree = "<group>"; };
 		DB0A25C31DAB35620047BA94 /* HttpService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpService.swift; sourceTree = "<group>"; };
 		DB0A25C51DAB35B70047BA94 /* BaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
 		DB0A25C71DAB9A330047BA94 /* HttpBaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpBaseService.swift; sourceTree = "<group>"; };
@@ -126,8 +128,6 @@
 		DB5259A51E02332100C0C8A9 /* YHPhotoHighImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHPhotoHighImageCell.swift; sourceTree = "<group>"; };
 		DB5259A61E02332100C0C8A9 /* YHPhotoHighImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YHPhotoHighImageCell.xib; sourceTree = "<group>"; };
 		DB5259A91E023EA000C0C8A9 /* YHPhotoPickThroughDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHPhotoPickThroughDelegate.swift; sourceTree = "<group>"; };
-		DB5259B11E028CE700C0C8A9 /* YHPhotoThroughViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHPhotoThroughViewController.swift; sourceTree = "<group>"; };
-		DB5259B21E028CE700C0C8A9 /* YHPhotoThroughViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YHPhotoThroughViewController.xib; sourceTree = "<group>"; };
 		DB55B8B71DFA51C2005BFA9A /* https.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = https.cer; sourceTree = "<group>"; };
 		DB55B8B91DFA81FC005BFA9A /* YHAssets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHAssets.swift; sourceTree = "<group>"; };
 		DB55B8BC1DFA95D7005BFA9A /* PhotoPickDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoPickDemoViewController.swift; sourceTree = "<group>"; };
@@ -220,11 +220,11 @@
 				DBFDC4D81E00E39F00AC38DF /* YHPhotoThumbnailCell.swift */,
 				DBFDC4D91E00E39F00AC38DF /* YHPhotoThumbnailCell.xib */,
 				DBCD12FB1E013DCC00587500 /* YHPhotoResult.swift */,
-				DB5259B11E028CE700C0C8A9 /* YHPhotoThroughViewController.swift */,
-				DB5259B21E028CE700C0C8A9 /* YHPhotoThroughViewController.xib */,
 				DBCD13011E014E8200587500 /* YHPhotoThroughCollectionViewDelegate.swift */,
 				DB5259A51E02332100C0C8A9 /* YHPhotoHighImageCell.swift */,
 				DB5259A61E02332100C0C8A9 /* YHPhotoHighImageCell.xib */,
+				CEB4143F1E02920B00C2D21C /* YHPhotoBrowseViewController.swift */,
+				CEB414401E02920B00C2D21C /* YHPhotoBrowseViewController.xib */,
 			);
 			path = photoPicker;
 			sourceTree = "<group>";
@@ -694,7 +694,7 @@
 				DBFA94671DA8F83900A9098D /* demo.plist in Resources */,
 				DB5DACC71DAF7AFA00D5F0B4 /* FileViewController.xib in Resources */,
 				DB5259A81E02332100C0C8A9 /* YHPhotoHighImageCell.xib in Resources */,
-				DB5259B41E028CE700C0C8A9 /* YHPhotoThroughViewController.xib in Resources */,
+				CEB414421E02920B00C2D21C /* YHPhotoBrowseViewController.xib in Resources */,
 				CE40FFDB1DD559E200C4B3D4 /* DownloadTableViewCell.xib in Resources */,
 				DBD7CB2F1DAE0BB6004443A1 /* pic_1.jpg in Resources */,
 				DBC8D0291DB60BBF00B08ED4 /* PromiseViewController.xib in Resources */,
@@ -780,7 +780,7 @@
 				DB24C33A1DA9D55D00019439 /* YHNetwork.swift in Sources */,
 				DB55B8BA1DFA81FC005BFA9A /* YHAssets.swift in Sources */,
 				DB5DACBE1DAF72A800D5F0B4 /* TestTempViewController.swift in Sources */,
-				DB5259B31E028CE700C0C8A9 /* YHPhotoThroughViewController.swift in Sources */,
+				CEB414411E02920B00C2D21C /* YHPhotoBrowseViewController.swift in Sources */,
 				DBA2DA051DBDA5ED00CCCCB5 /* YHPageControl.swift in Sources */,
 				DB0B1AB91DACD6FC00891BAC /* DeviceInfoViewController.swift in Sources */,
 				DBFDC4DA1E00E39F00AC38DF /* YHPhotoThumbnailCell.swift in Sources */,

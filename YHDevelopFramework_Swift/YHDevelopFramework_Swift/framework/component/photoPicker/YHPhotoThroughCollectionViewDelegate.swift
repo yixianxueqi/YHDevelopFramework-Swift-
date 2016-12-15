@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension YHPhotoThroughViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension YHPhotoBrowseViewController: UICollectionViewDelegate, UICollectionViewDataSource {
 
     // MARK: - UICollectionViewDataSource
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
