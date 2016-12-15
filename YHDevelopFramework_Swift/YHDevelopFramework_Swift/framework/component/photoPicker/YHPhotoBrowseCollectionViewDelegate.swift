@@ -1,5 +1,5 @@
 //
-//  YHPhotoThroughCell.swift
+//  YHPhotoBrowseViewController.swift
 //  YHDevelopFramework_Swift
 //
 //  Created by 君若见故 on 16/12/14.
@@ -20,6 +20,13 @@ extension YHPhotoBrowseViewController: UICollectionViewDelegate, UICollectionVie
         let cell: YHPhotoHighImageCell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! YHPhotoHighImageCell
         let image = delegate.photoThroughNeedGetImage(indexPath.row)
         cell.setImage(image)
+        cell.tapAction = {
+            if self.isShowToolView {
+                self.hideToolView()
+            } else {
+                self.showToolView()
+            }
+        }
         return cell
     }
     // MARK: - UICollectionViewDelegate

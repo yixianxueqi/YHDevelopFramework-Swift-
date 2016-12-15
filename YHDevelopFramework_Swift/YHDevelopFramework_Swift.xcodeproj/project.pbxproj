@@ -65,7 +65,7 @@
 		DBC8D0281DB60BBF00B08ED4 /* PromiseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC8D0261DB60BBF00B08ED4 /* PromiseViewController.swift */; };
 		DBC8D0291DB60BBF00B08ED4 /* PromiseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBC8D0271DB60BBF00B08ED4 /* PromiseViewController.xib */; };
 		DBCD12FC1E013DCC00587500 /* YHPhotoResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCD12FB1E013DCC00587500 /* YHPhotoResult.swift */; };
-		DBCD13021E014E8200587500 /* YHPhotoThroughCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCD13011E014E8200587500 /* YHPhotoThroughCollectionViewDelegate.swift */; };
+		DBCD13021E014E8200587500 /* YHPhotoBrowseCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCD13011E014E8200587500 /* YHPhotoBrowseCollectionViewDelegate.swift */; };
 		DBD7CB291DAE0920004443A1 /* UIImage_ELoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD7CB281DAE0920004443A1 /* UIImage_ELoad.swift */; };
 		DBD7CB2F1DAE0BB6004443A1 /* pic_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DBD7CB2A1DAE0BB6004443A1 /* pic_1.jpg */; };
 		DBD7CB301DAE0BB6004443A1 /* pic_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DBD7CB2B1DAE0BB6004443A1 /* pic_2.jpg */; };
@@ -154,7 +154,7 @@
 		DBC8D0261DB60BBF00B08ED4 /* PromiseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromiseViewController.swift; sourceTree = "<group>"; };
 		DBC8D0271DB60BBF00B08ED4 /* PromiseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PromiseViewController.xib; sourceTree = "<group>"; };
 		DBCD12FB1E013DCC00587500 /* YHPhotoResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHPhotoResult.swift; sourceTree = "<group>"; };
-		DBCD13011E014E8200587500 /* YHPhotoThroughCollectionViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHPhotoThroughCollectionViewDelegate.swift; sourceTree = "<group>"; };
+		DBCD13011E014E8200587500 /* YHPhotoBrowseCollectionViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHPhotoBrowseCollectionViewDelegate.swift; sourceTree = "<group>"; };
 		DBD7CB271DADE11A004443A1 /* YHDevelopFramework_Swift.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = YHDevelopFramework_Swift.entitlements; sourceTree = "<group>"; };
 		DBD7CB281DAE0920004443A1 /* UIImage_ELoad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage_ELoad.swift; sourceTree = "<group>"; };
 		DBD7CB2A1DAE0BB6004443A1 /* pic_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pic_1.jpg; sourceTree = "<group>"; };
@@ -220,11 +220,11 @@
 				DBFDC4D81E00E39F00AC38DF /* YHPhotoThumbnailCell.swift */,
 				DBFDC4D91E00E39F00AC38DF /* YHPhotoThumbnailCell.xib */,
 				DBCD12FB1E013DCC00587500 /* YHPhotoResult.swift */,
-				DBCD13011E014E8200587500 /* YHPhotoThroughCollectionViewDelegate.swift */,
-				DB5259A51E02332100C0C8A9 /* YHPhotoHighImageCell.swift */,
-				DB5259A61E02332100C0C8A9 /* YHPhotoHighImageCell.xib */,
 				CEB4143F1E02920B00C2D21C /* YHPhotoBrowseViewController.swift */,
 				CEB414401E02920B00C2D21C /* YHPhotoBrowseViewController.xib */,
+				DBCD13011E014E8200587500 /* YHPhotoBrowseCollectionViewDelegate.swift */,
+				DB5259A51E02332100C0C8A9 /* YHPhotoHighImageCell.swift */,
+				DB5259A61E02332100C0C8A9 /* YHPhotoHighImageCell.xib */,
 			);
 			path = photoPicker;
 			sourceTree = "<group>";
@@ -773,7 +773,7 @@
 				CE40FFE81DD55A1900C4B3D4 /* FileDownloadOperation.swift in Sources */,
 				CE40FFE41DD55A1900C4B3D4 /* FileDownloadDao.swift in Sources */,
 				DB55B8BE1DFA95D7005BFA9A /* PhotoPickDemoViewController.swift in Sources */,
-				DBCD13021E014E8200587500 /* YHPhotoThroughCollectionViewDelegate.swift in Sources */,
+				DBCD13021E014E8200587500 /* YHPhotoBrowseCollectionViewDelegate.swift in Sources */,
 				DB0E25F81DA5392100618C5D /* ViewController.swift in Sources */,
 				DBD7CB3E1DAE1E94004443A1 /* UIView_EAssist.swift in Sources */,
 				CE40FFE91DD55A1900C4B3D4 /* FileDownloadVO.swift in Sources */,

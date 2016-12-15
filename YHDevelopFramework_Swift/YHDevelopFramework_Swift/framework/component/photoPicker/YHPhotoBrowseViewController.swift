@@ -19,13 +19,12 @@ protocol YHPhotoThroughProtocol: NSObjectProtocol {
 
 class YHPhotoBrowseViewController: UIViewController {
     
-    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var topView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
     weak var delegate: YHPhotoThroughProtocol!
+    var isShowToolView = true
     
-    private var isShowToolView = true
     private let flowLayout: UICollectionViewFlowLayout = {
         let flowLayout = UICollectionViewFlowLayout.init()
         flowLayout.scrollDirection = .horizontal
@@ -39,13 +38,11 @@ class YHPhotoBrowseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         initilalizeCollectionView()
-        
-        
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
         navigationController?.interactivePopGestureRecognizer?.isEnabled = false
         let width = UIScreen.main.bounds.size.width * CGFloat.init(delegate.photoStartAtIndex())
         let offsetPoint = CGPoint.init(x: width, y: 0)
@@ -63,39 +60,39 @@ class YHPhotoBrowseViewController: UIViewController {
     }
     // MARK: - incident
     //click back button
-
-    //click select button
     @IBAction func clickBack(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
     }
-
+//click select button
     @IBAction func clickSelect(_ sender: UIButton) {
+        
     }
-    
     // MARK: - customView
     private func initilalizeCollectionView() {
         
         tabBarController?.tabBar.isHidden = true
         navigationController?.navigationBar.isHidden = true
+        isShowToolView = true
         topView.backgroundColor = UIColor.white.withAlphaComponent(0.2)
-        //        changeTitlePage(delegate.photoStartAtIndex())
+        changeTitlePage(delegate.photoStartAtIndex())
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.setCollectionViewLayout(flowLayout, animated: true)
         collectionView.register(UINib.init(nibName: "YHPhotoHighImageCell", bundle: Bundle.main), forCellWithReuseIdentifier: "cell")
-        //view.addSubview(collectionView)
         collectionView.reloadData()
     }
     //hide toolView
-    private func hideToolView() -> Void {
+    func hideToolView() -> Void {
         
+        isShowToolView = false
         UIView.animate(withDuration: 0.25, animations:{
             self.topView.center = CGPoint.init(x: kSize.width * 0.5, y: -kNavigationHeight * 0.5)
         })
     }
     //show tooView
-    private func showToolView() -> Void {
+    func showToolView() -> Void {
         
+        isShowToolView = true
         UIView.animate(withDuration: 0.25, animations:{
             self.topView.center = CGPoint.init(x: kSize.width * 0.5, y: kNavigationHeight * 0.5)
         })
