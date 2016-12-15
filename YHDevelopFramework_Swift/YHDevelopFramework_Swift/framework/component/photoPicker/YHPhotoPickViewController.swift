@@ -24,6 +24,7 @@ public class YHPhotoPickViewController: UIViewController {
     internal var getThumbnail: ImageOfIndex?
     internal var getHighImage: ImageOfIndex?
     internal var selectList = [Int]()
+    internal var throuthStartIndex = 0
     
     @IBOutlet private weak var collectionView: UICollectionView!
     @IBOutlet private weak var selectCountLabel: UILabel!
@@ -50,6 +51,9 @@ public class YHPhotoPickViewController: UIViewController {
         initilalizeCollectionView()
         getAssets()
     }
+    public override var prefersStatusBarHidden: Bool {
+        return false
+    }
     // MARK: - incident
     @IBAction private func clickOKButton(_ sender: UIButton) {
         
@@ -65,7 +69,11 @@ public class YHPhotoPickViewController: UIViewController {
     }
     //through highImage
     internal func throughImage(_ index: Int) {
-        log.debug(index)
+        
+        throuthStartIndex = index
+        let throughVC = YHPhotoThroughViewController.init()
+        throughVC.delegate = self
+        navigationController?.pushViewController(throughVC, animated: true)
     }
     //select image handle
     internal func selectImage(_ index: Int) {
@@ -104,11 +112,15 @@ public class YHPhotoPickViewController: UIViewController {
     // MARK: - load resources
     private func getAssets() {
         
-        YHAssets().loadImageAssets { (list) in
-            self.assetsList = list
-            self.getThumbnail = self.asset.getThumbnailImage(list, targetSize: self.flowLayout.itemSize)
-            self.getHighImage = self.asset.getHighImage(list, targetSize: UIScreen.main.bounds.size)
-            self.collectionView.reloadData()
+        DispatchQueue.global().async {
+            YHAssets().loadImageAssets { (list) in
+                self.assetsList = list
+                self.getThumbnail = self.asset.getThumbnailImage(list, targetSize: self.flowLayout.itemSize)
+                self.getHighImage = self.asset.getHighImage(list, targetSize: UIScreen.main.bounds.size)
+                DispatchQueue.main.async {
+                    self.collectionView.reloadData()
+                }
+            }
         }
     }
     // MARK: - custom view
