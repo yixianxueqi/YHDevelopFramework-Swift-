@@ -20,7 +20,7 @@ public class YHPhotoPickViewController: UIViewController {
     public var selectCount: Int = 0
     public var completionAction: (([YHPhotoResult]) -> Void)?
     
-    internal var assetsList = [PHAsset]()
+    internal var assetsList: [PHAsset]?
     internal var getThumbnail: ImageOfIndex?
     internal var getHighImage: ImageOfIndex?
     internal var selectList = [Int]()
@@ -48,14 +48,28 @@ public class YHPhotoPickViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        initilalizeCollectionView()
+        let nav = navigationController as! YHPhotoPickManagerViewController
+        selectCount = nav.selectCount
+        completionAction = nav.completionAction
+        
+        initializeNavRight()
+        initializeCollectionView()
         getAssets()
+    }
+    public override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if assetsList != nil,(assetsList?.count)! > 0 {
+            //exist,
+            getAssetsImage()
+        }
+        collectionView.reloadData()
     }
     public override var prefersStatusBarHidden: Bool {
         return false
     }
     // MARK: - incident
-    @IBAction private func clickOKButton(_ sender: UIButton) {
+    @IBAction func clickOKButton(_ sender: UIButton) {
         
         var resultList = [YHPhotoResult]()
         for value in selectList {
@@ -65,7 +79,10 @@ public class YHPhotoPickViewController: UIViewController {
             resultList.append(result)
         }
         completionAction?(resultList)
-        navigationController?.popViewController(animated: true)
+        navigationController?.dismiss(animated: true, completion: nil)
+    }
+    func clickRightBarItem() -> Void {
+        navigationController?.dismiss(animated: true, completion: nil)
     }
     //through highImage
     internal func throughImage(_ index: Int) {
@@ -76,8 +93,11 @@ public class YHPhotoPickViewController: UIViewController {
         navigationController?.pushViewController(throughVC, animated: true)
     }
     //select image handle
-    internal func selectImage(_ index: Int) {
+    @discardableResult
+    internal func selectImage(_ index: Int) -> Bool {
+        
         var oldIndex: Int?
+        var isSuccess = true
         if selectCount == 1 {
             //sigle
             oldIndex = selectList.first
@@ -90,6 +110,7 @@ public class YHPhotoPickViewController: UIViewController {
             } else {
                 //warning over limit
                 warningOverLimit()
+                isSuccess = false
             }
         }
         changeBottomView(selectList.count);
@@ -98,6 +119,7 @@ public class YHPhotoPickViewController: UIViewController {
         } else {
             reloadCollectionView([index])
         }
+        return isSuccess
     }
     //unSelect image handle
     internal func unSelectImage(_ index: Int) {
@@ -112,19 +134,24 @@ public class YHPhotoPickViewController: UIViewController {
     // MARK: - load resources
     private func getAssets() {
         
+        YHAssets().loadImageAssets { (list) in
+            self.assetsList = list
+            self.getAssetsImage()
+        }
+        
+    }
+    private func getAssetsImage() {
+    
         DispatchQueue.global().async {
-            YHAssets().loadImageAssets { (list) in
-                self.assetsList = list
-                self.getThumbnail = self.asset.getThumbnailImage(list, targetSize: self.flowLayout.itemSize)
-                self.getHighImage = self.asset.getHighImage(list, targetSize: UIScreen.main.bounds.size)
-                DispatchQueue.main.async {
-                    self.collectionView.reloadData()
-                }
+            self.getThumbnail = self.asset.getThumbnailImage(self.assetsList!, targetSize: self.flowLayout.itemSize)
+            self.getHighImage = self.asset.getHighImage(self.assetsList!, targetSize: UIScreen.main.bounds.size)
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
             }
         }
     }
     // MARK: - custom view
-    private func initilalizeCollectionView() {
+    private func initializeCollectionView() {
         
         tabBarController?.tabBar.isHidden = true
         collectionView.delegate = self
@@ -136,12 +163,14 @@ public class YHPhotoPickViewController: UIViewController {
     //change view by select image count
     private func changeBottomView(_ count: Int) {
         
+        selectCountLabel.text = String.init(count)
         if count > 0 {
             okButton.backgroundColor = kGreenColor
+            okButton.isUserInteractionEnabled = true
         } else {
             okButton.backgroundColor = UIColor.darkGray
+            okButton.isUserInteractionEnabled = false
         }
-        selectCountLabel.text = String.init(count)
     }
     //refresh collectionView
     private func reloadCollectionView(_ indexList: [Int]) {
@@ -160,5 +189,10 @@ public class YHPhotoPickViewController: UIViewController {
         let cancel = UIAlertAction.init(title: "取消", style: .cancel, handler: nil)
         alert.addAction(cancel)
         present(alert, animated: true, completion: nil)
+    }
+    func initializeNavRight() -> Void {
+        
+        let barItem = UIBarButtonItem.init(title: "取消", style: .plain, target: self, action: #selector(clickRightBarItem))
+        navigationItem.rightBarButtonItem = barItem;
     }
 }

@@ -12,7 +12,7 @@ extension YHPhotoPickViewController: YHPhotoThroughProtocol {
 
     func photoCount() -> Int {
     
-        return assetsList.count
+        return assetsList!.count
     }
     func photoStartAtIndex() -> Int {
         
@@ -22,7 +22,7 @@ extension YHPhotoPickViewController: YHPhotoThroughProtocol {
     
         return getHighImage!(index)
     }
-    func selectImageOfIndex(_ index: Int) -> Void {
+    func selectImageOfIndex(_ index: Int) -> Bool {
         
         return selectImage(index)
     }
@@ -31,4 +31,19 @@ extension YHPhotoPickViewController: YHPhotoThroughProtocol {
     
         return unSelectImage(index)
     }
+    func containImageOfIndex(_ index: Int) -> Bool {
+        
+        return selectList.contains(index)
+    }
+    func getSelectPhotoCount() -> Int {
+        
+        return selectList.count
+    }
+    func completePick() {
+        
+        clickOKButton(UIButton())
+    }
 }
+
+
+

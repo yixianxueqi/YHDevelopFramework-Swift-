@@ -36,6 +36,11 @@
 		DB24C3451DA9E91600019439 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB24C3441DA9E91600019439 /* BaseNavigationController.swift */; };
 		DB24DDE41DA894EF003F1741 /* YHLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB24DDE31DA894EF003F1741 /* YHLogger.swift */; };
 		DB286AC51DBE0A2000BC7EAF /* AdsCycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB286AC41DBE0A2000BC7EAF /* AdsCycleView.swift */; };
+		DB3AB85B1E03C948005CE212 /* YHPhotoAlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3AB8591E03C947005CE212 /* YHPhotoAlbumViewController.swift */; };
+		DB3AB85C1E03C948005CE212 /* YHPhotoAlbumViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB3AB85A1E03C948005CE212 /* YHPhotoAlbumViewController.xib */; };
+		DB3AB85E1E03C9C7005CE212 /* YHPhotoAlbumTableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3AB85D1E03C9C7005CE212 /* YHPhotoAlbumTableDelegate.swift */; };
+		DB3AB8611E03CAAB005CE212 /* YHPhotoAlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3AB85F1E03CAAB005CE212 /* YHPhotoAlbumTableViewCell.swift */; };
+		DB3AB8621E03CAAB005CE212 /* YHPhotoAlbumTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB3AB8601E03CAAB005CE212 /* YHPhotoAlbumTableViewCell.xib */; };
 		DB5259A71E02332100C0C8A9 /* YHPhotoHighImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5259A51E02332100C0C8A9 /* YHPhotoHighImageCell.swift */; };
 		DB5259A81E02332100C0C8A9 /* YHPhotoHighImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB5259A61E02332100C0C8A9 /* YHPhotoHighImageCell.xib */; };
 		DB5259AA1E023EA000C0C8A9 /* YHPhotoPickThroughDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5259A91E023EA000C0C8A9 /* YHPhotoPickThroughDelegate.swift */; };
@@ -81,6 +86,7 @@
 		DBD7CB421DAE258F004443A1 /* NSString_ERect.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD7CB411DAE258F004443A1 /* NSString_ERect.swift */; };
 		DBD7CB441DAE307D004443A1 /* YHGlobalFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD7CB431DAE307D004443A1 /* YHGlobalFunc.swift */; };
 		DBD7CB461DAE30D5004443A1 /* NSDate_EStamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD7CB451DAE30D5004443A1 /* NSDate_EStamp.swift */; };
+		DBD838C11E050C7D000EB02A /* YHPhotoPickManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD838C01E050C7D000EB02A /* YHPhotoPickManagerViewController.swift */; };
 		DBDF15131DB70BAC0072364A /* YHNetworkReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDF15121DB70BAC0072364A /* YHNetworkReachability.swift */; };
 		DBDF15151DB74AD40072364A /* YHURLCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDF15141DB74AD40072364A /* YHURLCache.swift */; };
 		DBFA94621DA8F42B00A9098D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFA94611DA8F42B00A9098D /* BaseViewController.swift */; };
@@ -125,6 +131,11 @@
 		DB24C3441DA9E91600019439 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		DB24DDE31DA894EF003F1741 /* YHLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHLogger.swift; sourceTree = "<group>"; };
 		DB286AC41DBE0A2000BC7EAF /* AdsCycleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdsCycleView.swift; sourceTree = "<group>"; };
+		DB3AB8591E03C947005CE212 /* YHPhotoAlbumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHPhotoAlbumViewController.swift; sourceTree = "<group>"; };
+		DB3AB85A1E03C948005CE212 /* YHPhotoAlbumViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YHPhotoAlbumViewController.xib; sourceTree = "<group>"; };
+		DB3AB85D1E03C9C7005CE212 /* YHPhotoAlbumTableDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHPhotoAlbumTableDelegate.swift; sourceTree = "<group>"; };
+		DB3AB85F1E03CAAB005CE212 /* YHPhotoAlbumTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHPhotoAlbumTableViewCell.swift; sourceTree = "<group>"; };
+		DB3AB8601E03CAAB005CE212 /* YHPhotoAlbumTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YHPhotoAlbumTableViewCell.xib; sourceTree = "<group>"; };
 		DB5259A51E02332100C0C8A9 /* YHPhotoHighImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHPhotoHighImageCell.swift; sourceTree = "<group>"; };
 		DB5259A61E02332100C0C8A9 /* YHPhotoHighImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YHPhotoHighImageCell.xib; sourceTree = "<group>"; };
 		DB5259A91E023EA000C0C8A9 /* YHPhotoPickThroughDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHPhotoPickThroughDelegate.swift; sourceTree = "<group>"; };
@@ -171,6 +182,7 @@
 		DBD7CB411DAE258F004443A1 /* NSString_ERect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSString_ERect.swift; sourceTree = "<group>"; };
 		DBD7CB431DAE307D004443A1 /* YHGlobalFunc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHGlobalFunc.swift; sourceTree = "<group>"; };
 		DBD7CB451DAE30D5004443A1 /* NSDate_EStamp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDate_EStamp.swift; sourceTree = "<group>"; };
+		DBD838C01E050C7D000EB02A /* YHPhotoPickManagerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHPhotoPickManagerViewController.swift; sourceTree = "<group>"; };
 		DBDF15121DB70BAC0072364A /* YHNetworkReachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHNetworkReachability.swift; sourceTree = "<group>"; };
 		DBDF15141DB74AD40072364A /* YHURLCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHURLCache.swift; sourceTree = "<group>"; };
 		DBFA94611DA8F42B00A9098D /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -225,6 +237,12 @@
 				DBCD13011E014E8200587500 /* YHPhotoBrowseCollectionViewDelegate.swift */,
 				DB5259A51E02332100C0C8A9 /* YHPhotoHighImageCell.swift */,
 				DB5259A61E02332100C0C8A9 /* YHPhotoHighImageCell.xib */,
+				DB3AB8591E03C947005CE212 /* YHPhotoAlbumViewController.swift */,
+				DB3AB85A1E03C948005CE212 /* YHPhotoAlbumViewController.xib */,
+				DB3AB85D1E03C9C7005CE212 /* YHPhotoAlbumTableDelegate.swift */,
+				DB3AB85F1E03CAAB005CE212 /* YHPhotoAlbumTableViewCell.swift */,
+				DB3AB8601E03CAAB005CE212 /* YHPhotoAlbumTableViewCell.xib */,
+				DBD838C01E050C7D000EB02A /* YHPhotoPickManagerViewController.swift */,
 			);
 			path = photoPicker;
 			sourceTree = "<group>";
@@ -684,6 +702,7 @@
 			files = (
 				DBFDC4DB1E00E39F00AC38DF /* YHPhotoThumbnailCell.xib in Resources */,
 				DB5DACB81DAF606E00D5F0B4 /* 111.png in Resources */,
+				DB3AB85C1E03C948005CE212 /* YHPhotoAlbumViewController.xib in Resources */,
 				DB55B8BF1DFA95D7005BFA9A /* PhotoPickDemoViewController.xib in Resources */,
 				DB0B1ABA1DACD6FC00891BAC /* DeviceInfoViewController.xib in Resources */,
 				DB6C92A41DBF460E006AB9FE /* AdsCycyleViewController.xib in Resources */,
@@ -706,6 +725,7 @@
 				DB55B8B81DFA51C2005BFA9A /* https.cer in Resources */,
 				DB0E25FD1DA5392100618C5D /* Assets.xcassets in Resources */,
 				DB0E25FB1DA5392100618C5D /* Main.storyboard in Resources */,
+				DB3AB8621E03CAAB005CE212 /* YHPhotoAlbumTableViewCell.xib in Resources */,
 				DB5DACBF1DAF72A800D5F0B4 /* TestTempViewController.xib in Resources */,
 				DBD7CB301DAE0BB6004443A1 /* pic_2.jpg in Resources */,
 			);
@@ -782,6 +802,7 @@
 				DB5DACBE1DAF72A800D5F0B4 /* TestTempViewController.swift in Sources */,
 				CEB414411E02920B00C2D21C /* YHPhotoBrowseViewController.swift in Sources */,
 				DBA2DA051DBDA5ED00CCCCB5 /* YHPageControl.swift in Sources */,
+				DB3AB85B1E03C948005CE212 /* YHPhotoAlbumViewController.swift in Sources */,
 				DB0B1AB91DACD6FC00891BAC /* DeviceInfoViewController.swift in Sources */,
 				DBFDC4DA1E00E39F00AC38DF /* YHPhotoThumbnailCell.swift in Sources */,
 				DBC8D0281DB60BBF00B08ED4 /* PromiseViewController.swift in Sources */,
@@ -790,12 +811,15 @@
 				DBD7CB421DAE258F004443A1 /* NSString_ERect.swift in Sources */,
 				DB286AC51DBE0A2000BC7EAF /* AdsCycleView.swift in Sources */,
 				DBFA94691DA8F87700A9098D /* HttpDemoViewController.swift in Sources */,
+				DB3AB85E1E03C9C7005CE212 /* YHPhotoAlbumTableDelegate.swift in Sources */,
 				CE01AEC61DD992BE0037A989 /* FileDownloadDBConstants.swift in Sources */,
 				DB5259A71E02332100C0C8A9 /* YHPhotoHighImageCell.swift in Sources */,
 				DB5259AA1E023EA000C0C8A9 /* YHPhotoPickThroughDelegate.swift in Sources */,
 				DBBC94BB1DD4A63D00A20383 /* SwiftyJSON.swift in Sources */,
+				DB3AB8611E03CAAB005CE212 /* YHPhotoAlbumTableViewCell.swift in Sources */,
 				DBD7CB371DAE0F6F004443A1 /* NSArray_ELoad.swift in Sources */,
 				DB629D671DBB6DB3006A642A /* WaterFallViewController.swift in Sources */,
+				DBD838C11E050C7D000EB02A /* YHPhotoPickManagerViewController.swift in Sources */,
 				DB24DDE41DA894EF003F1741 /* YHLogger.swift in Sources */,
 				DB0A25C61DAB35B70047BA94 /* BaseService.swift in Sources */,
 				DB5DACC21DAF74BC00D5F0B4 /* YHFileManger.swift in Sources */,

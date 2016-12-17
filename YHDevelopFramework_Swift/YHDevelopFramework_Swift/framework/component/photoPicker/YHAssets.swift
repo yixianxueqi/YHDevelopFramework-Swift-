@@ -39,7 +39,41 @@ public class YHAssets: NSObject {
             self.getImageAssets()
         }
     }
+    // get photo album
+    func getAlbum() -> [(String,[PHAsset])] {
     
+        var resultlist = [(String,[PHAsset])]()
+        let result: PHFetchResult<PHAssetCollection> = PHAssetCollection.fetchAssetCollections(with: .smartAlbum, subtype: .any, options: nil)
+        result.enumerateObjects({ (assetCollection, index, stop) in
+            let title = assetCollection.localizedTitle
+            var assetList = [PHAsset]()
+            let collectionResult = PHAsset.fetchAssets(in: assetCollection, options: nil)
+            collectionResult.enumerateObjects({ (asset, index, stop) in
+                assetList.append(asset)
+            })
+            resultlist.append((title ?? "",assetList))
+        })
+        return resultlist
+    }
+    
+    /// get image for asset
+    ///
+    /// - Parameters:
+    ///   - asset: PHAsset
+    ///   - size: target size
+    /// - Returns: UIImage
+    static func getImageByAsset(_ asset: PHAsset, targetSize size: CGSize) -> UIImage {
+    
+        let manager = PHImageManager.default()
+        let options = PHImageRequestOptions()
+        options.deliveryMode = .opportunistic
+        options.isSynchronous = true
+        var image = UIImage()
+        manager.requestImage(for: asset, targetSize: size, contentMode: .aspectFit, options: options, resultHandler:{(result, info)->Void in
+            image = result!
+        })
+        return image
+    }
     /// get thumbnail creater
     ///
     /// - Parameters:

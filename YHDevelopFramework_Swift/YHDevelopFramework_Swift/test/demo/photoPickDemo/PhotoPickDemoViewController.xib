@@ -22,7 +22,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" tag="1003" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RcI-iN-xsE">
-                    <rect key="frame" x="204" y="196" width="80" height="30"/>
+                    <rect key="frame" x="204" y="296" width="80" height="30"/>
                     <color key="backgroundColor" red="0.015686274510000001" green="0.72156862749999995" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="Ohf-QG-MNF"/>
@@ -36,7 +36,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" tag="1001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ed0-Wc-cgp">
-                    <rect key="frame" x="92" y="196" width="80" height="30"/>
+                    <rect key="frame" x="92" y="296" width="80" height="30"/>
                     <color key="backgroundColor" red="0.015686274510000001" green="0.72156862749999995" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                     <state key="normal" title="PickOne">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -46,17 +46,17 @@
                     </connections>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2k5-Ht-85L">
-                    <rect key="frame" x="158" y="275" width="60" height="60"/>
+                    <rect key="frame" x="158" y="375" width="60" height="60"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="60" id="ELe-PK-NDJ"/>
                         <constraint firstAttribute="height" constant="60" id="f9f-1l-khO"/>
                     </constraints>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2Nf-2y-iYq">
-                    <rect key="frame" x="38" y="351" width="300" height="300"/>
+                    <rect key="frame" x="88" y="451" width="200" height="200"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="300" id="JPM-7E-6x4"/>
-                        <constraint firstAttribute="height" constant="300" id="g3j-N0-N1g"/>
+                        <constraint firstAttribute="width" constant="200" id="JPM-7E-6x4"/>
+                        <constraint firstAttribute="height" constant="200" id="g3j-N0-N1g"/>
                     </constraints>
                 </imageView>
             </subviews>

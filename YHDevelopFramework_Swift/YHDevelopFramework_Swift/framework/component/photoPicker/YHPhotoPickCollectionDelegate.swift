@@ -13,7 +13,10 @@ extension YHPhotoPickViewController: UICollectionViewDelegate,UICollectionViewDa
     // MARK: - UICollectionViewDataSource
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     
-        return assetsList.count
+        guard assetsList != nil else {
+            return 0
+        }
+        return assetsList!.count
     }
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
