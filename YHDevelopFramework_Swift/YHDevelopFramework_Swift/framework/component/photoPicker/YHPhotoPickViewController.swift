@@ -136,10 +136,9 @@ public class YHPhotoPickViewController: UIViewController {
         
         YHAssets().loadImageAssets { (list) in
             self.assetsList = list
-            self.getAssetsImage()
         }
-        
     }
+    //get image with asset
     private func getAssetsImage() {
     
         DispatchQueue.global().async {

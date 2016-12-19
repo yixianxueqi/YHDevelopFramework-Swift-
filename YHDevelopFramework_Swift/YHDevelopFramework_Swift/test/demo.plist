@@ -62,5 +62,11 @@
 		<key>title</key>
 		<string>photoPick</string>
 	</dict>
+	<dict>
+		<key>className</key>
+		<string>PictureBrowseDemoViewController</string>
+		<key>title</key>
+		<string>pictureBrowse</string>
+	</dict>
 </array>
 </plist>
