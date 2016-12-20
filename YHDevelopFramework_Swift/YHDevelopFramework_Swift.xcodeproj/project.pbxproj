@@ -48,6 +48,7 @@
 		DB3AB85E1E03C9C7005CE212 /* YHPhotoAlbumTableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3AB85D1E03C9C7005CE212 /* YHPhotoAlbumTableDelegate.swift */; };
 		DB3AB8611E03CAAB005CE212 /* YHPhotoAlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3AB85F1E03CAAB005CE212 /* YHPhotoAlbumTableViewCell.swift */; };
 		DB3AB8621E03CAAB005CE212 /* YHPhotoAlbumTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB3AB8601E03CAAB005CE212 /* YHPhotoAlbumTableViewCell.xib */; };
+		DB3D47911E0925AA0036C4D7 /* NSString_ERegularCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3D47901E0925AA0036C4D7 /* NSString_ERegularCheck.swift */; };
 		DB5259A71E02332100C0C8A9 /* YHPhotoHighImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5259A51E02332100C0C8A9 /* YHPhotoHighImageCell.swift */; };
 		DB5259A81E02332100C0C8A9 /* YHPhotoHighImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB5259A61E02332100C0C8A9 /* YHPhotoHighImageCell.xib */; };
 		DB5259AA1E023EA000C0C8A9 /* YHPhotoPickThroughDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5259A91E023EA000C0C8A9 /* YHPhotoPickThroughDelegate.swift */; };
@@ -150,6 +151,7 @@
 		DB3AB85D1E03C9C7005CE212 /* YHPhotoAlbumTableDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHPhotoAlbumTableDelegate.swift; sourceTree = "<group>"; };
 		DB3AB85F1E03CAAB005CE212 /* YHPhotoAlbumTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHPhotoAlbumTableViewCell.swift; sourceTree = "<group>"; };
 		DB3AB8601E03CAAB005CE212 /* YHPhotoAlbumTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YHPhotoAlbumTableViewCell.xib; sourceTree = "<group>"; };
+		DB3D47901E0925AA0036C4D7 /* NSString_ERegularCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSString_ERegularCheck.swift; sourceTree = "<group>"; };
 		DB5259A51E02332100C0C8A9 /* YHPhotoHighImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHPhotoHighImageCell.swift; sourceTree = "<group>"; };
 		DB5259A61E02332100C0C8A9 /* YHPhotoHighImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YHPhotoHighImageCell.xib; sourceTree = "<group>"; };
 		DB5259A91E023EA000C0C8A9 /* YHPhotoPickThroughDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHPhotoPickThroughDelegate.swift; sourceTree = "<group>"; };
@@ -316,6 +318,7 @@
 				DBD7CB411DAE258F004443A1 /* NSString_ERect.swift */,
 				DBD7CB451DAE30D5004443A1 /* NSDate_EStamp.swift */,
 				DB5DACB51DAF2ABD00D5F0B4 /* NSNumber_EFromatter.swift */,
+				DB3D47901E0925AA0036C4D7 /* NSString_ERegularCheck.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -860,6 +863,7 @@
 				DB55B8BE1DFA95D7005BFA9A /* PhotoPickDemoViewController.swift in Sources */,
 				DBCD13021E014E8200587500 /* YHPhotoBrowseCollectionViewDelegate.swift in Sources */,
 				DB0E25F81DA5392100618C5D /* ViewController.swift in Sources */,
+				DB3D47911E0925AA0036C4D7 /* NSString_ERegularCheck.swift in Sources */,
 				DBD7CB3E1DAE1E94004443A1 /* UIView_EAssist.swift in Sources */,
 				CE40FFE91DD55A1900C4B3D4 /* FileDownloadVO.swift in Sources */,
 				DB24C33A1DA9D55D00019439 /* YHNetwork.swift in Sources */,
