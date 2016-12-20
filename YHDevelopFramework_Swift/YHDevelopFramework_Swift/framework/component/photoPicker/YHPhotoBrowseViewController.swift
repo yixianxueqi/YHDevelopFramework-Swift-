@@ -120,18 +120,24 @@ class YHPhotoBrowseViewController: UIViewController {
     func hideToolView() -> Void {
         
         isShowToolView = false
-        UIView.animate(withDuration: 0.25, animations:{
-            self.topView.center = CGPoint.init(x: kSize.width * 0.5, y: -kNavigationHeight * 0.5)
-            self.bottomView.center = CGPoint.init(x: kSize.width * 0.5, y: kSize.height + kBottomBarHeight * 0.5)
+        UIView.animate(withDuration: 0.25, animations: {
+            self.topView.alpha = 0.0
+            self.bottomView.alpha = 0.0
+        }, completion: { (flag) in
+            self.topView.isHidden = true
+            self.bottomView.isHidden = true
         })
     }
     //show tooView
     func showToolView() -> Void {
         
         isShowToolView = true
-        UIView.animate(withDuration: 0.25, animations:{
-            self.topView.center = CGPoint.init(x: kSize.width * 0.5, y: kNavigationHeight * 0.5)
-            self.bottomView.center = CGPoint.init(x: kSize.width * 0.5, y: kSize.height - kBottomBarHeight * 0.5)
+        UIView.animate(withDuration: 0.25, animations: {
+            self.topView.alpha = 1.0
+            self.bottomView.alpha = 1.0
+        }, completion: { (flag) in
+            self.topView.isHidden = false
+            self.bottomView.isHidden = false
         })
     }
     //update title label

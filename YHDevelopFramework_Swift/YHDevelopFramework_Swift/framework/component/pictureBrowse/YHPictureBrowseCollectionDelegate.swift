@@ -32,5 +32,7 @@ extension YHPictureBrowseViewController: UICollectionViewDelegate, UICollectionV
         
         let index: Int = Int.init(scrollView.contentOffset.x / kSize.width)
         changeTitlePage(index)
+        
+        print("========= \(isShowTopView)")
     }
 }

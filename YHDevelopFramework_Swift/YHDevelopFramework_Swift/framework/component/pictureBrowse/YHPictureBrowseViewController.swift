@@ -13,6 +13,7 @@ class YHPictureBrowseViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var topView: UIView!
+    @IBOutlet weak var topViewTopConstraint: NSLayoutConstraint!
     var imageList = [UIImage]()
     var startIndex = 0
     var isShowTopView = true
@@ -75,14 +76,19 @@ class YHPictureBrowseViewController: UIViewController {
         if isShow {
             isShowTopView = true
             UIView.animate(withDuration: 0.25, animations: { 
-                self.topView.center = CGPoint.init(x: size.width * 0.5, y: 64 * 0.5)
+                self.topView.alpha = 1.0
+            }, completion: { (flag) in
+                self.topView.isHidden = false
             })
         } else {
             isShowTopView = false
             UIView.animate(withDuration: 0.25, animations: { 
-                self.topView.center = CGPoint.init(x: size.width * 0.5, y: -64 * 0.5)
+                self.topView.alpha = 0.0
+            }, completion: { (flag) in
+                self.topView.isHidden = true
             })
         }
+        view.setNeedsLayout()
     }
     //update title label
     func changeTitlePage(_ index: Int) -> Void {
