@@ -71,6 +71,10 @@
 		DB629D681DBB6DB3006A642A /* WaterFallViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB629D661DBB6DB3006A642A /* WaterFallViewController.xib */; };
 		DB6C92A31DBF460E006AB9FE /* AdsCycyleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C92A11DBF460E006AB9FE /* AdsCycyleViewController.swift */; };
 		DB6C92A41DBF460E006AB9FE /* AdsCycyleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB6C92A21DBF460E006AB9FE /* AdsCycyleViewController.xib */; };
+		DB76993C1E0A1C4E00405611 /* YHTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB76993B1E0A1C4E00405611 /* YHTextField.swift */; };
+		DB7699401E0A1F1200405611 /* TextInputDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB76993E1E0A1F1200405611 /* TextInputDemoViewController.swift */; };
+		DB7699411E0A1F1200405611 /* TextInputDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB76993F1E0A1F1200405611 /* TextInputDemoViewController.xib */; };
+		DB7699441E0A66D200405611 /* YHTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7699431E0A66D200405611 /* YHTextView.swift */; };
 		DBA2DA051DBDA5ED00CCCCB5 /* YHPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA2DA041DBDA5ED00CCCCB5 /* YHPageControl.swift */; };
 		DBBC94BB1DD4A63D00A20383 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBC94BA1DD4A63D00A20383 /* SwiftyJSON.swift */; };
 		DBC8D0231DB5CA5400B08ED4 /* SpringDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC8D0211DB5CA5400B08ED4 /* SpringDemoViewController.swift */; };
@@ -174,6 +178,10 @@
 		DB629D661DBB6DB3006A642A /* WaterFallViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WaterFallViewController.xib; sourceTree = "<group>"; };
 		DB6C92A11DBF460E006AB9FE /* AdsCycyleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdsCycyleViewController.swift; sourceTree = "<group>"; };
 		DB6C92A21DBF460E006AB9FE /* AdsCycyleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdsCycyleViewController.xib; sourceTree = "<group>"; };
+		DB76993B1E0A1C4E00405611 /* YHTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHTextField.swift; sourceTree = "<group>"; };
+		DB76993E1E0A1F1200405611 /* TextInputDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInputDemoViewController.swift; sourceTree = "<group>"; };
+		DB76993F1E0A1F1200405611 /* TextInputDemoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextInputDemoViewController.xib; sourceTree = "<group>"; };
+		DB7699431E0A66D200405611 /* YHTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHTextView.swift; sourceTree = "<group>"; };
 		DBA2DA041DBDA5ED00CCCCB5 /* YHPageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHPageControl.swift; sourceTree = "<group>"; };
 		DBBC94BA1DD4A63D00A20383 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		DBC8D0211DB5CA5400B08ED4 /* SpringDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringDemoViewController.swift; sourceTree = "<group>"; };
@@ -570,6 +578,31 @@
 			path = adsCycleDemo;
 			sourceTree = "<group>";
 		};
+		DB76993A1E0A1C1000405611 /* textField */ = {
+			isa = PBXGroup;
+			children = (
+				DB76993B1E0A1C4E00405611 /* YHTextField.swift */,
+			);
+			path = textField;
+			sourceTree = "<group>";
+		};
+		DB76993D1E0A1ECD00405611 /* textInputDemo */ = {
+			isa = PBXGroup;
+			children = (
+				DB76993E1E0A1F1200405611 /* TextInputDemoViewController.swift */,
+				DB76993F1E0A1F1200405611 /* TextInputDemoViewController.xib */,
+			);
+			path = textInputDemo;
+			sourceTree = "<group>";
+		};
+		DB7699421E0A668900405611 /* textView */ = {
+			isa = PBXGroup;
+			children = (
+				DB7699431E0A66D200405611 /* YHTextView.swift */,
+			);
+			path = textView;
+			sourceTree = "<group>";
+		};
 		DBA2DA031DBDA59400CCCCB5 /* pageControl */ = {
 			isa = PBXGroup;
 			children = (
@@ -599,6 +632,8 @@
 		DBCE0CE61DBB573900A84358 /* subClass */ = {
 			isa = PBXGroup;
 			children = (
+				DB7699421E0A668900405611 /* textView */,
+				DB76993A1E0A1C1000405611 /* textField */,
 				DBA2DA031DBDA59400CCCCB5 /* pageControl */,
 				DB629D611DBB6D5F006A642A /* collectionLayout */,
 			);
@@ -670,6 +705,7 @@
 		DBFA94641DA8F7F000A9098D /* demo */ = {
 			isa = PBXGroup;
 			children = (
+				DB76993D1E0A1ECD00405611 /* textInputDemo */,
 				DB2A50BE1E07B5EE00A4C38C /* pictureBrowseDemo */,
 				DB55B8BB1DFA956A005BFA9A /* photoPickDemo */,
 				CE40FFD61DD559E200C4B3D4 /* fileDownload */,
@@ -773,6 +809,7 @@
 				DB6C92A41DBF460E006AB9FE /* AdsCycyleViewController.xib in Resources */,
 				DB24C3431DA9E7DB00019439 /* HttpDemoViewController.xib in Resources */,
 				DB2A50C21E07B62600A4C38C /* PictureBrowseDemoViewController.xib in Resources */,
+				DB7699411E0A1F1200405611 /* TextInputDemoViewController.xib in Resources */,
 				DB629D681DBB6DB3006A642A /* WaterFallViewController.xib in Resources */,
 				DB0E26001DA5392100618C5D /* LaunchScreen.storyboard in Resources */,
 				DBC8D0241DB5CA5400B08ED4 /* SpringDemoViewController.xib in Resources */,
@@ -857,6 +894,7 @@
 				CE40FFDA1DD559E200C4B3D4 /* DownloadTableViewCell.swift in Sources */,
 				DB0A25C41DAB35620047BA94 /* HttpService.swift in Sources */,
 				DBD7CB441DAE307D004443A1 /* YHGlobalFunc.swift in Sources */,
+				DB7699441E0A66D200405611 /* YHTextView.swift in Sources */,
 				DBD7CB351DAE0C84004443A1 /* NSDictionary_ELoad.swift in Sources */,
 				CE40FFE81DD55A1900C4B3D4 /* FileDownloadOperation.swift in Sources */,
 				CE40FFE41DD55A1900C4B3D4 /* FileDownloadDao.swift in Sources */,
@@ -875,6 +913,7 @@
 				DB0B1AB91DACD6FC00891BAC /* DeviceInfoViewController.swift in Sources */,
 				DBFDC4DA1E00E39F00AC38DF /* YHPhotoThumbnailCell.swift in Sources */,
 				DBC8D0281DB60BBF00B08ED4 /* PromiseViewController.swift in Sources */,
+				DB76993C1E0A1C4E00405611 /* YHTextField.swift in Sources */,
 				DB0B1A971DACCDFA00891BAC /* YHDeviceInfo.swift in Sources */,
 				DBD7CB3C1DAE17E5004443A1 /* YHGlobalVariable.swift in Sources */,
 				DBD7CB421DAE258F004443A1 /* NSString_ERect.swift in Sources */,
@@ -911,6 +950,7 @@
 				DBC8D0231DB5CA5400B08ED4 /* SpringDemoViewController.swift in Sources */,
 				CE40FFDC1DD559E200C4B3D4 /* FileDownloadViewController.swift in Sources */,
 				DB2A50C11E07B62600A4C38C /* PictureBrowseDemoViewController.swift in Sources */,
+				DB7699401E0A1F1200405611 /* TextInputDemoViewController.swift in Sources */,
 				DB5B707F1DFFE4670033193F /* YHPhotoPickViewController.swift in Sources */,
 				DB24C3451DA9E91600019439 /* BaseNavigationController.swift in Sources */,
 				DB5DACB61DAF2ABD00D5F0B4 /* NSNumber_EFromatter.swift in Sources */,

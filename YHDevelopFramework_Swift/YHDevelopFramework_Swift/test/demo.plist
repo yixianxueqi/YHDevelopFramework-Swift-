@@ -68,5 +68,11 @@
 		<key>title</key>
 		<string>pictureBrowse</string>
 	</dict>
+	<dict>
+		<key>className</key>
+		<string>TextInputDemoViewController</string>
+		<key>title</key>
+		<string>textInput</string>
+	</dict>
 </array>
 </plist>

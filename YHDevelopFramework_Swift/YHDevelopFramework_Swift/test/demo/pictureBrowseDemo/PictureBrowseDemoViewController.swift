@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PictureBrowseDemoViewController: UIViewController {
+class PictureBrowseDemoViewController: BaseViewController {
 
     var imageList = [UIImage]()
     
