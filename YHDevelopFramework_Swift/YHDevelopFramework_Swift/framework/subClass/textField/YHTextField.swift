@@ -8,11 +8,17 @@
 
 import UIKit
 
+/*
+ notice:
+ 长度限制和内容校验 建议只使用其一，
+ 若同时使用，则可能只有长度限制生效
+ */
 class YHTextField: UITextField {
 
     
     @IBInspectable var regularLength = Int.max
     var regularRule: String?
+    var regularLengthResultReport: ((Int) -> Void)?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -69,12 +75,14 @@ extension YHTextField: UITextFieldDelegate {
         if result.1 {
             return
         }
-        if let inputTetx = self.text {
-            guard inputTetx.length < regularLength else {
-                let index = inputTetx.index(inputTetx.startIndex, offsetBy: regularLength)
-                text = inputTetx.substring(to: index)
+        if let inputText = self.text {
+            guard inputText.length < regularLength else {
+                let index = inputText.index(inputText.startIndex, offsetBy: regularLength)
+                text = inputText.substring(to: index)
+                regularLengthResultReport?(0)
                 return
             }
+            regularLengthResultReport?(regularLength - inputText.length)
         }
     }
     // MARK: - UITextFieldDelegate

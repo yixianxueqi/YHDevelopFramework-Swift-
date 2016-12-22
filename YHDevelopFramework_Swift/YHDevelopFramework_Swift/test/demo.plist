@@ -74,5 +74,11 @@
 		<key>title</key>
 		<string>textInput</string>
 	</dict>
+	<dict>
+		<key>className</key>
+		<string>DispatchDemoViewController</string>
+		<key>title</key>
+		<string>dispatch</string>
+	</dict>
 </array>
 </plist>

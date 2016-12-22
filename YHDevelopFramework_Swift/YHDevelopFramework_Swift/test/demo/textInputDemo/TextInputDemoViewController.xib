@@ -12,6 +12,7 @@
             <connections>
                 <outlet property="textField" destination="RhZ-Zl-dW8" id="NRv-bM-0Qd"/>
                 <outlet property="textView" destination="U46-Z1-gJd" id="EmY-BF-bl3"/>
+                <outlet property="textViewTextLength" destination="StC-zX-4n3" id="3eE-OT-HHM"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -57,13 +58,21 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="剩余：10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="StC-zX-4n3">
+                    <rect key="frame" x="268" y="205" width="70" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="U46-Z1-gJd" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="FNp-88-x2c"/>
+                <constraint firstItem="StC-zX-4n3" firstAttribute="trailing" secondItem="U46-Z1-gJd" secondAttribute="trailing" id="IbD-Zt-lWj"/>
                 <constraint firstItem="U46-Z1-gJd" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="IpG-ji-176"/>
                 <constraint firstItem="U46-Z1-gJd" firstAttribute="top" secondItem="RhZ-Zl-dW8" secondAttribute="bottom" constant="64" id="Kba-6L-IkF"/>
                 <constraint firstItem="RhZ-Zl-dW8" firstAttribute="leading" secondItem="FVp-4D-Wuf" secondAttribute="leading" id="erH-vh-dwO"/>
+                <constraint firstItem="U46-Z1-gJd" firstAttribute="top" secondItem="StC-zX-4n3" secondAttribute="bottom" constant="8" id="f9T-6V-cJO"/>
                 <constraint firstItem="RhZ-Zl-dW8" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="lGH-33-lms"/>
                 <constraint firstItem="RhZ-Zl-dW8" firstAttribute="top" secondItem="FVp-4D-Wuf" secondAttribute="bottom" constant="8" id="sWG-mn-b8m"/>
                 <constraint firstItem="U46-Z1-gJd" firstAttribute="top" secondItem="coq-r0-ija" secondAttribute="bottom" constant="8" id="tj3-4d-xJm"/>

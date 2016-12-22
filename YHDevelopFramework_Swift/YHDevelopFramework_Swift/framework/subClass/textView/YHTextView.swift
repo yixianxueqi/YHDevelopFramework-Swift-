@@ -21,6 +21,7 @@ class YHTextView: UITextView {
         }
     }
     var regularRule: String?
+    var regularLengthResultReport: ((Int) -> Void)?
     private let placeHolderLabel: UILabel = {
         let label = UILabel.init()
         label.numberOfLines = 0
@@ -87,8 +88,10 @@ extension YHTextView: UITextViewDelegate {
         guard textView.text.length < regularLength else {
             let index = textView.text.index(textView.text.startIndex, offsetBy: regularLength)
             text = textView.text.substring(to: index)
+            regularLengthResultReport?(0)
             return
         }
+        regularLengthResultReport?(regularLength - textView.text.length)
     }
     
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {

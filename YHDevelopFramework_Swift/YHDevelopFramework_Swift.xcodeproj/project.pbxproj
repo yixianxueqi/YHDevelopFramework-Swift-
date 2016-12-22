@@ -31,6 +31,10 @@
 		DB0E25FB1DA5392100618C5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB0E25F91DA5392100618C5D /* Main.storyboard */; };
 		DB0E25FD1DA5392100618C5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB0E25FC1DA5392100618C5D /* Assets.xcassets */; };
 		DB0E26001DA5392100618C5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB0E25FE1DA5392100618C5D /* LaunchScreen.storyboard */; };
+		DB1F50EF1E0B732A005A0E9A /* YHDispatchTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1F50EE1E0B732A005A0E9A /* YHDispatchTimer.swift */; };
+		DB1F50F31E0BAAB6005A0E9A /* YHDispatchGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1F50F21E0BAAB6005A0E9A /* YHDispatchGroup.swift */; };
+		DB1F50FB1E0BD804005A0E9A /* DispatchDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1F50F91E0BD804005A0E9A /* DispatchDemoViewController.swift */; };
+		DB1F50FC1E0BD804005A0E9A /* DispatchDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB1F50FA1E0BD804005A0E9A /* DispatchDemoViewController.xib */; };
 		DB24C33A1DA9D55D00019439 /* YHNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB24C3391DA9D55D00019439 /* YHNetwork.swift */; };
 		DB24C3431DA9E7DB00019439 /* HttpDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB24C3421DA9E7DB00019439 /* HttpDemoViewController.xib */; };
 		DB24C3451DA9E91600019439 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB24C3441DA9E91600019439 /* BaseNavigationController.swift */; };
@@ -138,6 +142,10 @@
 		DB0E25FC1DA5392100618C5D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../Assets.xcassets; sourceTree = "<group>"; };
 		DB0E25FF1DA5392100618C5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB0E26011DA5392100618C5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../../Info.plist; sourceTree = "<group>"; };
+		DB1F50EE1E0B732A005A0E9A /* YHDispatchTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHDispatchTimer.swift; sourceTree = "<group>"; };
+		DB1F50F21E0BAAB6005A0E9A /* YHDispatchGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHDispatchGroup.swift; sourceTree = "<group>"; };
+		DB1F50F91E0BD804005A0E9A /* DispatchDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchDemoViewController.swift; sourceTree = "<group>"; };
+		DB1F50FA1E0BD804005A0E9A /* DispatchDemoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DispatchDemoViewController.xib; sourceTree = "<group>"; };
 		DB24C3391DA9D55D00019439 /* YHNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHNetwork.swift; sourceTree = "<group>"; };
 		DB24C3421DA9E7DB00019439 /* HttpDemoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HttpDemoViewController.xib; sourceTree = "<group>"; };
 		DB24C3441DA9E91600019439 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
@@ -429,9 +437,28 @@
 			path = classes;
 			sourceTree = "<group>";
 		};
+		DB1F50ED1E0B72F8005A0E9A /* dipatch */ = {
+			isa = PBXGroup;
+			children = (
+				DB1F50EE1E0B732A005A0E9A /* YHDispatchTimer.swift */,
+				DB1F50F21E0BAAB6005A0E9A /* YHDispatchGroup.swift */,
+			);
+			path = dipatch;
+			sourceTree = "<group>";
+		};
+		DB1F50F41E0BBD08005A0E9A /* dispatchDemo */ = {
+			isa = PBXGroup;
+			children = (
+				DB1F50F91E0BD804005A0E9A /* DispatchDemoViewController.swift */,
+				DB1F50FA1E0BD804005A0E9A /* DispatchDemoViewController.xib */,
+			);
+			path = dispatchDemo;
+			sourceTree = "<group>";
+		};
 		DB24DDE11DA894B2003F1741 /* component */ = {
 			isa = PBXGroup;
 			children = (
+				DB1F50ED1E0B72F8005A0E9A /* dipatch */,
 				DB2A50B31E07AE6500A4C38C /* pictureBrowse */,
 				CE0E4F661DDD53AA00AC2BD2 /* photoPicker */,
 				CE40FFDD1DD55A1900C4B3D4 /* fileDownload */,
@@ -705,6 +732,7 @@
 		DBFA94641DA8F7F000A9098D /* demo */ = {
 			isa = PBXGroup;
 			children = (
+				DB1F50F41E0BBD08005A0E9A /* dispatchDemo */,
 				DB76993D1E0A1ECD00405611 /* textInputDemo */,
 				DB2A50BE1E07B5EE00A4C38C /* pictureBrowseDemo */,
 				DB55B8BB1DFA956A005BFA9A /* photoPickDemo */,
@@ -827,6 +855,7 @@
 				DB5B70801DFFE4670033193F /* YHPhotoPickViewController.xib in Resources */,
 				DBD7CB311DAE0BB6004443A1 /* pic_3.jpg in Resources */,
 				DB55B8B81DFA51C2005BFA9A /* https.cer in Resources */,
+				DB1F50FC1E0BD804005A0E9A /* DispatchDemoViewController.xib in Resources */,
 				DB0E25FD1DA5392100618C5D /* Assets.xcassets in Resources */,
 				DB0E25FB1DA5392100618C5D /* Main.storyboard in Resources */,
 				DB3AB8621E03CAAB005CE212 /* YHPhotoAlbumTableViewCell.xib in Resources */,
@@ -914,6 +943,7 @@
 				DBFDC4DA1E00E39F00AC38DF /* YHPhotoThumbnailCell.swift in Sources */,
 				DBC8D0281DB60BBF00B08ED4 /* PromiseViewController.swift in Sources */,
 				DB76993C1E0A1C4E00405611 /* YHTextField.swift in Sources */,
+				DB1F50EF1E0B732A005A0E9A /* YHDispatchTimer.swift in Sources */,
 				DB0B1A971DACCDFA00891BAC /* YHDeviceInfo.swift in Sources */,
 				DBD7CB3C1DAE17E5004443A1 /* YHGlobalVariable.swift in Sources */,
 				DBD7CB421DAE258F004443A1 /* NSString_ERect.swift in Sources */,
@@ -923,6 +953,7 @@
 				DB3AB85E1E03C9C7005CE212 /* YHPhotoAlbumTableDelegate.swift in Sources */,
 				CE01AEC61DD992BE0037A989 /* FileDownloadDBConstants.swift in Sources */,
 				DB5259A71E02332100C0C8A9 /* YHPhotoHighImageCell.swift in Sources */,
+				DB1F50F31E0BAAB6005A0E9A /* YHDispatchGroup.swift in Sources */,
 				DB5259AA1E023EA000C0C8A9 /* YHPhotoPickThroughDelegate.swift in Sources */,
 				DBBC94BB1DD4A63D00A20383 /* SwiftyJSON.swift in Sources */,
 				DB3AB8611E03CAAB005CE212 /* YHPhotoAlbumTableViewCell.swift in Sources */,
@@ -954,6 +985,7 @@
 				DB5B707F1DFFE4670033193F /* YHPhotoPickViewController.swift in Sources */,
 				DB24C3451DA9E91600019439 /* BaseNavigationController.swift in Sources */,
 				DB5DACB61DAF2ABD00D5F0B4 /* NSNumber_EFromatter.swift in Sources */,
+				DB1F50FB1E0BD804005A0E9A /* DispatchDemoViewController.swift in Sources */,
 				DBFA94621DA8F42B00A9098D /* BaseViewController.swift in Sources */,
 				CE40FFE71DD55A1900C4B3D4 /* FileDownloadManager.swift in Sources */,
 			);

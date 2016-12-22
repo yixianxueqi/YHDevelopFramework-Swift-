@@ -12,6 +12,7 @@ class TextInputDemoViewController: BaseViewController {
 
     @IBOutlet weak var textField: YHTextField!
     @IBOutlet weak var textView: YHTextView!
+    @IBOutlet weak var textViewTextLength: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,9 @@ class TextInputDemoViewController: BaseViewController {
         textView.regularLength = 10
 //        textView.regularRule = RegularRule.userName
         textView.placeHolder = "please enter..."
+        textView.regularLengthResultReport = { length in
+            self.textViewTextLength.text = String.init(format: "剩余：%d", length)
+        }
     }
 
 
