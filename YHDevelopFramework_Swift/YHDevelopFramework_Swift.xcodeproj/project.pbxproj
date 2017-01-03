@@ -63,6 +63,9 @@
 		DB5B707F1DFFE4670033193F /* YHPhotoPickViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5B707D1DFFE4670033193F /* YHPhotoPickViewController.swift */; };
 		DB5B70801DFFE4670033193F /* YHPhotoPickViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB5B707E1DFFE4670033193F /* YHPhotoPickViewController.xib */; };
 		DB5B70821DFFE8C30033193F /* YHPhotoPickCollectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5B70811DFFE8C30033193F /* YHPhotoPickCollectionDelegate.swift */; };
+		DB5C59FE1E1B7BD9005DED05 /* YHAppInfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5C59FD1E1B7BD9005DED05 /* YHAppInfoManager.swift */; };
+		DB5C5A021E1BA727005DED05 /* AppInfoDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5C5A001E1BA727005DED05 /* AppInfoDemoViewController.swift */; };
+		DB5C5A031E1BA727005DED05 /* AppInfoDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB5C5A011E1BA727005DED05 /* AppInfoDemoViewController.xib */; };
 		DB5DACB61DAF2ABD00D5F0B4 /* NSNumber_EFromatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5DACB51DAF2ABD00D5F0B4 /* NSNumber_EFromatter.swift */; };
 		DB5DACB81DAF606E00D5F0B4 /* 111.png in Resources */ = {isa = PBXBuildFile; fileRef = DB5DACB71DAF606E00D5F0B4 /* 111.png */; };
 		DB5DACBE1DAF72A800D5F0B4 /* TestTempViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5DACBC1DAF72A800D5F0B4 /* TestTempViewController.swift */; };
@@ -174,6 +177,9 @@
 		DB5B707D1DFFE4670033193F /* YHPhotoPickViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHPhotoPickViewController.swift; sourceTree = "<group>"; };
 		DB5B707E1DFFE4670033193F /* YHPhotoPickViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YHPhotoPickViewController.xib; sourceTree = "<group>"; };
 		DB5B70811DFFE8C30033193F /* YHPhotoPickCollectionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHPhotoPickCollectionDelegate.swift; sourceTree = "<group>"; };
+		DB5C59FD1E1B7BD9005DED05 /* YHAppInfoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHAppInfoManager.swift; sourceTree = "<group>"; };
+		DB5C5A001E1BA727005DED05 /* AppInfoDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppInfoDemoViewController.swift; sourceTree = "<group>"; };
+		DB5C5A011E1BA727005DED05 /* AppInfoDemoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppInfoDemoViewController.xib; sourceTree = "<group>"; };
 		DB5DACB51DAF2ABD00D5F0B4 /* NSNumber_EFromatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSNumber_EFromatter.swift; sourceTree = "<group>"; };
 		DB5DACB71DAF606E00D5F0B4 /* 111.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 111.png; sourceTree = "<group>"; };
 		DB5DACBC1DAF72A800D5F0B4 /* TestTempViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestTempViewController.swift; sourceTree = "<group>"; };
@@ -458,6 +464,7 @@
 		DB24DDE11DA894B2003F1741 /* component */ = {
 			isa = PBXGroup;
 			children = (
+				DB5C59FC1E1B7B9D005DED05 /* appInfo */,
 				DB1F50ED1E0B72F8005A0E9A /* dipatch */,
 				DB2A50B31E07AE6500A4C38C /* pictureBrowse */,
 				CE0E4F661DDD53AA00AC2BD2 /* photoPicker */,
@@ -551,6 +558,23 @@
 				DB55B8BD1DFA95D7005BFA9A /* PhotoPickDemoViewController.xib */,
 			);
 			path = photoPickDemo;
+			sourceTree = "<group>";
+		};
+		DB5C59FC1E1B7B9D005DED05 /* appInfo */ = {
+			isa = PBXGroup;
+			children = (
+				DB5C59FD1E1B7BD9005DED05 /* YHAppInfoManager.swift */,
+			);
+			path = appInfo;
+			sourceTree = "<group>";
+		};
+		DB5C59FF1E1BA68D005DED05 /* appInfoDemo */ = {
+			isa = PBXGroup;
+			children = (
+				DB5C5A001E1BA727005DED05 /* AppInfoDemoViewController.swift */,
+				DB5C5A011E1BA727005DED05 /* AppInfoDemoViewController.xib */,
+			);
+			path = appInfoDemo;
 			sourceTree = "<group>";
 		};
 		DB5DACBB1DAF727E00D5F0B4 /* testTempDemo */ = {
@@ -732,6 +756,7 @@
 		DBFA94641DA8F7F000A9098D /* demo */ = {
 			isa = PBXGroup;
 			children = (
+				DB5C59FF1E1BA68D005DED05 /* appInfoDemo */,
 				DB1F50F41E0BBD08005A0E9A /* dispatchDemo */,
 				DB76993D1E0A1ECD00405611 /* textInputDemo */,
 				DB2A50BE1E07B5EE00A4C38C /* pictureBrowseDemo */,
@@ -843,6 +868,7 @@
 				DBC8D0241DB5CA5400B08ED4 /* SpringDemoViewController.xib in Resources */,
 				DBFA94671DA8F83900A9098D /* demo.plist in Resources */,
 				DB5DACC71DAF7AFA00D5F0B4 /* FileViewController.xib in Resources */,
+				DB5C5A031E1BA727005DED05 /* AppInfoDemoViewController.xib in Resources */,
 				DB5259A81E02332100C0C8A9 /* YHPhotoHighImageCell.xib in Resources */,
 				CEB414421E02920B00C2D21C /* YHPhotoBrowseViewController.xib in Resources */,
 				CE40FFDB1DD559E200C4B3D4 /* DownloadTableViewCell.xib in Resources */,
@@ -921,6 +947,7 @@
 			files = (
 				DB2A50B91E07B2F200A4C38C /* YHPictureBrowseCollectionDelegate.swift in Sources */,
 				CE40FFDA1DD559E200C4B3D4 /* DownloadTableViewCell.swift in Sources */,
+				DB5C5A021E1BA727005DED05 /* AppInfoDemoViewController.swift in Sources */,
 				DB0A25C41DAB35620047BA94 /* HttpService.swift in Sources */,
 				DBD7CB441DAE307D004443A1 /* YHGlobalFunc.swift in Sources */,
 				DB7699441E0A66D200405611 /* YHTextView.swift in Sources */,
@@ -935,6 +962,7 @@
 				CE40FFE91DD55A1900C4B3D4 /* FileDownloadVO.swift in Sources */,
 				DB24C33A1DA9D55D00019439 /* YHNetwork.swift in Sources */,
 				DB55B8BA1DFA81FC005BFA9A /* YHAssets.swift in Sources */,
+				DB5C59FE1E1B7BD9005DED05 /* YHAppInfoManager.swift in Sources */,
 				DB5DACBE1DAF72A800D5F0B4 /* TestTempViewController.swift in Sources */,
 				CEB414411E02920B00C2D21C /* YHPhotoBrowseViewController.swift in Sources */,
 				DBA2DA051DBDA5ED00CCCCB5 /* YHPageControl.swift in Sources */,

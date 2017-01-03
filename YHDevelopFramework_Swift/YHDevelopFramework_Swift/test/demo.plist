@@ -80,5 +80,11 @@
 		<key>title</key>
 		<string>dispatch</string>
 	</dict>
+	<dict>
+		<key>className</key>
+		<string>AppInfoDemoViewController</string>
+		<key>title</key>
+		<string>appInfo</string>
+	</dict>
 </array>
 </plist>
