@@ -342,7 +342,7 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     /**
     Resigns currently first responder field.
     */
-    @discardableResult open func resignFirstResponder()-> Bool {
+    open func resignFirstResponder()-> Bool {
         
         if let textFieldRetain = _textFieldView {
             
@@ -407,7 +407,7 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     /**
     Navigate to previous responder textField/textView.
     */
-    @discardableResult open func goPrevious()-> Bool {
+    open func goPrevious()-> Bool {
         
         //Getting all responder view's.
         if let  textFieldRetain = _textFieldView {
@@ -442,7 +442,7 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     /**
     Navigate to next responder textField/textView.
     */
-    @discardableResult open func goNext()-> Bool {
+    open func goNext()-> Bool {
 
         //Getting all responder view's.
         if let  textFieldRetain = _textFieldView {
@@ -669,10 +669,7 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
     fileprivate weak var    _rootViewController: UIViewController?
     
     /** To save topBottomLayoutConstraint original constant */
-    fileprivate var         _layoutGuideConstraintInitialConstant: CGFloat  = 0
-
-    /** To save topBottomLayoutConstraint original constraint reference */
-    fileprivate weak var    _layoutGuideConstraint: NSLayoutConstraint?
+    fileprivate var         _layoutGuideConstraintInitialConstant: CGFloat  = 0.25
 
     /*******************************************/
 
@@ -912,7 +909,7 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         
         if let viewController = textFieldView.viewController() {
             
-            if let constraint = _layoutGuideConstraint {
+            if let constraint = viewController.IQLayoutGuideConstraint {
                 
                 var layoutGuide : UILayoutSupport?
                 if let itemLayoutGuide = constraint.firstItem as? UILayoutSupport {
@@ -1126,35 +1123,33 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         //Going ahead. No else if.
         
         if layoutGuidePosition == .top {
+
+            let constraint = textFieldView.viewController()!.IQLayoutGuideConstraint!
+
+            let constant = min(_layoutGuideConstraintInitialConstant, constraint.constant-move)
             
-            if let constraint = _layoutGuideConstraint {
+            UIView.animate(withDuration: _animationDuration, delay: 0, options: (_animationCurve.union(UIViewAnimationOptions.beginFromCurrentState)), animations: { () -> Void in
                 
-                let constant = min(_layoutGuideConstraintInitialConstant, constraint.constant-move)
+                constraint.constant = constant
+                self._rootViewController?.view.setNeedsLayout()
+                self._rootViewController?.view.layoutIfNeeded()
                 
-                UIView.animate(withDuration: _animationDuration, delay: 0, options: (_animationCurve.union(UIViewAnimationOptions.beginFromCurrentState)), animations: { () -> Void in
-                    
-                    constraint.constant = constant
-                    self._rootViewController?.view.setNeedsLayout()
-                    self._rootViewController?.view.layoutIfNeeded()
-                    
-                    }, completion: { (finished) -> Void in })
-            }
-            
+                }, completion: { (finished) -> Void in })
+
         } else if layoutGuidePosition == .bottom {
             
-            if let constraint = _layoutGuideConstraint {
-                
-                let constant = max(_layoutGuideConstraintInitialConstant, constraint.constant+move)
-                
-                UIView.animate(withDuration: _animationDuration, delay: 0, options: (_animationCurve.union(UIViewAnimationOptions.beginFromCurrentState)), animations: { () -> Void in
-                    
-                    constraint.constant = constant
-                    self._rootViewController?.view.setNeedsLayout()
-                    self._rootViewController?.view.layoutIfNeeded()
-                    
-                    }, completion: { (finished) -> Void in })
-            }
+            let constraint = textFieldView.viewController()!.IQLayoutGuideConstraint!
+
+            let constant = max(_layoutGuideConstraintInitialConstant, constraint.constant+move)
             
+            UIView.animate(withDuration: _animationDuration, delay: 0, options: (_animationCurve.union(UIViewAnimationOptions.beginFromCurrentState)), animations: { () -> Void in
+                
+                constraint.constant = constant
+                self._rootViewController?.view.setNeedsLayout()
+                self._rootViewController?.view.layoutIfNeeded()
+                
+                }, completion: { (finished) -> Void in })
+
         } else {
             
             //Special case for UITextView(Readjusting textView.contentInset when textView hight is too big to fit on screen)
@@ -1308,9 +1303,8 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         if _textFieldView != nil && _topViewBeginRect.equalTo(CGRect.zero) == true {
             
             //  keyboard is not showing(At the beginning only). We should save rootViewRect.
-            if let constraint = _textFieldView?.viewController()?.IQLayoutGuideConstraint {
-                _layoutGuideConstraint = constraint
-                _layoutGuideConstraintInitialConstant = constraint.constant
+            if let constant = _textFieldView?.viewController()?.IQLayoutGuideConstraint?.constant {
+                _layoutGuideConstraintInitialConstant = constant
             }
             
             //  keyboard is not showing(At the beginning only). We should save rootViewRect.
@@ -1513,13 +1507,35 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                 //Used UIViewAnimationOptionBeginFromCurrentState to minimize strange animations.
                 UIView.animate(withDuration: _animationDuration, delay: 0, options: UIViewAnimationOptions.beginFromCurrentState.union(_animationCurve), animations: { () -> Void in
                     
-                    if let constraint = self._layoutGuideConstraint {
+                    var hasDoneTweakLayoutGuide = false
+                    
+                    if let viewController = self._textFieldView?.viewController() {
                         
-                        constraint.constant = self._layoutGuideConstraintInitialConstant
-                        rootViewController.view.setNeedsLayout()
-                        rootViewController.view.layoutIfNeeded()
+                        if let constraint = viewController.IQLayoutGuideConstraint {
+                            
+                            var layoutGuide : UILayoutSupport?
+                            if let itemLayoutGuide = constraint.firstItem as? UILayoutSupport {
+                                layoutGuide = itemLayoutGuide
+                            } else if let itemLayoutGuide = constraint.secondItem as? UILayoutSupport {
+                                layoutGuide = itemLayoutGuide
+                            }
+                            
+                            if let itemLayoutGuide : UILayoutSupport = layoutGuide {
+                                
+                                if (itemLayoutGuide === viewController.topLayoutGuide ||
+                                    itemLayoutGuide === viewController.bottomLayoutGuide)
+                                {
+                                    constraint.constant = self._layoutGuideConstraintInitialConstant
+                                    rootViewController.view.setNeedsLayout()
+                                    rootViewController.view.layoutIfNeeded()
+
+                                    hasDoneTweakLayoutGuide = true
+                                }
+                            }
+                        }
                     }
-                    else {
+                    
+                    if hasDoneTweakLayoutGuide == false {
                         self.showLog("Restoring \(rootViewController._IQDescription()) frame to : \(self._topViewBeginRect)")
                         
                         //  Setting it's new frame
@@ -1537,24 +1553,11 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
                 
                 _rootViewController = nil
             }
-        } else if let constraint = self._layoutGuideConstraint {
-            
-            if let rootViewController = _rootViewController {
-                
-                UIView.animate(withDuration: _animationDuration, delay: 0, options: UIViewAnimationOptions.beginFromCurrentState.union(_animationCurve), animations: { () -> Void in
-                    
-                    constraint.constant = self._layoutGuideConstraintInitialConstant
-                    rootViewController.view.setNeedsLayout()
-                    rootViewController.view.layoutIfNeeded()
-                }) { (finished) -> Void in }
-            }
         }
         
         //Reset all values
         _lastScrollView = nil
         _kbSize = CGSize.zero
-        _layoutGuideConstraint = nil
-        _layoutGuideConstraintInitialConstant = 0
         _startingContentInsets = UIEdgeInsets.zero
         _startingScrollIndicatorInsets = UIEdgeInsets.zero
         _startingContentOffset = CGPoint.zero
@@ -1642,9 +1645,8 @@ open class IQKeyboardManager: NSObject, UIGestureRecognizerDelegate {
         if _topViewBeginRect.equalTo(CGRect.zero) == true {    //  (Bug ID: #5)
 
             //  keyboard is not showing(At the beginning only). We should save rootViewRect.
-            if let constraint = _textFieldView?.viewController()?.IQLayoutGuideConstraint {
-                _layoutGuideConstraint = constraint
-                _layoutGuideConstraintInitialConstant = constraint.constant
+            if let constant = _textFieldView?.viewController()?.IQLayoutGuideConstraint?.constant {
+                _layoutGuideConstraintInitialConstant = constant
             }
 
             _rootViewController = _textFieldView?.topMostController()

@@ -39,7 +39,7 @@ class YHLogger {
     private let fileDestination:FileDestination = {
         
         let documentDirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first! as String
-        let logPath = documentDirPath.appending("/logger.txt")
+        let logPath = documentDirPath.appending("/logger.log")
         let fileDestination = FileDestination(writeToFile: logPath, identifier: "advancedLogger.fileDestination", shouldAppend: true)
         fileDestination.outputLevel = .debug
         fileDestination.showLogIdentifier = false
