@@ -19,17 +19,15 @@ class LoginServiceDemoViewController: BaseViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        loginService.saveLoginInfo(loginInfo: ["bbb":"123"], loginResult:nil)
-        
-//        let result = loginService.getCurrentLoginInfo()
-//        log.debug(result)
-//        let result = loginService.getHistoryList(0)
-//        log.debug(result)
     }
     
     @IBAction func login(_ sender: UIButton) {
         
-        loginService.saveLoginInfo(loginInfo: ["aaa": "123"], loginResult: ["loginToken": "loginToken"])
+        guard let name = nameTextField.text, let pwd = passwordTextField.text else {
+            log.debug("not allow empty")
+            return
+        }
+        loginService.saveLoginInfo(loginInfo: ["name": name, "pwd": pwd], loginResult: nil)
     }
     @IBAction func logout(_ sender: UIButton) {
         loginService.replaceLoginState()
@@ -37,7 +35,11 @@ class LoginServiceDemoViewController: BaseViewController {
     @IBAction func currentLoginInfo(_ sender: UIButton) {
         
         let result = loginService.getCurrentLoginInfo()
-        log.debug(result)
+        guard let res = result else {
+            log.debug("null of current LoginInfo")
+            return
+        }
+        log.debug(res)
     }
     @IBAction func historyInfo(_ sender: UIButton) {
         

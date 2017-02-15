@@ -88,9 +88,9 @@ class YHLoginServiceDB: NSObject {
         })
     }
     
-    public func getRecentList(_ recentCount: Int) -> [[String: String]]? {
+    public func getRecentList(_ recentCount: Int) -> [[String: String]] {
     
-        var resultList: [[String: String]]? = []
+        var resultList: [[String: String]] = []
         dbQueue?.inDatabase({ (database) in
             guard database!.open() else {
                 log.error("Unable to open database")
@@ -107,7 +107,7 @@ class YHLoginServiceDB: NSObject {
                 while resultSet!.next() {
                     let result = [self.loginInfo: resultSet!.string(forColumn: self.loginInfo),
                                   self.loginResult:resultSet!.string(forColumn: self.loginResult)]
-                    resultList?.append(result as! [String : String])
+                    resultList.append(result as! [String : String])
                 }
             }
             catch {
