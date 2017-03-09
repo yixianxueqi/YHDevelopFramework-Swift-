@@ -125,7 +125,7 @@ public class YHPhotoPickViewController: UIViewController {
     internal func unSelectImage(_ index: Int) {
         
         if selectList.contains(index) {
-            selectList.remove(at: selectList.index(of: index)!)        
+            selectList.remove(at: selectList.index(of: index)!)
         }
         changeBottomView(selectList.count);
         reloadCollectionView([index])
@@ -140,58 +140,58 @@ public class YHPhotoPickViewController: UIViewController {
     }
     //get image with asset
     private func getAssetsImage() {
+        
+        
+        self.getThumbnail = self.asset.getThumbnailImage(self.assetsList!, targetSize: self.flowLayout.itemSize)
+        self.getHighImage = self.asset.getHighImage(self.assetsList!, targetSize: UIScreen.main.bounds.size)
+        
+        self.collectionView.reloadData()
+        
+    }
+}
+// MARK: - custom view
+private func initializeCollectionView() {
     
-        DispatchQueue.global().async {
-            self.getThumbnail = self.asset.getThumbnailImage(self.assetsList!, targetSize: self.flowLayout.itemSize)
-            self.getHighImage = self.asset.getHighImage(self.assetsList!, targetSize: UIScreen.main.bounds.size)
-            DispatchQueue.main.async {
-                self.collectionView.reloadData()
-            }
-        }
-    }
-    // MARK: - custom view
-    private func initializeCollectionView() {
-        
-        tabBarController?.tabBar.isHidden = true
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        collectionView.setCollectionViewLayout(flowLayout, animated: true)
-        collectionView.register(UINib.init(nibName: "YHPhotoThumbnailCell", bundle: Bundle.main), forCellWithReuseIdentifier: "cell")
-        view.addSubview(collectionView)
-    }
-    //change view by select image count
-    private func changeBottomView(_ count: Int) {
-        
-        selectCountLabel.text = String.init(count)
-        if count > 0 {
-            okButton.backgroundColor = kGreenColor
-            okButton.isUserInteractionEnabled = true
-        } else {
-            okButton.backgroundColor = UIColor.darkGray
-            okButton.isUserInteractionEnabled = false
-        }
-    }
-    //refresh collectionView
-    private func reloadCollectionView(_ indexList: [Int]) {
-        
-        var indexPathList = [IndexPath]()
-        for value in indexList {
-            indexPathList.append(IndexPath.init(row: value, section: 0))
-        }
-        collectionView.reloadItems(at: indexPathList)
-    }
-    //alert
-    private func warningOverLimit() {
+    tabBarController?.tabBar.isHidden = true
+    collectionView.delegate = self
+    collectionView.dataSource = self
+    collectionView.setCollectionViewLayout(flowLayout, animated: true)
+    collectionView.register(UINib.init(nibName: "YHPhotoThumbnailCell", bundle: Bundle.main), forCellWithReuseIdentifier: "cell")
+    view.addSubview(collectionView)
+}
+//change view by select image count
+private func changeBottomView(_ count: Int) {
     
-        let msg = String.init("最多可选择" + String.init(selectCount) + "张")
-        let alert = UIAlertController.init(title: "提示", message: msg, preferredStyle: .alert)
-        let cancel = UIAlertAction.init(title: "取消", style: .cancel, handler: nil)
-        alert.addAction(cancel)
-        present(alert, animated: true, completion: nil)
+    selectCountLabel.text = String.init(count)
+    if count > 0 {
+        okButton.backgroundColor = kGreenColor
+        okButton.isUserInteractionEnabled = true
+    } else {
+        okButton.backgroundColor = UIColor.darkGray
+        okButton.isUserInteractionEnabled = false
     }
-    func initializeNavRight() -> Void {
-        
-        let barItem = UIBarButtonItem.init(title: "取消", style: .plain, target: self, action: #selector(clickRightBarItem))
-        navigationItem.rightBarButtonItem = barItem;
+}
+//refresh collectionView
+private func reloadCollectionView(_ indexList: [Int]) {
+    
+    var indexPathList = [IndexPath]()
+    for value in indexList {
+        indexPathList.append(IndexPath.init(row: value, section: 0))
     }
+    collectionView.reloadItems(at: indexPathList)
+}
+//alert
+private func warningOverLimit() {
+    
+    let msg = String.init("最多可选择" + String.init(selectCount) + "张")
+    let alert = UIAlertController.init(title: "提示", message: msg, preferredStyle: .alert)
+    let cancel = UIAlertAction.init(title: "取消", style: .cancel, handler: nil)
+    alert.addAction(cancel)
+    present(alert, animated: true, completion: nil)
+}
+func initializeNavRight() -> Void {
+    
+    let barItem = UIBarButtonItem.init(title: "取消", style: .plain, target: self, action: #selector(clickRightBarItem))
+    navigationItem.rightBarButtonItem = barItem;
+}
 }
