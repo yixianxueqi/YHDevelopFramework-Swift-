@@ -147,7 +147,6 @@ public class YHPhotoPickViewController: UIViewController {
         
         self.collectionView.reloadData()
         
-    }
 }
 // MARK: - custom view
 private func initializeCollectionView() {
