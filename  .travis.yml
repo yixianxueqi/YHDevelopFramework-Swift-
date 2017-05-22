@@ -1,0 +1,3 @@
+language: swift
+script:
+- xcodebuild -workspace YHDevelopFramework_Swift.xcworkspace -scheme YHDevelopFramework_Swift -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
