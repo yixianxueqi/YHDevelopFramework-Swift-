@@ -56,7 +56,6 @@
 		DB5259A71E02332100C0C8A9 /* YHPhotoHighImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5259A51E02332100C0C8A9 /* YHPhotoHighImageCell.swift */; };
 		DB5259A81E02332100C0C8A9 /* YHPhotoHighImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB5259A61E02332100C0C8A9 /* YHPhotoHighImageCell.xib */; };
 		DB5259AA1E023EA000C0C8A9 /* YHPhotoPickThroughDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5259A91E023EA000C0C8A9 /* YHPhotoPickThroughDelegate.swift */; };
-		DB55B8B81DFA51C2005BFA9A /* https.cer in Resources */ = {isa = PBXBuildFile; fileRef = DB55B8B71DFA51C2005BFA9A /* https.cer */; };
 		DB55B8BA1DFA81FC005BFA9A /* YHAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB55B8B91DFA81FC005BFA9A /* YHAssets.swift */; };
 		DB55B8BE1DFA95D7005BFA9A /* PhotoPickDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB55B8BC1DFA95D7005BFA9A /* PhotoPickDemoViewController.swift */; };
 		DB55B8BF1DFA95D7005BFA9A /* PhotoPickDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB55B8BD1DFA95D7005BFA9A /* PhotoPickDemoViewController.xib */; };
@@ -82,6 +81,7 @@
 		DB7699401E0A1F1200405611 /* TextInputDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB76993E1E0A1F1200405611 /* TextInputDemoViewController.swift */; };
 		DB7699411E0A1F1200405611 /* TextInputDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB76993F1E0A1F1200405611 /* TextInputDemoViewController.xib */; };
 		DB7699441E0A66D200405611 /* YHTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7699431E0A66D200405611 /* YHTextView.swift */; };
+		DB8CA9A51E7165FC005DE3C1 /* https.cer in Resources */ = {isa = PBXBuildFile; fileRef = DB8CA9A41E7165FC005DE3C1 /* https.cer */; };
 		DBA2DA051DBDA5ED00CCCCB5 /* YHPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA2DA041DBDA5ED00CCCCB5 /* YHPageControl.swift */; };
 		DBBC94BB1DD4A63D00A20383 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBC94BA1DD4A63D00A20383 /* SwiftyJSON.swift */; };
 		DBC06DC21E52D42F00C49283 /* LoginServiceDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC06DC01E52D42F00C49283 /* LoginServiceDemoViewController.swift */; };
@@ -174,7 +174,6 @@
 		DB5259A51E02332100C0C8A9 /* YHPhotoHighImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHPhotoHighImageCell.swift; sourceTree = "<group>"; };
 		DB5259A61E02332100C0C8A9 /* YHPhotoHighImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YHPhotoHighImageCell.xib; sourceTree = "<group>"; };
 		DB5259A91E023EA000C0C8A9 /* YHPhotoPickThroughDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHPhotoPickThroughDelegate.swift; sourceTree = "<group>"; };
-		DB55B8B71DFA51C2005BFA9A /* https.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = https.cer; sourceTree = "<group>"; };
 		DB55B8B91DFA81FC005BFA9A /* YHAssets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHAssets.swift; sourceTree = "<group>"; };
 		DB55B8BC1DFA95D7005BFA9A /* PhotoPickDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoPickDemoViewController.swift; sourceTree = "<group>"; };
 		DB55B8BD1DFA95D7005BFA9A /* PhotoPickDemoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoPickDemoViewController.xib; sourceTree = "<group>"; };
@@ -200,6 +199,7 @@
 		DB76993E1E0A1F1200405611 /* TextInputDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInputDemoViewController.swift; sourceTree = "<group>"; };
 		DB76993F1E0A1F1200405611 /* TextInputDemoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextInputDemoViewController.xib; sourceTree = "<group>"; };
 		DB7699431E0A66D200405611 /* YHTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHTextView.swift; sourceTree = "<group>"; };
+		DB8CA9A41E7165FC005DE3C1 /* https.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = https.cer; sourceTree = "<group>"; };
 		DBA2DA041DBDA5ED00CCCCB5 /* YHPageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YHPageControl.swift; sourceTree = "<group>"; };
 		DBBC94BA1DD4A63D00A20383 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		DBC06DC01E52D42F00C49283 /* LoginServiceDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginServiceDemoViewController.swift; sourceTree = "<group>"; };
@@ -808,7 +808,7 @@
 				DBFA94681DA8F87700A9098D /* HttpDemoViewController.swift */,
 				DB24C3421DA9E7DB00019439 /* HttpDemoViewController.xib */,
 				DB0A25C31DAB35620047BA94 /* HttpService.swift */,
-				DB55B8B71DFA51C2005BFA9A /* https.cer */,
+				DB8CA9A41E7165FC005DE3C1 /* https.cer */,
 			);
 			path = httpDemo;
 			sourceTree = "<group>";
@@ -883,6 +883,7 @@
 			files = (
 				DBFDC4DB1E00E39F00AC38DF /* YHPhotoThumbnailCell.xib in Resources */,
 				DB2A50BD1E07B53600A4C38C /* YHPictureBrowseCell.xib in Resources */,
+				DB8CA9A51E7165FC005DE3C1 /* https.cer in Resources */,
 				DB5DACB81DAF606E00D5F0B4 /* 111.png in Resources */,
 				DB3AB85C1E03C948005CE212 /* YHPhotoAlbumViewController.xib in Resources */,
 				DB55B8BF1DFA95D7005BFA9A /* PhotoPickDemoViewController.xib in Resources */,
@@ -909,7 +910,6 @@
 				DBD7CB391DAE152C004443A1 /* testJson.json in Resources */,
 				DB5B70801DFFE4670033193F /* YHPhotoPickViewController.xib in Resources */,
 				DBD7CB311DAE0BB6004443A1 /* pic_3.jpg in Resources */,
-				DB55B8B81DFA51C2005BFA9A /* https.cer in Resources */,
 				DB1F50FC1E0BD804005A0E9A /* DispatchDemoViewController.xib in Resources */,
 				DB0E25FD1DA5392100618C5D /* Assets.xcassets in Resources */,
 				DB0E25FB1DA5392100618C5D /* Main.storyboard in Resources */,
